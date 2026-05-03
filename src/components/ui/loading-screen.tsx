@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 export const LoadingScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  const [isRendered, setIsRendered] = useState(true);
+
   useEffect(() => {
-    // Lock scroll
     document.body.style.overflow = "hidden";
     
-    // Hide the loading screen after 3 seconds for the liquid animation to complete
     const timer = setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = "";
@@ -23,16 +23,23 @@ export const LoadingScreen = () => {
     };
   }, []);
 
+  if (!isRendered) return null;
+
   return (
-    <AnimatePresence>
-      {isLoading && (
-        <motion.div
-          key="loading-screen"
-          className="fixed inset-0 z-[1000] flex items-center justify-center bg-paper"
-          initial={{ opacity: 1, y: "0%", rotateX: 0, scale: 1, transformPerspective: 1000 }}
-          exit={{ opacity: 0, y: "-15%", rotateX: 10, scale: 0.95 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
+    <motion.div
+      key="loading-screen"
+      className="fixed inset-0 z-[1000] flex items-center justify-center bg-paper"
+      initial={{ opacity: 1, y: "0%", rotateX: 0, scale: 1, transformPerspective: 1000 }}
+      animate={isLoading ? { opacity: 1, y: "0%", rotateX: 0, scale: 1 } : { opacity: 0, y: "-15%", rotateX: 10, scale: 0.95 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      style={{ pointerEvents: isLoading ? "auto" : "none" }}
+      onAnimationComplete={(definition) => {
+        // If the exit animation completes, unmount the component
+        if (!isLoading) {
+          setIsRendered(false);
+        }
+      }}
+    >
           <style>{`
             .liquid-text {
               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='1000' viewBox='0 0 200 1000'%3E%3Cpath fill='%230B5E7A' d='M0,100 Q50,150 100,100 T200,100 L200,1000 L0,1000 Z'/%3E%3C/svg%3E");
@@ -65,7 +72,5 @@ export const LoadingScreen = () => {
             </div>
           </div>
         </motion.div>
-      )}
-    </AnimatePresence>
   );
 };
