@@ -86,7 +86,7 @@ const Hero = memo(() => {
           <div className="md:col-span-4 md:col-start-9 flex flex-col gap-5">
             {/* Availability card */}
             <div className="border border-ink/15 rounded-sm p-5 bg-paper-deep/40 backdrop-blur-sm">
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-10">
                 <div className="flex items-center gap-2">
                   <span className="pulse-dot" aria-hidden />
                   <span className="font-mono-tag text-ink-soft">Founding clients · open</span>
@@ -94,9 +94,9 @@ const Hero = memo(() => {
                 <span className="font-mono-tag text-ink-muted">0 / 3</span>
               </div>
               <p className="font-display text-2xl text-ink leading-[0.9]">
-                Three founding partners <span className="font-serif text-teal">at studio rates</span> — for the work that builds our book.
+                Three founding partners <span className="font-serif text-blue-light">at studio rates</span> for the work that builds our book.
               </p>
-              <div className="mt-4 h-px w-full bg-ink/10 relative overflow-hidden">
+              <div className="mt-12 h-px w-full bg-ink/10 relative overflow-hidden">
                 <span className="absolute inset-y-0 left-0 w-0 bg-blue" />
               </div>
             </div>

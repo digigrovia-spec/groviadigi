@@ -35,9 +35,9 @@ const Process = memo(() => {
             <p className="font-mono-tag text-invert-fg-muted reveal">[ 03 — Process ]</p>
           </div>
           <div className="md:col-span-9">
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] reveal">
-              A method, not
-              <span className="font-serif text-blue-light/70 ml-3"> a pitch deck.</span>
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+              A method,
+              <span className="font-serif text-blue ml-3"> not a pitch deck.</span>
             </h2>
           </div>
         </div>

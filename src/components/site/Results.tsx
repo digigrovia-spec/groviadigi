@@ -29,12 +29,12 @@ const Results = memo(() => {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10 mb-20">
           <div className="md:col-span-3">
-            <p className="font-mono-tag text-ink-muted reveal">[ 05 — What we promise ]</p>
+            <p className="font-mono-tag text-ink-muted mb-6 reveal">[ 05 — What we promise ]</p>
           </div>
-          <div className="md:col-span-9">
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.95] tracking-tight text-teal reveal">
-              No receipts yet.<br />
-              <span className="italic font-light text-blue">A standard, instead.</span>
+          <div className="md:col-span-9 mt-4 md:mt-0">
+            <h2 className="font-display text-5xl md:text-7xl leading-1 text-teal reveal">
+              No receipts yet.
+              <span className="font-serif text-blue ml-3"> A standard, instead.</span>
             </h2>
             <p className="mt-8 max-w-2xl text-ink-soft text-lg md:text-xl leading-relaxed reveal">
               We're a new studio — which means we won't show you someone else's

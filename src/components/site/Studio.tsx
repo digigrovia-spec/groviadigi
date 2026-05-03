@@ -13,12 +13,12 @@ const Studio = memo(() => {
               Founder-led.
               <span className="font-serif text-blue ml-3"> Built this year.</span>
             </h2>
-             <p className="mt-8 max-w-2xl text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">
-               Groviadigi is a young studio out of Rajasthan, started by people who
-               got tired of watching good brands get diluted by big-agency
-               process. No account managers. No layers. The person you meet on
-               the call is the person who does the work.
-             </p>
+            <p className="mt-8 max-w-2xl text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">
+              Groviadigi is a young studio out of Rajasthan, started by people who
+              got tired of watching good brands get diluted by big-agency
+              process. No account managers. No layers. The person you meet on
+              the call is the person who does the work.
+            </p>
           </div>
         </div>
 

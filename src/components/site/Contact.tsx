@@ -9,7 +9,7 @@ const Contact = memo(() => {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    
+
     const formData = new FormData(e.currentTarget);
     // Add your Web3Forms Access Key here
     formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
@@ -45,8 +45,9 @@ const Contact = memo(() => {
         <div className="grid md:grid-cols-12 gap-10 mb-16">
           <div className="md:col-span-12">
             <p className="font-mono-tag text-invert-fg-muted reveal mb-8">[ 08 — Start ]</p>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight reveal whitespace-nowrap">
-              Let's build something that compounds.
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+              Let's build something
+              <span className="font-serif text-blue ml-3"> that compounds.</span>
             </h2>
           </div>
         </div>
@@ -77,15 +78,26 @@ const Contact = memo(() => {
                     />
                   </label>
                 </div>
-                <label className="block">
-                  <span className="font-mono-tag text-invert-fg-muted">Company</span>
-                  <input
-                    name="company"
-                    type="text"
-                    className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
-                    placeholder="Where you work"
-                  />
-                </label>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <label className="block">
+                    <span className="font-mono-tag text-invert-fg-muted">Company</span>
+                    <input
+                      name="company"
+                      type="text"
+                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
+                      placeholder="Where you work"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="font-mono-tag text-invert-fg-muted">Designation</span>
+                    <input
+                      name="designation"
+                      type="text"
+                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
+                      placeholder="Your role"
+                    />
+                  </label>
+                </div>
                 <label className="block">
                   <span className="font-mono-tag text-invert-fg-muted">The brief</span>
                   <textarea

@@ -30,7 +30,7 @@ const Work = memo(() => {
             <p className="font-mono-tag text-ink-muted reveal">[ 04 — Ways to work ]</p>
           </div>
           <div className="md:col-span-9 flex items-end justify-between gap-10">
-            <h2 className="font-display text-5xl md:text-7xl text-teal reveal">
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
               Three doors.
               <span className="font-serif text-blue ml-3"> One studio.</span>
             </h2>
