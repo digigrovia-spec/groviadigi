@@ -1,4 +1,6 @@
-const Testimonials = () => {
+import { memo } from "react";
+
+const Testimonials = memo(() => {
   return (
     <section className="bg-paper py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
@@ -12,18 +14,20 @@ const Testimonials = () => {
           <blockquote className="font-display text-3xl md:text-5xl leading-[1.15] text-ink">
             <span className="text-bright">“</span>
             Most agencies sell you their past. We'd rather earn yours. If you're
-            a founder who wants the work to actually move the number — and a
-            partner who'll tell you the truth about what's working — there's a
+            a founder who wants the work to actually move the number and a
+            partner who'll tell you the truth about what's working there's a
             seat at the table. The case studies will write themselves.
             <span className="text-bright">”</span>
           </blockquote>
           <figcaption className="mt-8 font-mono-tag text-ink-muted">
-            The Groviadigi team — Founding note, 2025
+            The Groviadigi team — Founding note, {new Date().getFullYear()}
           </figcaption>
         </figure>
       </div>
     </section>
   );
-};
+});
+
+Testimonials.displayName = "Testimonials";
 
 export default Testimonials;

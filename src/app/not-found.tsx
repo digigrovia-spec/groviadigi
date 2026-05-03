@@ -1,23 +1,22 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 import Link from "next/link";
 
 export default function NotFound() {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", pathname);
-  }, [pathname]);
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
+    <div className="flex min-h-screen items-center justify-center bg-paper grain">
       <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <Link href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
+        <p className="font-mono-tag text-ink-muted mb-6 reveal">[ 404 — Lost ]</p>
+        <h1 className="font-display text-8xl md:text-[12rem] leading-none tracking-tight text-ink mb-4">
+          404<span className="text-bright">.</span>
+        </h1>
+        <p className="text-xl md:text-2xl text-ink-soft mb-10 max-w-md mx-auto leading-relaxed">
+          This page doesn't exist — but the studio does.
+        </p>
+        <Link
+          href="/"
+          className="pill-cta text-base inline-flex"
+        >
+          Return home
+          <span aria-hidden>→</span>
         </Link>
       </div>
     </div>

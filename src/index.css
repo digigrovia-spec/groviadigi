@@ -1,176 +1,269 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Groviadigi — "Kinetic Minimalism" design system.
-   Ink black, warm paper, single electric accent. HSL only. */
+/* Groviadigi Brand System — "Grow Loud"
+   Teal, Blue, Cream, Ink. Archivo + Instrument Serif. */
 
 @layer base {
   :root {
-    /* Core canvas */
-    --background: 40 30% 96%;         /* warm paper */
-    --foreground: 20 14% 8%;          /* deep ink */
+    /* Core Brand Tokens */
+    --background: 42 27% 92%;
+    /* Aravalli Cream #F1EDE2 */
+    --foreground: 205 24% 10%;
+    /* Midnight Ink #0E1B24 */
 
-    --paper: 40 30% 96%;
-    --paper-deep: 36 22% 92%;
-    --ink: 20 14% 8%;
-    --ink-soft: 20 10% 24%;
-    --ink-muted: 24 8% 42%;
+    --paper: 42 27% 92%;
+    --paper-deep: 42 20% 88%;
+    --ink: 205 24% 10%;
+    --ink-soft: 205 18% 22%;
+    --ink-muted: 205 12% 40%;
 
-    /* Single accent — electric lime */
-    --accent-bright: 78 92% 55%;
-    --accent-bright-foreground: 20 14% 8%;
+    /* Brand Colors */
+    --teal: 195 83% 26%;
+    /* Groviadigi Teal #0B5E7A */
+    --blue: 195 75% 48%;
+    /* Digi Blue #1FA9D6 */
+    --blue-l: 195 72% 59%;
+    /* Digi Blue Light #4BC0E3 */
+    --coral: 11 100% 65%;
+    /* Ajmer Coral #FF6B4A */
+    --sand: 40 62% 73%;
+    /* Pushkar Sand #E6C98F */
 
-    --card: 40 30% 96%;
-    --card-foreground: 20 14% 8%;
+    /* Semantic Mappings */
+    --primary: 195 83% 26%;
+    /* Teal */
+    --primary-foreground: 42 27% 92%;
 
-    --popover: 40 30% 96%;
-    --popover-foreground: 20 14% 8%;
+    --secondary: 195 75% 48%;
+    /* Blue */
+    --secondary-foreground: 42 27% 92%;
 
-    --primary: 20 14% 8%;
-    --primary-foreground: 40 30% 96%;
+    --accent: 195 75% 48%;
+    /* Blue */
+    --accent-foreground: 42 27% 92%;
 
-    --secondary: 36 22% 92%;
-    --secondary-foreground: 20 14% 8%;
+    --bright: 195 75% 48%;
+    --bright-foreground: 42 27% 92%;
 
-    --muted: 36 18% 88%;
-    --muted-foreground: 24 8% 42%;
+    --card: 42 27% 92%;
+    --card-foreground: 205 24% 10%;
 
-    --accent: 78 92% 55%;
-    --accent-foreground: 20 14% 8%;
+    --popover: 42 27% 92%;
+    --popover-foreground: 205 24% 10%;
 
-    --destructive: 0 70% 45%;
-    --destructive-foreground: 40 30% 96%;
+    --muted: 42 15% 85%;
+    --muted-foreground: 205 12% 40%;
 
-    --border: 30 12% 82%;
-    --input: 30 12% 82%;
-    --ring: 20 14% 8%;
+    --destructive: 11 100% 65%;
+    /* Coral as destructive/urgent */
+    --destructive-foreground: 42 27% 92%;
+
+    --border: 195 83% 26% / 0.18;
+    /* Using teal for lines as per kit */
+    --input: 195 83% 26% / 0.18;
+    --ring: 195 75% 48%;
 
     --radius: 0.25rem;
 
-    /* Stable inverted surface — always dark bg with light fg, in BOTH themes.
-       Use for sections that must remain "dark zones" regardless of mode. */
-    --invert-bg: 20 14% 8%;
-    --invert-bg-deep: 22 12% 12%;
-    --invert-fg: 40 30% 96%;
-    --invert-fg-soft: 40 20% 88%;
-    --invert-fg-muted: 36 10% 70%;
-    --invert-border: 40 30% 96%;
+    /* Inverted surface (Ink mode) */
+    --invert-bg: 205 24% 10%;
+    --invert-bg-deep: 205 24% 8%;
+    --invert-fg: 42 27% 92%;
+    --invert-fg-soft: 42 20% 88%;
+    --invert-fg-muted: 42 10% 75%;
+    --invert-border: 205 24% 25%;
 
-    /* Gradients & effects */
-    --grain-opacity: 0.06;
-    --shadow-soft: 0 30px 60px -30px hsl(var(--ink) / 0.25);
-    --shadow-press: 0 1px 0 0 hsl(var(--ink) / 0.9);
-
-    /* Easing */
+    /* Effects */
+    --grain-opacity: 0.04;
+    --shadow-soft: 0 14px 34px -10px hsl(var(--ink) / 0.25);
     --ease-kinetic: cubic-bezier(0.22, 1, 0.36, 1);
 
-    --sidebar-background: 40 30% 96%;
-    --sidebar-foreground: 20 14% 8%;
-    --sidebar-primary: 20 14% 8%;
-    --sidebar-primary-foreground: 40 30% 96%;
-    --sidebar-accent: 36 22% 92%;
-    --sidebar-accent-foreground: 20 14% 8%;
-    --sidebar-border: 30 12% 82%;
-    --sidebar-ring: 78 92% 55%;
+    --sidebar-background: 42 27% 92%;
+    --sidebar-foreground: 205 24% 10%;
+    --sidebar-primary: 195 83% 26%;
+    --sidebar-primary-foreground: 42 27% 92%;
+    --sidebar-accent: 195 75% 48%;
+    --sidebar-accent-foreground: 42 27% 92%;
+    --sidebar-border: 195 83% 26% / 0.18;
+    --sidebar-ring: 195 75% 48%;
   }
 
   .dark {
-    --background: 24 10% 7%;
-    --foreground: 36 22% 94%;
-    --paper: 24 10% 7%;
-    --paper-deep: 24 8% 11%;
-    --ink: 36 22% 94%;
-    --ink-soft: 36 16% 82%;
-    --ink-muted: 32 8% 60%;
-    --card: 24 10% 7%;
-    --card-foreground: 36 22% 94%;
-    --popover: 24 10% 7%;
-    --popover-foreground: 36 22% 94%;
-    --primary: 36 22% 94%;
-    --primary-foreground: 24 10% 7%;
-    --secondary: 24 8% 12%;
-    --secondary-foreground: 36 22% 94%;
-    --muted: 24 8% 14%;
-    --muted-foreground: 32 8% 60%;
-    --accent: 78 92% 60%;
-    --accent-foreground: 24 10% 7%;
-    --border: 24 8% 18%;
-    --input: 24 8% 18%;
-    --ring: 78 92% 60%;
-    --grain-opacity: 0.08;
-    /* In dark mode the "invert zone" becomes a slightly deeper black to keep separation */
-    --invert-bg: 24 10% 4%;
-    --invert-bg-deep: 24 10% 8%;
-    --invert-fg: 36 22% 94%;
-    --invert-fg-soft: 36 16% 82%;
-    --invert-fg-muted: 32 8% 60%;
-    --invert-border: 36 22% 94%;
+    --background: 205 24% 7%;
+    --foreground: 42 27% 94%;
+    --paper: 205 24% 7%;
+    --paper-deep: 205 20% 11%;
+    --ink: 42 27% 94%;
+    --ink-soft: 42 20% 82%;
+    --ink-muted: 42 10% 65%;
+
+    --card: 205 24% 7%;
+    --card-foreground: 42 27% 94%;
+
+    --primary: 195 72% 59%;
+    /* Use blue-light in dark mode */
+    --primary-foreground: 205 24% 7%;
+
+    --secondary: 195 75% 48%;
+    --secondary-foreground: 42 27% 94%;
+
+    --muted: 205 15% 15%;
+    --muted-foreground: 42 10% 65%;
+
+    --accent: 195 75% 48%;
+    --accent-foreground: 205 24% 7%;
+
+    --border: 205 24% 20%;
+    --input: 205 24% 20%;
+    --ring: 195 75% 48%;
+
+    --invert-bg: 205 24% 4%;
+    --invert-bg-deep: 205 24% 2%;
   }
 }
 
 @layer base {
-  * { @apply border-border; }
-  html { scroll-behavior: smooth; }
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-inter, 'Inter'), system-ui, sans-serif;
     font-feature-settings: 'ss01', 'cv11';
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Hide default cursor on desktop when custom cursor is active */
   }
-  ::selection { background: hsl(var(--accent)); color: hsl(var(--accent-foreground)); }
+
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+
+  /* Reduce motion: disable all transitions and animations */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
   .font-display {
-    font-family: 'Fraunces', Georgia, serif;
-    font-optical-sizing: auto;
+    font-family: var(--font-archivo, 'Archivo'), sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.85;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif, 'Instrument Serif'), serif;
+    font-style: italic;
+    font-weight: 400;
     letter-spacing: -0.02em;
   }
+
   .font-mono-tag {
-    font-family: 'Inter', monospace;
-    font-feature-settings: 'tnum';
-    letter-spacing: 0.12em;
+    font-family: var(--font-mono, 'JetBrains Mono'), monospace;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     font-size: 0.7rem;
     font-weight: 500;
   }
 
-  /* Grain overlay */
+  /* Grain overlay — static, compositor-only layer */
   .grain::before {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5oGVcAAAAG3RSTlMABAgMEBQYHCAkKCwwNDg8QERYXGB0eHyAhCSB2AAAAnhJREFUeNqFlo2SgyAMhAkQfkWl2vd/0EsCdrh2pvNNvQKbbJIFfz6O4/h4/EbxvE7v+74N03F+DcPxut8u+z7c7rfz9L7fpuN5Ph2O4/06H++X+Xie3/f97d9+uc3n43g+T9f9+BzG4fj8AxiG+20+n87j+3Scz/N0PC6363B8D5frdHzfH5frcPnfj/d/f97Ox9NxfN0v1+Nw+d8fl+twPO6X4TJN0/UYxuF4+t+f9+twfJ5O5+N1vt7m4/84HOf9OkzTNI7DMAz/8TSN0zT+649hHM/n43gex8s8n67T8XU7v+/XYb+Oh+Nx3o/j+T6dxuN4PY7H6TRMA+6/PY7n+3gej+NxHMdxHAfceRqmcRyG8X/P5+M0Hcfz9Xq9TdPxuF/m43B8X6fz8TxO4zDg3v99H+73+30+X4ZpHMZhGKdpGMZxHMaxP/6fj8Pw37dpmsa/9zgcz+OA+88D7r1ft+t4nqbjdDzP5/k8nY7j+XQ6jtN0HKfjcbpcr8PlfB3O1+tyucIGFxjhAiN8DOfLbbjcLpcL/GCE83Ecz+fzeRqn8Xw+D8fhOM3Hcfzfn8fz+B/fxwGXPhzH8/k4Xq7T8XQ+TqfTcRq");
+    background-size: 50px 50px;
     opacity: var(--grain-opacity);
-    mix-blend-mode: multiply;
     z-index: 1;
+    /* No transform tricks — let it be a simple paint */
   }
 
-  /* Marquee */
+  /* Disable grain on reduced-motion / low-end devices */
+  @media (prefers-reduced-motion: reduce) {
+    .grain::before {
+      display: none;
+    }
+  }
+
+  /* Marquee — GPU-composited with will-change */
   .marquee-track {
     display: flex;
     width: max-content;
     animation: marquee 40s linear infinite;
-  }
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    will-change: transform;
+    transform: translateZ(0);
+    /* Force GPU layer */
   }
 
-  /* Reveal */
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  /* Pause marquee when off-screen to save GPU cycles */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+
+  /* Reveal — use transform3d for GPU compositing */
   .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 1s var(--ease-kinetic), transform 1s var(--ease-kinetic);
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 0.8s var(--ease-kinetic), transform 0.8s var(--ease-kinetic);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
+
   .reveal.in {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* GPU Layer helper — only promote when actually animating */
+  .gpu-layer {
+    /* Use contain instead of force-promoting idle elements.
+       Reduces VRAM usage; elements still composite when hovered. */
+    contain: layout style;
+  }
+  .gpu-layer:hover {
+    will-change: transform;
+  }
+
+  /* Optimize sections for paint isolation without breaking sticky nav */
+  .section-perf {
+    content-visibility: auto;
+    contain-intrinsic-size: 0px 900px;
+    /* 'paint' isolates repaints without creating a new stacking context */
+    contain: paint style;
+  }
+
+  .reveal-container {
+    contain: paint style;
   }
 
   /* Underline link */
@@ -178,25 +271,37 @@
     position: relative;
     display: inline-block;
   }
+
   .link-underline::after {
     content: '';
     position: absolute;
-    left: 0; bottom: -2px;
+    left: 0;
+    bottom: -2px;
     width: 100%;
     height: 1px;
     background: currentColor;
     transform-origin: right;
     transform: scaleX(1);
     transition: transform 0.6s var(--ease-kinetic);
+    will-change: transform;
   }
+
   .link-underline:hover::after {
     transform-origin: left;
     transform: scaleX(0);
     animation: underline-in 0.6s var(--ease-kinetic) 0.6s forwards;
   }
+
   @keyframes underline-in {
-    from { transform: scaleX(0); transform-origin: left; }
-    to { transform: scaleX(1); transform-origin: left; }
+    from {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    to {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
 
   /* Big CTA pill */
@@ -206,6 +311,7 @@
     color: hsl(var(--paper));
     font-weight: 500;
   }
+
   .pill-cta:hover {
     background: hsl(var(--accent));
     color: hsl(var(--accent-foreground));
@@ -217,6 +323,7 @@
     border-color: hsl(var(--ink) / 0.2);
     color: hsl(var(--ink));
   }
+
   .pill-ghost:hover {
     border-color: hsl(var(--ink));
     background: hsl(var(--ink));
@@ -225,15 +332,26 @@
 
   /* Ticking dot */
   .pulse-dot {
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     border-radius: 999px;
     background: hsl(var(--accent));
     box-shadow: 0 0 0 0 hsl(var(--accent) / 0.7);
     animation: pulse 2s infinite;
   }
+
   @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 hsl(var(--accent) / 0.6); }
-    70% { box-shadow: 0 0 0 14px hsl(var(--accent) / 0); }
-    100% { box-shadow: 0 0 0 0 hsl(var(--accent) / 0); }
+    0% {
+      box-shadow: 0 0 0 0 hsl(var(--accent) / 0.6);
+    }
+
+    70% {
+      box-shadow: 0 0 0 14px hsl(var(--accent) / 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--accent) / 0);
+    }
   }
+
 }

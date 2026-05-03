@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Groviadigi — Brand Book / Ajmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0B5E7A;
+    --teal-d:#074558;
+    --blue:#1FA9D6;
+    --blue-l:#4BC0E3;
+    --cream:#F1EDE2;
+    --cream-2:#E6E1D1;
+    --ink:#0E1B24;
+    --ink-2:#14222C;
+    --ink-3:#1B2C38;
+    --line:rgba(11,94,122,.18);
+    --line-d:#223645;
+    --coral:#FF6B4A;
+    --sand:#E6C98F;
+    --disp:'Archivo',sans-serif;
+    --serif:'Instrument Serif',serif;
+    --body:'Inter',sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--cream);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 56px;position:relative}
+  .mono{font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase}
+  .serif{font-family:var(--serif);font-style:italic}
+  .disp{font-family:var(--disp);letter-spacing:-.04em;line-height:.86}
+  .label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(14,27,36,.55)}
+  .teal{color:var(--teal)}
+  .blue{color:var(--blue)}
+
+  /* Groviadigi wordmark helper — matches uploaded logo */
+  .gwm{font-family:var(--disp);font-weight:800;letter-spacing:-.055em;line-height:1;display:inline-block}
+  .gwm .g1{color:var(--teal)}
+  .gwm .g2{color:var(--blue)}
+  .gwm.on-dark .g1{color:var(--blue-l)}
+  .gwm.on-dark .g2{color:var(--blue)}
+  .gwm.on-teal .g1{color:var(--cream)}
+  .gwm.on-teal .g2{color:var(--sand)}
+  .gwm.on-blue .g1{color:var(--ink)}
+  .gwm.on-blue .g2{color:var(--cream)}
+  /* Star dingbat from logo */
+  .dingbat{display:inline-block;width:.7em;height:.7em;vertical-align:middle;color:var(--blue)}
+
+  /* ========== MARQUEE ========== */
+  .marquee{display:flex;white-space:nowrap;overflow:hidden;border-block:1px solid var(--line);padding:14px 0;gap:42px;align-items:center;background:var(--cream)}
+  .marquee.blue-bar{background:var(--blue);color:var(--cream);border-color:transparent}
+  .marquee.teal-bar{background:var(--teal);color:var(--cream);border-color:transparent}
+  .marquee.ink-bar{background:var(--ink);color:var(--cream);border-color:transparent}
+  .marquee .track{display:flex;gap:42px;animation:marq 30s linear infinite;flex-shrink:0}
+  .marquee.fast .track{animation-duration:18s}
+  .marquee.reverse .track{animation-direction:reverse}
+  @keyframes marq{to{transform:translateX(-50%)}}
+  .marquee .track span{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:42px}
+  .marquee .track span::after{content:'✦';color:var(--blue);font-size:14px}
+  .marquee.blue-bar .track span::after,.marquee.teal-bar .track span::after,.marquee.ink-bar .track span::after{color:var(--sand)}
+  .marquee.huge .track span{font-size:88px;font-weight:900;letter-spacing:-.04em}
+
+  /* ========== TOP BAR ========== */
+  .topbar{position:sticky;top:0;z-index:60;background:rgba(241,237,226,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 56px}
+  .tb-brand{display:flex;gap:10px;align-items:center}
+  .tb-brand .gwm{font-size:22px}
+  .topbar nav{display:flex;gap:22px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase}
+  .topbar nav a:hover{color:var(--blue)}
+  .tb-status{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--teal);text-transform:uppercase}
+  .pulse{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 0 rgba(31,169,214,.6);animation:p 1.8s infinite}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(31,169,214,.55)}70%{box-shadow:0 0 0 14px rgba(31,169,214,0)}100%{box-shadow:0 0 0 0 rgba(31,169,214,0)}}
+
+  /* ========== HERO ========== */
+  .hero{position:relative;padding:60px 0 40px;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(11,94,122,.06) 1px,transparent 1px);background-size:calc(100%/12) 100%;pointer-events:none}
+  .hero-top{display:flex;justify-content:space-between;gap:20px;position:relative;padding:0 56px;max-width:1400px;margin:0 auto;flex-wrap:wrap}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;background:rgba(255,255,255,.4);display:inline-flex;align-items:center;gap:8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;max-width:640px}
+  .hero-title{position:relative;padding:0 56px;max-width:1400px;margin:30px auto 0;pointer-events:none}
+  .hero-title h1{font-family:var(--disp);font-weight:900;font-size:clamp(92px,15vw,240px);line-height:.84;letter-spacing:-.055em;color:var(--teal)}
+  .hero-title h1 .line{display:block;position:relative}
+  .hero-title h1 em{font-style:normal;color:var(--blue)}
+  .hero-title h1 .serif{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--blue);letter-spacing:-.02em}
+  .hero-title h1 .stroke{-webkit-text-stroke:2px var(--teal);color:transparent}
+  .sticker{position:absolute;padding:14px 22px;background:var(--coral);color:var(--cream);font-family:var(--disp);font-weight:800;font-size:16px;letter-spacing:-.01em;text-transform:uppercase;border-radius:4px;transform:rotate(-6deg);box-shadow:0 14px 34px rgba(14,27,36,.25)}
+  .sticker.blue{background:var(--blue);color:var(--cream)}
+  .sticker.sand{background:var(--sand);color:var(--ink)}
+  .sticker.teal{background:var(--teal);color:var(--cream)}
+  .hero-bottom{display:grid;grid-template-columns:1.3fr 1fr .9fr;gap:40px;padding:0 56px;max-width:1400px;margin:60px auto 0;border-top:1px solid var(--line);padding-top:28px}
+  .hero-bottom .tag{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;opacity:.6}
+  .hero-bottom .lede{font-family:var(--serif);font-style:italic;font-size:28px;line-height:1.15;color:var(--ink);max-width:22ch}
+  .hero-bottom .lede em{color:var(--blue)}
+  .grid-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+  .stat .num{font-family:var(--disp);font-weight:900;font-size:52px;letter-spacing:-.04em;line-height:1;color:var(--teal)}
+  .stat .num em{color:var(--blue);font-style:normal}
+  .stat .lab{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:.16em;text-transform:uppercase;margin-top:6px;opacity:.6}
+  .clients{display:flex;flex-direction:column;gap:10px;font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.1em}
+  .clients span{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:6px 0;text-transform:uppercase}
+  .clients span b{color:var(--blue);font-weight:500}
+
+  /* ========== SECTIONS ========== */
+  section.sec{padding:90px 0;border-top:1px solid var(--line);position:relative}
+  section.sec.dark{background:var(--ink);color:var(--cream);border-color:var(--line-d)}
+  section.sec.dark .label{color:rgba(241,237,226,.55)}
+  .sec-head{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:flex-end;margin-bottom:48px;padding:0 56px;max-width:1400px;margin-left:auto;margin-right:auto}
+  .sec-head .num{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--blue);margin-bottom:14px;text-transform:uppercase}
+  .sec-head .title{font-family:var(--disp);font-weight:900;font-size:clamp(48px,7.2vw,104px);letter-spacing:-.045em;line-height:.9;color:var(--teal)}
+  .dark .sec-head .title{color:var(--cream)}
+  .sec-head .title .serif{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--blue);letter-spacing:-.02em}
+  .sec-head .title em{color:var(--blue);font-style:normal}
+  .sec-head .title .stroke{-webkit-text-stroke:2px var(--teal);color:transparent}
+  .dark .sec-head .title .stroke{-webkit-text-stroke:2px var(--cream);color:transparent}
+  .sec-head .right{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--ink-3);text-align:right;text-transform:uppercase;line-height:1.8;opacity:.7}
+  .dark .sec-head .right{color:rgba(241,237,226,.65)}
+  .sec-head .right b{display:block;font-family:var(--disp);color:var(--teal);font-size:16px;letter-spacing:-.02em;text-transform:none;margin-top:4px;font-weight:700}
+  .dark .sec-head .right b{color:var(--cream)}
+
+  /* ========== LOGO ========== */
+  .logo-hero{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;padding:0 56px;max-width:1400px;margin:0 auto}
+  .lh-card{border-radius:8px;padding:56px;min-height:460px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+  .lh-card.cream{background:var(--cream-2);border:1px solid var(--line)}
+  .lh-card.dark{background:var(--ink);color:var(--cream)}
+  .lh-card.teal{background:var(--teal);color:var(--cream)}
+  .lh-card.blue{background:var(--blue);color:var(--cream)}
+  .lh-card .bigmark{font-size:clamp(56px,8vw,126px)}
+  .lh-card .rotator{position:absolute;top:28px;right:28px;width:110px;height:110px;animation:spin 24s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .rotator svg{width:100%;height:100%}
+  .rotator text{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;fill:var(--teal);text-transform:uppercase}
+  .lh-card.dark .rotator text,.lh-card.teal .rotator text,.lh-card.blue .rotator text{fill:var(--cream)}
+  .rotator .dot{fill:var(--blue)}
+  .lh-card.dark .rotator .dot,.lh-card.teal .rotator .dot{fill:var(--sand)}
+
+  .logo-four{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 56px 0;max-width:1400px;margin:0 auto}
+  .l4{border-radius:8px;min-height:220px;padding:22px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .l4.cream{background:var(--cream-2);border:1px solid var(--line)}
+  .l4.dark{background:var(--ink);color:var(--cream)}
+  .l4.teal{background:var(--teal);color:var(--cream)}
+  .l4.blue{background:var(--blue);color:var(--cream)}
+  .l4.coral{background:var(--coral);color:var(--cream)}
+  .l4 .tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  .l4 .size{position:absolute;bottom:14px;right:14px;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+
+  .logo-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px 56px 0;max-width:1400px;margin:0 auto}
+  .rule-card{border:1px solid var(--line);border-radius:8px;padding:24px;background:rgba(255,255,255,.4);min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+  .rule-card h4{font-family:var(--disp);font-weight:800;font-size:24px;letter-spacing:-.02em;margin-bottom:6px;color:var(--teal)}
+  .rule-card p{font-family:var(--mono);font-size:11px;color:var(--ink-3);line-height:1.7;letter-spacing:.04em}
+  .rule-card ul{list-style:none}
+  .rule-card li{font-family:var(--mono);font-size:11px;color:var(--ink-3);line-height:1.9;display:flex;gap:10px;padding:4px 0;border-top:1px dashed var(--line)}
+  .rule-card li:first-child{border-top:none}
+  .rule-card li .x{color:var(--coral)}
+
+  /* ========== COLOR ========== */
+  .color-hero{padding:0 56px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px}
+  .sw{border-radius:8px;padding:26px;min-height:340px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+  .sw .role{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.65}
+  .sw .nm{font-family:var(--disp);font-weight:900;font-size:40px;letter-spacing:-.035em;line-height:1;margin-top:4px}
+  .sw .codes{font-family:var(--mono);font-size:11px;line-height:1.8;letter-spacing:.02em}
+  .sw .codes .k{opacity:.55;display:inline-block;width:52px}
+  .sw .idx{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;opacity:.55}
+  .sw.teal{background:var(--teal);color:var(--cream)}
+  .sw.blue{background:var(--blue);color:var(--cream)}
+  .sw.cream-sw{background:var(--cream-2);color:var(--ink);border:1px solid var(--line)}
+  .sw.ink-sw{background:var(--ink);color:var(--cream)}
+  .sw.coral-sw{background:var(--coral);color:var(--cream)}
+  .sw.sand-sw{background:var(--sand);color:var(--ink)}
+
+  .color-sub{padding:12px 56px 0;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .color-ratio{margin:24px auto 0;max-width:1400px;padding:0 56px}
+  .color-ratio .inner{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:rgba(255,255,255,.5)}
+  .color-ratio .hd{padding:14px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--ink-3);border-bottom:1px solid var(--line);text-transform:uppercase;display:flex;justify-content:space-between;opacity:.7}
+  .color-ratio .bar{display:flex;height:72px}
+  .color-ratio .bar > div{display:flex;align-items:center;padding:0 16px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+  .palette-interplay{padding:12px 56px 0;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .pi{border-radius:8px;aspect-ratio:1/1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:900;font-size:62px;letter-spacing:-.05em;line-height:.9;text-align:center}
+  .pi .lab{position:absolute;bottom:14px;left:14px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+
+  /* ========== TYPE ========== */
+  .type-showcase{padding:0 56px;max-width:1400px;margin:0 auto}
+  .type-block{border-top:1px solid var(--line);padding:48px 0;display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
+  .type-block:last-of-type{border-bottom:1px solid var(--line)}
+  .tb-meta .role{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--blue);text-transform:uppercase}
+  .tb-meta .fam{font-family:var(--disp);font-weight:800;font-size:34px;letter-spacing:-.03em;margin-top:10px;color:var(--teal)}
+  .tb-meta .spec{font-family:var(--mono);font-size:11px;color:var(--ink-3);line-height:1.7;margin-top:12px;letter-spacing:.02em;opacity:.8}
+  .tb-meta .weights{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+  .tb-meta .weights span{padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--ink-3);opacity:.7}
+  .tb-meta .weights span.star{color:var(--blue);border-color:var(--blue);opacity:1}
+  .tb-sample .lg{font-family:var(--disp);font-weight:900;font-size:clamp(64px,10vw,160px);letter-spacing:-.05em;line-height:.85;color:var(--teal)}
+  .tb-sample .lg em{color:var(--blue);font-style:normal}
+  .tb-sample .lg .serif{font-family:var(--serif);font-weight:400;color:var(--blue);font-style:italic;letter-spacing:-.02em}
+  .tb-sample .med{font-family:var(--serif);font-size:40px;line-height:1.12;color:var(--ink);font-style:italic;max-width:24ch}
+  .tb-sample .med em{color:var(--blue)}
+  .tb-sample .body{font-family:var(--body);font-size:18px;line-height:1.55;color:var(--ink-3);max-width:54ch}
+  .tb-sample .mono-list{font-family:var(--mono);font-size:14px;line-height:2;color:var(--teal);letter-spacing:.04em}
+
+  /* ========== VOICE / MANIFESTO ========== */
+  .voice-4{padding:0 56px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .vcard{border-radius:8px;padding:28px;min-height:310px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+  .vcard.a{background:var(--teal);color:var(--cream)}
+  .vcard.b{background:var(--blue);color:var(--cream)}
+  .vcard.c{background:var(--coral);color:var(--cream)}
+  .vcard.d{background:var(--cream-2);color:var(--ink);border:1px solid var(--line)}
+  .vcard .num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+  .vcard .word{font-family:var(--disp);font-weight:900;font-size:58px;letter-spacing:-.04em;line-height:.95;margin-top:20px}
+  .vcard .word .serif{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.02em}
+  .vcard .desc{font-family:var(--body);font-size:14px;line-height:1.5;margin-top:14px;max-width:30ch}
+  .vcard.d .desc{color:var(--ink-3)}
+  .vcard .badge{position:absolute;top:18px;right:18px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.15);font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+  .vcard.d .badge{background:rgba(11,94,122,.1);color:var(--teal);border:1px solid var(--line)}
+
+  .voice-do{padding:16px 56px 0;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .vdo{border:1px solid var(--line);border-radius:8px;padding:28px;background:rgba(255,255,255,.5)}
+  .vdo.yes{border-color:var(--blue);background:rgba(31,169,214,.06)}
+  .vdo .h{font-family:var(--mono);font-size:11px;letter-spacing:.18em;margin-bottom:16px;text-transform:uppercase;display:flex;gap:10px;align-items:center}
+  .vdo.yes .h{color:var(--blue)}
+  .vdo.no .h{color:var(--coral)}
+  .vdo .h::before{content:'';width:10px;height:10px;border-radius:50%}
+  .vdo.yes .h::before{background:var(--blue)}
+  .vdo.no .h::before{background:var(--coral)}
+  .vdo ul{list-style:none}
+  .vdo li{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.25;padding:10px 0;border-top:1px dashed var(--line);color:var(--ink)}
+  .vdo li:first-child{border-top:none}
+  .vdo.no li{color:var(--ink-3);text-decoration:line-through;text-decoration-color:rgba(255,107,74,.55);font-style:normal;font-family:var(--body);font-size:20px;opacity:.6}
+
+  .manifesto{padding:120px 56px;max-width:1400px;margin:0 auto;position:relative}
+  .manifesto .quote{font-family:var(--disp);font-weight:900;font-size:clamp(50px,7.8vw,114px);letter-spacing:-.05em;line-height:.92;max-width:14ch;color:var(--teal)}
+  .manifesto .quote em{color:var(--blue);font-style:normal}
+  .manifesto .quote .serif{font-family:var(--serif);font-weight:400;color:var(--blue);font-style:italic;letter-spacing:-.02em}
+  .manifesto .quote .stroke{-webkit-text-stroke:2px var(--teal);color:transparent}
+  .manifesto .attr{margin-top:28px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ink-3);text-transform:uppercase;opacity:.7}
+
+  /* ========== SOCIAL ========== */
+  .ig-row{padding:0 56px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:440px 1fr;gap:40px;align-items:flex-start}
+  .phone{background:var(--cream);color:var(--ink);border-radius:12px;padding:20px;position:relative;box-shadow:0 40px 100px rgba(14,27,36,.25);border:1px solid var(--line)}
+  .phone .prof{display:flex;gap:14px;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .phone .av{width:72px;height:72px;border-radius:50%;background:var(--teal);position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--cream);font-family:var(--disp);font-weight:900;font-size:28px;letter-spacing:-.04em}
+  .phone .av::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:2.5px solid var(--blue)}
+  .phone .av .d{color:var(--blue)}
+  .phone .handle{font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--teal)}
+  .phone .handle span{color:var(--blue)}
+  .phone .bio{font-size:12px;color:var(--ink-3);line-height:1.45;margin-top:4px}
+  .phone .bio b{color:var(--ink)}
+  .phone .stats{display:flex;gap:22px;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+  .phone .stats b{font-family:var(--disp);font-weight:800;display:block;color:var(--ink);font-size:16px;letter-spacing:-.02em}
+  .phone .hl-row{display:flex;gap:14px;padding:14px 0;overflow-x:auto}
+  .phone .hl{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}
+  .phone .hl .c{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:8px}
+  .phone .hl span{font-size:10px;color:var(--ink-3);font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase}
+  .phone .tabs{display:flex;justify-content:space-around;padding:10px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;opacity:.7}
+  .phone .tabs .on{color:var(--ink);opacity:1;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:-11px}
+
+  .ig-9{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:10px}
+  .tile{aspect-ratio:1/1;padding:12px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+  .tile .n{font-family:var(--mono);font-size:8px;letter-spacing:.18em;opacity:.6;text-transform:uppercase}
+  .tile .b{font-family:var(--disp);font-weight:900;font-size:20px;line-height:.9;letter-spacing:-.03em}
+  .tile .b em{font-style:normal}
+  .tile .b .serif{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.02em}
+  .tile .c{font-family:var(--mono);font-size:8px;letter-spacing:.14em;opacity:.7;text-transform:uppercase}
+  .tile.ink{background:var(--ink);color:var(--cream)}
+  .tile.teal{background:var(--teal);color:var(--cream)}
+  .tile.blue{background:var(--blue);color:var(--cream)}
+  .tile.cream{background:var(--cream-2);color:var(--ink);border:1px solid var(--line)}
+  .tile.coral{background:var(--coral);color:var(--cream)}
+  .tile.sand{background:var(--sand);color:var(--ink)}
+  .tile.ptrn{position:relative}
+  .tile.ptrn::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent 0 10px,rgba(31,169,214,.22) 10px 11px);pointer-events:none}
+  .tile.ptrn > *{position:relative;z-index:1}
+
+  .ig-notes .head{font-family:var(--disp);font-weight:900;font-size:clamp(40px,5.5vw,72px);letter-spacing:-.04em;line-height:.9;color:var(--teal)}
+  .ig-notes .head em{color:var(--blue);font-style:normal}
+  .ig-notes .head .serif{font-family:var(--serif);font-weight:400;color:var(--blue);font-style:italic;letter-spacing:-.02em}
+  .ig-notes p{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink-3);max-width:52ch;margin-top:16px}
+  .ig-notes p b{color:var(--ink)}
+  .ig-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+  .ig-stats .is{border:1px solid var(--line);border-radius:8px;padding:16px;background:rgba(255,255,255,.5)}
+  .ig-stats .is .n{font-family:var(--disp);font-weight:900;font-size:36px;letter-spacing:-.03em;color:var(--teal)}
+  .ig-stats .is .n em{color:var(--blue);font-style:normal}
+  .ig-stats .is .l{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--ink-3);margin-top:4px;text-transform:uppercase;opacity:.7}
+  .legend{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .legend .lr{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.5)}
+  .legend .chip2{width:16px;height:16px;border-radius:4px;flex-shrink:0}
+  .legend .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;opacity:.7}
+  .legend .v{font-family:var(--disp);font-weight:600;font-size:13px;letter-spacing:-.01em;color:var(--ink)}
+
+  /* LinkedIn */
+  .li-wrap{padding:0 56px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:flex-start}
+  .li-card{background:var(--cream);color:var(--ink);border-radius:10px;overflow:hidden;box-shadow:0 40px 100px rgba(14,27,36,.25);border:1px solid var(--line)}
+  .li-banner{height:250px;background:var(--teal);color:var(--cream);padding:0 56px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
+  .li-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px);background-size:60px 100%}
+  .li-banner .bh{font-family:var(--disp);font-weight:900;font-size:80px;letter-spacing:-.05em;line-height:.85;position:relative}
+  .li-banner .bh em{color:var(--blue);font-style:normal}
+  .li-banner .bh .serif{font-family:var(--serif);font-weight:400;color:var(--sand);font-style:italic;letter-spacing:-.02em}
+  .li-banner .bside{position:relative;text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:rgba(241,237,226,.75);text-transform:uppercase}
+  .li-banner .bside .big{font-family:var(--disp);color:var(--cream);font-size:24px;letter-spacing:-.02em;margin-top:6px;text-transform:none;font-weight:700}
+  .li-banner .bside .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--blue);margin-right:6px;vertical-align:middle;animation:p 1.8s infinite}
+  .li-body{padding:0 32px 24px;position:relative}
+  .li-av{width:140px;height:140px;border-radius:50%;background:var(--cream);border:5px solid var(--cream);margin-top:-70px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(14,27,36,.1)}
+  .li-av .gwm{font-size:28px}
+  .li-name{font-family:var(--disp);font-weight:800;font-size:30px;letter-spacing:-.03em;margin-top:14px;display:flex;align-items:center;gap:10px;color:var(--teal)}
+  .li-name .verify{width:22px;height:22px;background:var(--blue);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+  .li-title{font-size:15px;color:var(--ink-3);margin-top:2px}
+  .li-meta{font-size:12px;color:var(--ink-3);margin-top:10px;display:flex;gap:20px;flex-wrap:wrap;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase;opacity:.75}
+  .li-cta{display:flex;gap:10px;margin-top:18px}
+  .li-cta button{font-family:var(--disp);font-weight:700;font-size:14px;padding:10px 22px;border-radius:999px;border:none;cursor:pointer;letter-spacing:-.01em}
+  .li-cta .primary{background:var(--blue);color:var(--cream)}
+  .li-cta .ghost{background:transparent;color:var(--teal);border:1.5px solid var(--teal)}
+
+  .li-post{margin-top:22px;border:1px solid var(--line);border-radius:10px;padding:20px;background:var(--cream)}
+  .li-post .p-head{display:flex;gap:12px;align-items:center}
+  .li-post .p-head .av{width:46px;height:46px;border-radius:50%;background:var(--cream-2);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:900;color:var(--teal);font-size:18px;letter-spacing:-.04em}
+  .li-post .p-head .av .d{color:var(--blue)}
+  .li-post .nm{font-family:var(--disp);font-weight:700;font-size:14px;letter-spacing:-.01em;color:var(--teal)}
+  .li-post .sub{font-size:11px;color:var(--ink-3);opacity:.75}
+  .li-post .body{margin:14px 0;font-size:14px;line-height:1.55;color:var(--ink)}
+  .li-post .hl{font-family:var(--disp);font-weight:700;font-size:22px;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px;display:block;color:var(--teal)}
+  .li-post .tag{color:var(--blue);font-weight:600}
+  .li-post .img{border-radius:8px;overflow:hidden;background:var(--ink);color:var(--cream);padding:40px;position:relative;min-height:320px;display:flex;flex-direction:column;justify-content:space-between}
+  .li-post .img .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--blue-l);text-transform:uppercase}
+  .li-post .img .big{font-family:var(--disp);font-weight:900;font-size:84px;letter-spacing:-.05em;line-height:.85}
+  .li-post .img .big em{color:var(--blue);font-style:normal}
+  .li-post .img .big .serif{font-family:var(--serif);font-weight:400;color:var(--sand);font-style:italic;letter-spacing:-.02em}
+  .li-post .img .bott{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:rgba(241,237,226,.6);text-transform:uppercase}
+  .li-post .img::before{content:'';position:absolute;inset:0;background-image:linear-gradient(to right,rgba(31,169,214,.07) 1px,transparent 1px);background-size:48px 100%}
+  .li-post .engage{display:flex;justify-content:space-between;padding-top:14px;border-top:1px solid var(--line);margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;opacity:.8}
+  .li-post .engage b{font-family:var(--disp);color:var(--ink);font-size:13px;letter-spacing:-.01em;text-transform:none}
+
+  .li-side{display:flex;flex-direction:column;gap:12px}
+  .li-side .chip{background:var(--cream);color:var(--ink);border-radius:10px;padding:18px;border:1px solid var(--line)}
+  .li-side .chip h4{font-family:var(--disp);font-weight:800;font-size:16px;letter-spacing:-.02em;margin-bottom:10px;color:var(--teal)}
+  .li-side .chip p{font-size:12px;color:var(--ink-3);line-height:1.5}
+  .li-side .chip .row{display:flex;justify-content:space-between;padding:8px 0;font-size:12px;border-top:1px dashed var(--line);font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);opacity:.85}
+  .li-side .chip .row:first-of-type{border-top:none}
+  .li-side .chip .row b{font-family:var(--body);font-weight:600;color:var(--ink);letter-spacing:-.01em;text-transform:none;font-size:12px}
+  .li-side .chip.dark{background:var(--teal);color:var(--cream);border-color:transparent}
+  .li-side .chip.dark h4{color:var(--sand)}
+  .li-side .chip.dark .row{border-top-color:rgba(255,255,255,.15);color:rgba(241,237,226,.75)}
+  .li-side .chip.dark .row b{color:var(--cream)}
+
+  /* ========== WEB MOCK ========== */
+  .web-wrap{padding:0 56px;max-width:1400px;margin:0 auto}
+  .web-mock{border-radius:12px;overflow:hidden;box-shadow:0 50px 120px rgba(14,27,36,.35);background:var(--cream);color:var(--ink);border:1px solid var(--line)}
+  .web-nav{background:var(--ink);color:var(--cream);padding:16px 36px;display:flex;justify-content:space-between;align-items:center}
+  .web-nav .left{display:flex;gap:36px;align-items:center}
+  .web-nav .links{display:flex;gap:24px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:rgba(241,237,226,.7);text-transform:uppercase}
+  .web-nav .right{display:flex;gap:14px;align-items:center}
+  .web-nav .pin{display:flex;gap:6px;align-items:center;font-family:var(--mono);font-size:10px;color:rgba(241,237,226,.6);letter-spacing:.14em;text-transform:uppercase}
+  .web-nav .cta{background:var(--blue);color:var(--cream);padding:10px 20px;border-radius:999px;font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:-.01em}
+  .web-hero{background:var(--teal);color:var(--cream);padding:70px 56px 90px;position:relative;overflow:hidden}
+  .web-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(to right,rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px}
+  .web-hero .eye{font-family:var(--mono);font-size:10px;color:var(--sand);letter-spacing:.2em;position:relative;display:inline-flex;gap:10px;align-items:center;padding:6px 12px;border:1px solid rgba(230,201,143,.4);border-radius:999px;text-transform:uppercase}
+  .web-hero h2{font-family:var(--disp);font-weight:900;font-size:clamp(52px,8.5vw,118px);letter-spacing:-.05em;line-height:.88;margin-top:22px;max-width:14ch;position:relative}
+  .web-hero h2 em{color:var(--blue-l);font-style:normal}
+  .web-hero h2 .serif{font-family:var(--serif);font-weight:400;color:var(--sand);font-style:italic;letter-spacing:-.02em}
+  .web-hero .sub{max-width:52ch;margin-top:24px;font-size:17px;line-height:1.55;color:rgba(241,237,226,.85);position:relative}
+  .web-hero .ctas{margin-top:30px;display:flex;gap:14px;position:relative}
+  .web-hero .ctas .p{background:var(--blue);color:var(--cream);padding:16px 26px;border-radius:999px;font-family:var(--disp);font-weight:700;font-size:15px;display:flex;gap:10px;align-items:center}
+  .web-hero .ctas .g{background:transparent;color:var(--cream);border:1.5px solid rgba(255,255,255,.25);padding:16px 26px;border-radius:999px;font-family:var(--disp);font-size:15px;font-weight:600}
+  .web-hero .logos{margin-top:50px;display:flex;gap:36px;align-items:center;font-family:var(--mono);font-size:10px;color:rgba(241,237,226,.6);letter-spacing:.18em;text-transform:uppercase;position:relative;flex-wrap:wrap}
+  .web-hero .logos .l{font-family:var(--disp);font-weight:700;font-size:18px;color:rgba(241,237,226,.85);letter-spacing:-.02em;text-transform:none}
+
+  .web-sec{padding:56px;background:var(--cream)}
+  .web-sec h3{font-family:var(--disp);font-weight:900;font-size:44px;letter-spacing:-.035em;max-width:18ch;line-height:.95;color:var(--teal)}
+  .web-sec h3 em{font-style:normal;color:var(--blue)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+  .wcard{border-radius:10px;padding:26px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+  .wcard.a{background:var(--ink);color:var(--cream)}
+  .wcard.b{background:var(--blue);color:var(--cream)}
+  .wcard.c{background:var(--cream-2);color:var(--ink);border:1px solid var(--line)}
+  .wcard .num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+  .wcard h4{font-family:var(--disp);font-weight:800;font-size:24px;letter-spacing:-.02em;margin-top:60px}
+  .wcard.c h4{color:var(--teal)}
+  .wcard p{font-size:13px;line-height:1.5;margin-top:8px}
+  .wcard.a p{color:rgba(241,237,226,.75)}
+  .wcard .arr{align-self:flex-end;width:40px;height:40px;border-radius:50%;background:currentColor;position:relative}
+  .wcard .arr::after{content:'→';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700}
+  .wcard.a .arr{background:var(--blue)}
+  .wcard.a .arr::after{color:var(--cream)}
+  .wcard.b .arr{background:var(--ink)}
+  .wcard.b .arr::after{color:var(--blue-l)}
+  .wcard.c .arr{background:var(--teal)}
+  .wcard.c .arr::after{color:var(--cream)}
+
+  .web-footer{background:var(--ink);color:var(--cream);padding:60px 56px 28px}
+  .web-footer .top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
+  .web-footer .big{font-family:var(--disp);font-weight:900;font-size:56px;letter-spacing:-.045em;line-height:.9}
+  .web-footer .big em{color:var(--blue);font-style:normal}
+  .web-footer .big .serif{font-family:var(--serif);font-weight:400;color:var(--sand);font-style:italic;letter-spacing:-.02em}
+  .web-footer h5{font-family:var(--mono);font-size:10px;color:var(--blue-l);letter-spacing:.18em;margin-bottom:16px;text-transform:uppercase}
+  .web-footer ul{list-style:none;font-size:13px;color:rgba(241,237,226,.7);line-height:2}
+  .web-footer .bot{padding-top:22px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:rgba(241,237,226,.45);letter-spacing:.14em;text-transform:uppercase}
+
+  .cu-wrap{margin-top:16px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .cu{border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.5);padding:14px}
+  .cu .sw2{width:100%;height:48px;border-radius:4px;margin-bottom:10px}
+  .cu .r{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;opacity:.7}
+  .cu .n{font-family:var(--disp);font-weight:700;font-size:14px;letter-spacing:-.01em;margin-top:4px;color:var(--teal)}
+
+  /* ========== PATTERN ========== */
+  .pat-wrap{padding:0 56px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:12px}
+  .pbox{border-radius:8px;min-height:420px;position:relative;overflow:hidden;border:1px solid var(--line)}
+  .pbox .pt{position:absolute;top:16px;left:16px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+  .pbox .pn{position:absolute;bottom:16px;right:16px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+  .pat-a{background:var(--teal)}
+  .pat-a .fg{position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,transparent 0 26px,rgba(31,169,214,.22) 26px 27px),repeating-linear-gradient(45deg,transparent 0 26px,rgba(230,201,143,.12) 26px 27px)}
+  .pat-b{background:var(--cream-2);color:var(--ink)}
+  .pat-c{background:var(--ink)}
+  .pat-c .noise{position:absolute;inset:-10%;background-image:radial-gradient(circle at 20% 30%,rgba(31,169,214,.35),transparent 40%),radial-gradient(circle at 80% 70%,rgba(11,94,122,.5),transparent 40%),radial-gradient(circle at 50% 100%,rgba(255,107,74,.2),transparent 50%);filter:blur(10px)}
+  .pat-notes{padding:16px 56px 0;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .pnc{border:1px solid var(--line);border-radius:8px;padding:22px;background:rgba(255,255,255,.5)}
+  .pnc .h{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.18em;margin-bottom:10px;text-transform:uppercase}
+  .pnc p{font-family:var(--body);font-size:13px;color:var(--ink-3);line-height:1.55}
+
+  /* ========== STATIONERY ========== */
+  .stat-wrap{padding:0 56px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:flex-start}
+  .bc-stack{display:flex;flex-direction:column;gap:18px;perspective:1800px}
+  .bc{aspect-ratio:1.75/1;border-radius:10px;padding:26px;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(14,27,36,.3);transform:rotate(-1.5deg)}
+  .bc.back{transform:rotate(2deg)}
+  .bc.front{background:var(--cream);color:var(--ink);border:1px solid var(--line)}
+  .bc.back{background:var(--teal);color:var(--cream)}
+  .bc.back::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,transparent 0 18px,rgba(31,169,214,.25) 18px 19px)}
+  .bc .row{position:relative;display:flex;justify-content:space-between;align-items:flex-start}
+  .bc .bot{position:absolute;left:26px;right:26px;bottom:26px;display:flex;justify-content:space-between;align-items:flex-end}
+  .bc .tag{font-family:var(--mono);font-size:9px;letter-spacing:.16em;opacity:.7;text-transform:uppercase}
+  .bc .nm{font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--teal)}
+  .bc.back .nm{color:var(--cream)}
+  .bc .ti{font-family:var(--mono);font-size:10px;letter-spacing:.14em;opacity:.7;text-transform:uppercase;margin-top:4px}
+  .bc .ct{font-family:var(--mono);font-size:10px;line-height:1.8;text-align:right;text-transform:uppercase;letter-spacing:.1em}
+  .bc.back .huge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:900;font-size:160px;letter-spacing:-.06em;line-height:1;color:var(--cream)}
+  .bc.back .huge em{font-style:normal;color:var(--blue-l)}
+
+  .bc-spec{border:1px solid var(--line);border-radius:8px;padding:20px;background:rgba(255,255,255,.5)}
+  .bc-spec .h{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.18em;margin-bottom:10px;text-transform:uppercase}
+  .bc-spec ul{list-style:none;font-family:var(--mono);font-size:11px;color:var(--ink-3);line-height:2}
+  .bc-spec ul li::before{content:'— ';color:var(--blue)}
+
+  .letter{aspect-ratio:1/1.33;background:var(--cream);color:var(--ink);padding:48px;position:relative;box-shadow:0 40px 100px rgba(14,27,36,.35);border-radius:6px;overflow:hidden;font-family:'Inter';border:1px solid var(--line)}
+  .letter .hd{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:18px;border-bottom:1.5px solid var(--teal)}
+  .letter .hd .meta{text-align:right;font-family:var(--mono);font-size:9px;color:var(--ink-3);line-height:1.75;letter-spacing:.1em;text-transform:uppercase}
+  .letter .date{font-family:var(--mono);font-size:10px;margin-top:22px;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase}
+  .letter .body{margin-top:20px;font-size:11.5px;line-height:1.65;color:var(--ink)}
+  .letter .body p{margin-bottom:10px}
+  .letter .body .greet{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.15;margin-bottom:14px;color:var(--teal)}
+  .letter .body .sig{font-family:var(--serif);font-style:italic;font-size:26px;margin-top:18px;color:var(--teal)}
+  .letter .footer{position:absolute;left:48px;right:48px;bottom:28px;display:flex;justify-content:space-between;border-top:1.5px solid var(--teal);padding-top:12px;font-family:var(--mono);font-size:9px;color:var(--ink);letter-spacing:.14em;text-transform:uppercase}
+  .letter::after{content:'';position:absolute;right:-120px;top:54%;width:300px;height:300px;border-radius:50%;background:var(--blue);opacity:.85}
+  .letter .bar{position:absolute;left:0;top:30%;width:6px;height:160px;background:var(--coral)}
+  .letter .watermark{position:absolute;right:-20px;bottom:90px;font-family:var(--disp);font-weight:900;font-size:110px;letter-spacing:-.06em;color:rgba(11,94,122,.08);line-height:1;z-index:0;transform:rotate(-90deg);transform-origin:bottom right}
+
+  /* ========== CLOSING ========== */
+  .book-end{padding:140px 56px 80px;text-align:center;border-top:1px solid var(--line)}
+  .book-end .eyebrow{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.22em;margin-bottom:28px;text-transform:uppercase}
+  .book-end .mk{font-family:var(--disp);font-weight:900;font-size:clamp(76px,14vw,240px);letter-spacing:-.06em;line-height:.88;color:var(--teal)}
+  .book-end .mk em{color:var(--blue);font-style:normal}
+  .book-end .mk .serif{font-family:var(--serif);font-weight:400;color:var(--blue);font-style:italic;letter-spacing:-.02em}
+  .book-end .credit{margin-top:44px;font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+
+  @media (max-width:1000px){
+    .wrap,.topbar-inner,.hero-top,.hero-title,.hero-bottom,.sec-head,.logo-hero,.logo-four,.logo-rules,.color-hero,.color-sub,.palette-interplay,.type-showcase,.manifesto,.voice-4,.voice-do,.ig-row,.li-wrap,.web-wrap,.pat-wrap,.pat-notes,.stat-wrap,.book-end,.color-ratio{padding-left:24px;padding-right:24px}
+    .hero-bottom,.logo-hero,.logo-four,.logo-rules,.color-hero,.color-sub,.palette-interplay,.voice-4,.voice-do,.ig-row,.li-wrap,.cards,.cu-wrap,.pat-wrap,.pat-notes,.stat-wrap{grid-template-columns:1fr !important}
+    .type-block{grid-template-columns:1fr;gap:16px}
+    .sec-head{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======= TOPBAR ======= -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="tb-brand"><span class="gwm"><span class="g1">Grovia</span><span class="g2">digi</span></span></div>
+    <nav>
+      <a href="#logo">01 · MARK</a>
+      <a href="#color">02 · COLOR</a>
+      <a href="#type">03 · TYPE</a>
+      <a href="#voice">04 · VOICE</a>
+      <a href="#social">05 · SOCIAL</a>
+      <a href="#web">06 · WEB</a>
+      <a href="#pattern">07 · PATTERN</a>
+      <a href="#stationery">08 · PAPER</a>
+    </nav>
+    <div class="tb-status"><span class="pulse"></span> BOOK 001 · AJMER · LIVE</div>
+  </div>
+</div>
+
+<div class="marquee blue-bar fast">
+  <div class="track">
+    <span>BRAND BOOK 001</span><span>AJMER · RAJASTHAN · INDIA</span><span>ALWAYS CONFIDENT</span><span>PERFORMANCE × BRAND</span><span>EST. 2024</span><span>GROVIADIGI ®</span><span>FY 2026—27</span>
+    <span>BRAND BOOK 001</span><span>AJMER · RAJASTHAN · INDIA</span><span>ALWAYS CONFIDENT</span><span>PERFORMANCE × BRAND</span><span>EST. 2024</span><span>GROVIADIGI ®</span><span>FY 2026—27</span>
+  </div>
+</div>
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-top">
+    <div class="chips">
+      <span class="chip"><span style="width:6px;height:6px;background:var(--blue);border-radius:50%"></span> GROVIADIGI</span>
+      <span class="chip">BRAND SYSTEM</span>
+      <span class="chip">VOL. 001 · APR 2026</span>
+      <span class="chip">AJMER · RAJASTHAN · IN</span>
+    </div>
+    <div class="chips" style="justify-content:flex-end">
+      <span class="chip">EDITION 01 / 01</span>
+      <span class="chip">INTERNAL + PARTNER</span>
+    </div>
+  </div>
+
+  <div class="hero-title">
+    <h1>
+      <span class="line">GROW<em>.</em></span>
+      <span class="line"><span class="serif">grow</span> LOUD<em>.</em></span>
+      <span class="line"><span class="stroke">GROW</span> INDIAN<em>.</em></span>
+    </h1>
+    <div class="sticker" style="top:6%;right:6%">NEW · VOL 001</div>
+    <div class="sticker blue" style="top:36%;right:14%;transform:rotate(8deg)">BHARAT FIRST</div>
+    <div class="sticker sand" style="top:66%;left:44%;transform:rotate(-10deg)">FY 26 · FY 27</div>
+  </div>
+
+  <div class="hero-bottom">
+    <div>
+      <div class="tag">THE THESIS</div>
+      <p class="lede">A brand for the loudest decade of <em>Indian digital</em> — built from Ajmer, for founders who want Bharat to hear them.</p>
+    </div>
+    <div>
+      <div class="tag">THE RECEIPTS</div>
+      <div class="grid-stats">
+        <div class="stat"><div class="num">₹180<em>Cr</em></div><div class="lab">Client revenue unlocked · FY25</div></div>
+        <div class="stat"><div class="num">4.2<em>×</em></div><div class="lab">Avg. ROAS · performance clients</div></div>
+        <div class="stat"><div class="num">−42<em>%</em></div><div class="lab">CAC reduction · D2C avg.</div></div>
+        <div class="stat"><div class="num">9</div><div class="lab">Indian languages shipped</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="tag">SELECT CLIENTS</div>
+      <div class="clients">
+        <span>KUSHAL KITCHENS <b>D2C</b></span>
+        <span>SAMBHAV FINANCE <b>FINTECH</b></span>
+        <span>TATVA SKIN <b>BEAUTY</b></span>
+        <span>RUSTIC WHEEL <b>EV</b></span>
+        <span>DAKSHA STUDIOS <b>SAAS</b></span>
+        <span>& 24 MORE <b>IN 2026</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee huge ink-bar">
+  <div class="track">
+    <span>GROVIADIGI ®</span><span style="color:var(--blue-l)">LOUD × CONFIDENT</span><span>GROVIADIGI ®</span><span style="color:var(--blue-l)">BHARAT-FIRST</span><span>GROVIADIGI ®</span><span style="color:var(--blue-l)">AJMER → INDIA</span>
+    <span>GROVIADIGI ®</span><span style="color:var(--blue-l)">LOUD × CONFIDENT</span><span>GROVIADIGI ®</span><span style="color:var(--blue-l)">BHARAT-FIRST</span><span>GROVIADIGI ®</span><span style="color:var(--blue-l)">AJMER → INDIA</span>
+  </div>
+</div>
+
+<!-- ======= 01 LOGO ======= -->
+<section class="sec" id="logo">
+  <div class="sec-head">
+    <div>
+      <div class="num">01 / THE MARK</div>
+      <div class="title">One <span class="serif">two-tone</span><br/>wordmark. <em>Infinite scroll.</em></div>
+    </div>
+    <div class="right">IDENTITY SYSTEM<br/><b>1 wordmark · 4 colour-ways</b></div>
+  </div>
+
+  <div class="logo-hero">
+    <div class="lh-card cream">
+      <div class="label">PRIMARY · ON CREAM</div>
+      <div class="gwm bigmark"><span class="g1">Grovia</span><span class="g2">digi</span><span class="dingbat" style="color:var(--blue);margin-left:.05em">✦</span></div>
+      <div class="rotator">
+        <svg viewBox="0 0 110 110">
+          <defs><path id="cir" d="M 55 55 m -44 0 a 44 44 0 1 1 88 0 a 44 44 0 1 1 -88 0"/></defs>
+          <text><textPath href="#cir">GROW · CONFIDENT · AJMER · BHARAT · GROW · CONFIDENT · </textPath></text>
+          <circle cx="55" cy="55" r="6" class="dot"/>
+        </svg>
+      </div>
+      <div class="label" style="color:var(--blue)">WORDMARK · 96PX MIN · DIGITAL</div>
+    </div>
+    <div class="lh-card dark">
+      <div class="label" style="color:rgba(241,237,226,.55)">REVERSE · ON INK</div>
+      <div class="gwm on-dark bigmark" style="font-size:72px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+      <div class="label" style="color:var(--blue-l)">DARK MODE · SOCIAL · SITE</div>
+    </div>
+  </div>
+
+  <div class="logo-four">
+    <div class="l4 teal">
+      <div class="tag">ON TEAL</div>
+      <div class="gwm on-teal" style="font-size:30px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+      <div class="size">EVENT / BANNER</div>
+    </div>
+    <div class="l4 blue">
+      <div class="tag">ON BLUE</div>
+      <div class="gwm on-blue" style="font-size:30px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+      <div class="size">HERO / CTA</div>
+    </div>
+    <div class="l4 cream">
+      <div class="tag">HORIZONTAL · SMALL</div>
+      <div class="gwm" style="font-size:22px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+      <div class="size">16 PX +</div>
+    </div>
+    <div class="l4 coral">
+      <div class="tag">CAMPAIGN LOCKUP</div>
+      <div style="font-family:var(--disp);font-weight:900;font-size:46px;letter-spacing:-.05em;color:var(--cream);line-height:.9;text-align:center">G<span style="color:var(--ink)">d</span><span class="serif" style="color:var(--cream);font-weight:400;font-size:.8em">.</span></div>
+      <div class="size">MONOGRAM</div>
+    </div>
+  </div>
+
+  <div class="logo-rules">
+    <div class="rule-card">
+      <div>
+        <div class="label" style="color:var(--blue);margin-bottom:10px">CLEARSPACE · X</div>
+        <h4>Breathe around it.</h4>
+      </div>
+      <p>Minimum padding on all sides equals "x" — the cap-height of the 'o' in Grovia. Never crop type into a container edge.</p>
+    </div>
+    <div class="rule-card">
+      <div>
+        <div class="label" style="color:var(--blue);margin-bottom:10px">MINIMUM SIZE</div>
+        <h4>72 px · 18 mm</h4>
+      </div>
+      <p>Below this, use the "Gd." monogram. The wordmark must remain two-tone at all times.</p>
+    </div>
+    <div class="rule-card">
+      <div>
+        <div class="label" style="color:var(--blue);margin-bottom:10px">DON'T</div>
+      </div>
+      <ul>
+        <li><span class="x">✕</span> Flatten to a single colour</li>
+        <li><span class="x">✕</span> Swap teal / blue ordering</li>
+        <li><span class="x">✕</span> Add shadow, glow, or outline</li>
+        <li><span class="x">✕</span> Place on busy imagery</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="marquee teal-bar">
+  <div class="track">
+    <span>COLOR SYSTEM</span><span>6 TOKENS</span><span>HEX · RGB · CMYK · PMS</span><span>TEAL 45 · BLUE 20 · CREAM 25 · INK 10</span><span>SCREEN + PRINT READY</span>
+    <span>COLOR SYSTEM</span><span>6 TOKENS</span><span>HEX · RGB · CMYK · PMS</span><span>TEAL 45 · BLUE 20 · CREAM 25 · INK 10</span><span>SCREEN + PRINT READY</span>
+  </div>
+</div>
+
+<!-- ======= 02 COLOR ======= -->
+<section class="sec" id="color">
+  <div class="sec-head">
+    <div>
+      <div class="num">02 / COLOR</div>
+      <div class="title">A palette <em>pulled</em><br/>from the <span class="serif">wordmark.</span></div>
+    </div>
+    <div class="right">6 TOKENS · 4 PRIMARY · 2 ACCENT<br/><b>Screen + print ready</b></div>
+  </div>
+
+  <div class="color-hero">
+    <div class="sw teal">
+      <div><div class="role">PRIMARY · GROVIA</div><div class="nm">Groviadigi Teal</div></div>
+      <div class="idx">01</div>
+      <div class="codes">
+        <div><span class="k">HEX</span>#0B5E7A</div>
+        <div><span class="k">RGB</span>11 · 94 · 122</div>
+        <div><span class="k">CMYK</span>91 · 23 · 0 · 52</div>
+        <div><span class="k">PMS</span>7706 C</div>
+        <div><span class="k">USE</span>Primary type · chrome · banners</div>
+      </div>
+    </div>
+    <div class="sw blue">
+      <div><div class="role">PRIMARY · DIGI</div><div class="nm">Digi Blue</div></div>
+      <div class="idx">02</div>
+      <div class="codes">
+        <div><span class="k">HEX</span>#1FA9D6</div>
+        <div><span class="k">RGB</span>31 · 169 · 214</div>
+        <div><span class="k">CMYK</span>85 · 21 · 0 · 16</div>
+        <div><span class="k">PMS</span>2995 C</div>
+        <div><span class="k">USE</span>CTA · highlight · signal</div>
+      </div>
+    </div>
+    <div class="sw cream-sw">
+      <div><div class="role">PRIMARY · PAPER</div><div class="nm">Aravalli Cream</div></div>
+      <div class="idx">03</div>
+      <div class="codes">
+        <div><span class="k">HEX</span>#F1EDE2</div>
+        <div><span class="k">RGB</span>241 · 237 · 226</div>
+        <div><span class="k">CMYK</span>3 · 4 · 9 · 0</div>
+        <div><span class="k">PMS</span>Warm Gray 1 C</div>
+        <div><span class="k">USE</span>Background · editorial base</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="color-sub">
+    <div class="sw ink-sw">
+      <div><div class="role">PRIMARY · INK</div><div class="nm">Midnight Ink</div></div>
+      <div class="idx">04</div>
+      <div class="codes">
+        <div><span class="k">HEX</span>#0E1B24</div>
+        <div><span class="k">RGB</span>14 · 27 · 36</div>
+        <div><span class="k">CMYK</span>61 · 25 · 0 · 86</div>
+        <div><span class="k">PMS</span>Black 6 C</div>
+        <div><span class="k">USE</span>Dark mode · body · chrome</div>
+      </div>
+    </div>
+    <div class="sw coral-sw">
+      <div><div class="role">ACCENT · HYPE</div><div class="nm">Ajmer Coral</div></div>
+      <div class="idx">05</div>
+      <div class="codes">
+        <div><span class="k">HEX</span>#FF6B4A</div>
+        <div><span class="k">RGB</span>255 · 107 · 74</div>
+        <div><span class="k">CMYK</span>0 · 58 · 71 · 0</div>
+        <div><span class="k">PMS</span>171 C</div>
+        <div><span class="k">USE</span>Campaign shock · sticker</div>
+      </div>
+    </div>
+    <div class="sw sand-sw">
+      <div><div class="role">ACCENT · WARMTH</div><div class="nm">Pushkar Sand</div></div>
+      <div class="idx">06</div>
+      <div class="codes">
+        <div><span class="k">HEX</span>#E6C98F</div>
+        <div><span class="k">RGB</span>230 · 201 · 143</div>
+        <div><span class="k">CMYK</span>0 · 12 · 38 · 10</div>
+        <div><span class="k">PMS</span>468 C</div>
+        <div><span class="k">USE</span>Festive · IRL · print highlights</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="color-ratio">
+    <div class="inner">
+      <div class="hd"><span>COLOUR RATIO · 45 / 25 / 20 / 10</span><span>RECOMMENDED USAGE</span></div>
+      <div class="bar">
+        <div style="flex:45;background:var(--teal);color:var(--cream)">TEAL · 45%</div>
+        <div style="flex:25;background:var(--cream-2);color:var(--ink)">CREAM · 25%</div>
+        <div style="flex:20;background:var(--blue);color:var(--cream)">BLUE · 20%</div>
+        <div style="flex:7;background:var(--ink);color:var(--cream)">INK · 7%</div>
+        <div style="flex:2;background:var(--coral);color:var(--cream)">COR</div>
+        <div style="flex:1;background:var(--sand);color:var(--ink)">SND</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="palette-interplay" style="margin-top:24px">
+    <div class="pi" style="background:var(--teal);color:var(--cream)">
+      <span><span class="serif" style="color:var(--sand)">grow</span> loud.</span>
+      <div class="lab" style="color:rgba(241,237,226,.7)">TEAL + CREAM · DEFAULT</div>
+    </div>
+    <div class="pi" style="background:var(--blue);color:var(--cream)">
+      <span>Go.</span>
+      <div class="lab" style="color:var(--cream)">BLUE + CREAM · CTA</div>
+    </div>
+    <div class="pi" style="background:var(--coral);color:var(--cream)">
+      <span>Hype.</span>
+      <div class="lab" style="color:var(--cream)">CORAL + CREAM · CAMPAIGN</div>
+    </div>
+    <div class="pi" style="background:var(--cream-2);color:var(--teal)">
+      <span>Quiet<span style="color:var(--blue)">.</span></span>
+      <div class="lab" style="color:var(--ink)">CREAM + TEAL · EDITORIAL</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 03 TYPE ======= -->
+<section class="sec" id="type">
+  <div class="sec-head">
+    <div>
+      <div class="num">03 / TYPOGRAPHY</div>
+      <div class="title">Three voices. <span class="serif">one</span><br/>kinetic <em>system.</em></div>
+    </div>
+    <div class="right">DISPLAY · SERIF · BODY · MONO<br/><b>Archivo / Instrument / Inter / JetBrains</b></div>
+  </div>
+
+  <div class="type-showcase">
+    <div class="type-block">
+      <div class="tb-meta">
+        <div class="role">01 · DISPLAY / HEADLINE</div>
+        <div class="fam">Archivo Black</div>
+        <div class="spec">Campaign lines, hero statements, slide titles. Track -4% to -6%. Weights 800 / 900. Never below 36 px.</div>
+        <div class="weights"><span>400</span><span>600</span><span>700</span><span class="star">800 ★</span><span class="star">900 ★</span></div>
+      </div>
+      <div class="tb-sample">
+        <div class="lg">BHARAT<br/><em>DOESN'T</em><br/>SCROLL<br/>SMALL<span class="blue">.</span></div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="tb-meta">
+        <div class="role">02 · SERIF / EMOTION</div>
+        <div class="fam">Instrument Serif</div>
+        <div class="spec">Italic only. Sparingly for emotional counterpoint — pull-quotes, signatures, pairing with Archivo. 24–84 px.</div>
+        <div class="weights"><span class="star">400 ★</span><span class="star">Italic ★</span></div>
+      </div>
+      <div class="tb-sample">
+        <div class="med">"A <em>little</em> brand becomes a loud one the moment it <em>stops asking</em> permission."</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="tb-meta">
+        <div class="role">03 · BODY / UTILITY</div>
+        <div class="fam">Inter</div>
+        <div class="spec">Long-form — web, decks, proposals, email. 14–18 px, line-height 1.55, tracking -0.5%. 400 / 500.</div>
+        <div class="weights"><span>300</span><span class="star">400 ★</span><span class="star">500 ★</span><span>600</span><span>700</span></div>
+      </div>
+      <div class="tb-sample">
+        <div class="body">Groviadigi builds performance brands for India's next generation of founders. From Ajmer to Ahmedabad, every line of copy earns its place — no filler, no fluff, no slop. Just work that compounds, measured weekly, explained in plain Hindi-English, and shipped like software.</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="tb-meta">
+        <div class="role">04 · MONO / METADATA</div>
+        <div class="fam">JetBrains Mono</div>
+        <div class="spec">Labels, timestamps, UI chrome, data callouts. Always uppercase, 10–13 px, tracked +14–18%.</div>
+        <div class="weights"><span class="star">400 ★</span><span class="star">500 ★</span><span>700</span></div>
+      </div>
+      <div class="tb-sample">
+        <div class="mono-list">
+          [ 001 ] · CAMPAIGN · PUSHKAR LAUNCH<br/>
+          [ 002 ] · IMPRESSIONS · 4.2M+<br/>
+          [ 003 ] · CTR · 6.8% · Q2 · FY26<br/>
+          [ 004 ] · STATUS · SHIPPED · AJMER
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee reverse">
+  <div class="track">
+    <span>VOICE</span><span>BOLD</span><span>CINEMATIC</span><span>CONFIDENT</span><span>USEFUL</span><span>LOUD</span><span>BHARAT-FIRST</span><span>NO FILLER · NO FLUFF · NO SLOP</span>
+    <span>VOICE</span><span>BOLD</span><span>CINEMATIC</span><span>CONFIDENT</span><span>USEFUL</span><span>LOUD</span><span>BHARAT-FIRST</span><span>NO FILLER · NO FLUFF · NO SLOP</span>
+  </div>
+</div>
+
+<!-- ======= 04 VOICE ======= -->
+<section class="sec" id="voice">
+  <div class="sec-head">
+    <div>
+      <div class="num">04 / VOICE</div>
+      <div class="title">We don't <span class="serif">whisper</span><br/>in <em>a market this loud.</em></div>
+    </div>
+    <div class="right">4 PILLARS · DO &amp; DON'T<br/><b>Written for Bharat</b></div>
+  </div>
+
+  <div class="voice-4">
+    <div class="vcard a">
+      <div class="num">PILLAR 01</div>
+      <div class="word"><span class="serif">be</span><br/>BOLD<span style="color:var(--blue-l)">.</span></div>
+      <div class="desc">Say it once, say it sharp. No hedge words. Growth is a decision, not a maybe-if-then.</div>
+      <div class="badge">I · II · III</div>
+    </div>
+    <div class="vcard b">
+      <div class="num">PILLAR 02</div>
+      <div class="word"><span class="serif">stay</span><br/>CINEMATIC<span style="color:var(--sand)">.</span></div>
+      <div class="desc">Every line has a frame. Wide, then close, then gone. The camera is on a crane.</div>
+      <div class="badge">IV · V · VI</div>
+    </div>
+    <div class="vcard c">
+      <div class="num">PILLAR 03</div>
+      <div class="word"><span class="serif">sound</span><br/>CONFIDENT<span style="color:var(--ink)">.</span></div>
+      <div class="desc">We know Bharat. Hindi rhythm, English precision. We localise — we don't translate.</div>
+      <div class="badge">VII · VIII · IX</div>
+    </div>
+    <div class="vcard d">
+      <div class="num">PILLAR 04</div>
+      <div class="word"><span class="serif">be</span><br/>USEFUL<span style="color:var(--coral)">.</span></div>
+      <div class="desc">Confidence without numbers is noise. Every claim earns a receipt — CTR, CAC, GMV, or a case-study link.</div>
+      <div class="badge">X · XI · XII</div>
+    </div>
+  </div>
+
+  <div class="voice-do">
+    <div class="vdo yes">
+      <div class="h">DO · WRITE LIKE THIS</div>
+      <ul>
+        <li>"Your next 10 crore is a campaign away."</li>
+        <li>"Stop boosting posts. Start owning feeds."</li>
+        <li>"Bharat scrolls in nine languages. We write in all nine."</li>
+        <li>"Performance — but make it cinematic."</li>
+      </ul>
+    </div>
+    <div class="vdo no">
+      <div class="h">DON'T · AVOID THIS</div>
+      <ul>
+        <li>"Let's explore synergies in the digital space."</li>
+        <li>"We're a 360° solution provider for all your needs."</li>
+        <li>"Leverage cutting-edge AI-powered dynamics."</li>
+        <li>"Take your brand to the next level! 🚀✨"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="manifesto">
+    <div class="label" style="color:var(--blue);margin-bottom:24px">THE MANIFESTO · ONE-LINER · SIGNED OFF</div>
+    <p class="quote"><span class="serif">we build</span><br/><em>loud brands</em> for<br/>founders who are<br/>done <span class="stroke">whispering</span><span class="blue">.</span></p>
+    <div class="attr">— GROVIADIGI HOUSE STYLE · AJMER · 04 · 2026</div>
+  </div>
+</section>
+
+<div class="marquee huge reverse teal-bar">
+  <div class="track">
+    <span>INSTAGRAM · 9 GRID</span><span style="color:var(--sand)">LINKEDIN · COMPANY PAGE</span><span>FEED IS A STOREFRONT</span>
+    <span>INSTAGRAM · 9 GRID</span><span style="color:var(--sand)">LINKEDIN · COMPANY PAGE</span><span>FEED IS A STOREFRONT</span>
+  </div>
+</div>
+
+<!-- ======= 05 SOCIAL ======= -->
+<section class="sec" id="social">
+  <div class="sec-head">
+    <div>
+      <div class="num">05 / SOCIAL</div>
+      <div class="title">A feed that <span class="serif">feels</span><br/>like <em>one film.</em></div>
+    </div>
+    <div class="right">INSTAGRAM · LINKEDIN<br/><b>9 tiles · 1 banner · 1 template</b></div>
+  </div>
+
+  <div class="label" style="padding:0 56px;max-width:1400px;margin:0 auto 16px;color:var(--blue)">A · INSTAGRAM · 3×3 CONTENT SYSTEM</div>
+  <div class="ig-row">
+    <div class="phone">
+      <div class="prof">
+        <div class="av">G<span class="d">d</span></div>
+        <div>
+          <div class="handle">@groviadigi <span>✦</span></div>
+          <div class="bio"><b>Performance × brand</b> — Ajmer, Rajasthan<br/>We make Indian founders <b>loud</b>. ↓ playbook<br/>groviadigi.co</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div><b>248</b>Posts</div>
+        <div><b>84.2K</b>Followers</div>
+        <div><b>312</b>Following</div>
+      </div>
+      <div class="hl-row">
+        <div class="hl"><div class="c" style="background:var(--teal);color:var(--cream);border-color:var(--teal)">CASE</div><span>Work</span></div>
+        <div class="hl"><div class="c" style="background:var(--ink);color:var(--blue-l);border-color:var(--ink)">Gd.</div><span>About</span></div>
+        <div class="hl"><div class="c" style="background:var(--coral);color:var(--cream);border-color:var(--coral)">₹₹</div><span>ROAS</span></div>
+        <div class="hl"><div class="c" style="background:var(--cream-2);color:var(--ink)">101</div><span>Playbook</span></div>
+        <div class="hl"><div class="c" style="background:var(--blue);color:var(--cream);border-color:var(--blue)">IRL</div><span>Events</span></div>
+      </div>
+      <div class="tabs"><span class="on">▦ POSTS</span><span>⟳ REELS</span><span>⎘ TAGGED</span></div>
+      <div class="ig-9">
+        <div class="tile teal"><div class="n">01</div><div class="b">Grow<span style="color:var(--blue-l)">.</span><br/>Loud<span style="color:var(--sand)">.</span></div><div class="c">QUOTE · BRAND</div></div>
+        <div class="tile blue"><div class="n">02</div><div class="b" style="font-size:13px">CAC dropped</div><div class="b" style="font-size:36px">−42<em class="serif">%</em></div><div class="c">D2C · Q1</div></div>
+        <div class="tile ptrn teal"><div class="n">03</div><div class="b">Reel<br/>drop<span style="color:var(--sand)">.</span></div><div class="c">0:15 · NEW</div></div>
+
+        <div class="tile cream"><div class="n">04</div><div class="b">3 rules<br/>of <em class="serif" style="color:var(--coral)">hooks.</em></div><div class="c">CAROUSEL 1/5</div></div>
+        <div class="tile coral"><div class="n">05</div><div class="b">Hype<em class="serif">,</em><br/>decoded.</div><div class="c">PLAYBOOK</div></div>
+        <div class="tile ink"><div class="n">06</div><div class="b" style="font-family:var(--mono);font-weight:500;font-size:9px;color:var(--blue-l);letter-spacing:.1em;line-height:1.9">[01] HOOK<br/>[02] HOLD<br/>[03] HIT<br/>[04] LOOP</div><div class="c">FRAMEWORK</div></div>
+
+        <div class="tile blue"><div class="n">07</div><div class="b">B2B<br/>≠ <em class="serif">boring.</em></div><div class="c">OPINION</div></div>
+        <div class="tile ink"><div class="n">08</div><div class="b" style="font-size:12px;color:rgba(241,237,226,.7)">Client spotlight</div><div class="b" style="font-size:24px">Kushal<br/>Kitchens.</div><div class="c" style="color:var(--blue-l)">D2C · AJMER</div></div>
+        <div class="tile sand"><div class="n">09</div><div class="b">Your<br/>turn<span style="color:var(--coral)">.</span></div><div class="c">DM US →</div></div>
+      </div>
+    </div>
+
+    <div class="ig-notes">
+      <h3 class="head">One screen. <span class="serif">nine</span><br/>signals. <em>One show.</em></h3>
+      <p>The grid is a show-reel. Every row reads left-to-right as a three-beat story — <b>hook · proof · punchline</b>. Diagonals alternate <b class="teal">Teal</b>, <b>Ink</b>, <b class="blue">Blue</b> so no two identical tiles sit side-by-side.</p>
+
+      <div class="ig-stats">
+        <div class="is"><div class="n">84<em>K</em></div><div class="l">Followers FY26 goal</div></div>
+        <div class="is"><div class="n">6.8<em>%</em></div><div class="l">Avg. engagement rate</div></div>
+        <div class="is"><div class="n">3×<em>/wk</em></div><div class="l">Cadence · carousel + reel + quote</div></div>
+      </div>
+
+      <div class="legend">
+        <div class="lr"><div class="chip2" style="background:var(--teal)"></div><div><div class="k">FOUND</div><div class="v">Teal · quote</div></div></div>
+        <div class="lr"><div class="chip2" style="background:var(--blue)"></div><div><div class="k">SIGNAL</div><div class="v">Blue · proof</div></div></div>
+        <div class="lr"><div class="chip2" style="background:var(--cream-2);border:1px solid var(--line)"></div><div><div class="k">PAPER</div><div class="v">Cream · carousel</div></div></div>
+        <div class="lr"><div class="chip2" style="background:var(--coral)"></div><div><div class="k">HYPE</div><div class="v">Coral · campaign</div></div></div>
+        <div class="lr"><div class="chip2" style="background:var(--ink)"></div><div><div class="k">GROUND</div><div class="v">Ink · opinion</div></div></div>
+        <div class="lr"><div class="chip2" style="background:var(--sand)"></div><div><div class="k">WARM</div><div class="v">Sand · IRL</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="label" style="padding:80px 56px 16px;max-width:1400px;margin:0 auto;color:var(--blue)">B · LINKEDIN · COMPANY PAGE + POST</div>
+  <div class="li-wrap">
+    <div>
+      <div class="li-card">
+        <div class="li-banner">
+          <div class="bh">Grow<em>.</em><br/><span class="serif">loud.</span> <em>Confident.</em></div>
+          <div class="bside">
+            PERFORMANCE × BRAND · SINCE 2024<br/>
+            <div class="big">Ajmer · Rajasthan · India</div>
+            <div style="margin-top:12px"><span class="dot"></span> HIRING · 4 ROLES OPEN</div>
+          </div>
+        </div>
+        <div class="li-body">
+          <div class="li-av"><span class="gwm"><span class="g1">Grovia</span><span class="g2">digi</span></span></div>
+          <div class="li-name">Groviadigi <span class="verify">✓</span></div>
+          <div class="li-title">Digital marketing agency · Performance + Brand for Indian founders.</div>
+          <div class="li-meta"><span>AJMER · IN</span><span>11—50 PEOPLE</span><span>2,840 FOLLOWERS</span><span>FOUNDED 2024</span></div>
+          <div class="li-cta">
+            <button class="primary">+ FOLLOW</button>
+            <button class="ghost">VISIT SITE</button>
+            <button class="ghost">MESSAGE</button>
+          </div>
+
+          <div class="li-post">
+            <div class="p-head">
+              <div class="av">G<span class="d">d</span></div>
+              <div><div class="nm">Groviadigi</div><div class="sub">Digital marketing agency · 2,840 followers · 4h · 🌐</div></div>
+            </div>
+            <div class="body">
+              <span class="hl">We stopped chasing reach. Revenue came anyway.</span>
+              One D2C client. 90 days. ₹42L in paid-media spend moved from "awareness" into bottom-funnel creative. Result: 3.1× ROAS, −42% CAC, and a content library they actually own.<br/><br/>
+              Here's the playbook → <span class="tag">#IndianStartups</span> <span class="tag">#PerformanceMarketing</span> <span class="tag">#Bharat</span>
+            </div>
+            <div class="img">
+              <div class="k">[ CASE STUDY · D2C · Q1 FY26 ]</div>
+              <div class="big">3.1×<br/><span class="serif">roas.</span></div>
+              <div class="bott"><span>GROVIADIGI · AJMER</span><span>90 DAYS · ₹42L SPEND</span></div>
+            </div>
+            <div class="engage"><span>♥ <b>482</b> · 💬 36</span><span>22 REPOSTS · 3,204 IMPRESSIONS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="li-side">
+      <div class="chip dark">
+        <h4>Banner spec</h4>
+        <div class="row"><span>Size</span><b>1584 × 396</b></div>
+        <div class="row"><span>Ground</span><b>Groviadigi Teal</b></div>
+        <div class="row"><span>Type</span><b>Archivo 900 + Instrument italic</b></div>
+        <div class="row"><span>Accent</span><b>Digi Blue — max 15%</b></div>
+      </div>
+      <div class="chip">
+        <h4>Avatar + profile</h4>
+        <p>Use the two-tone wordmark on cream — <b>never</b> flatten. Headline ≤ 90 chars. CTA always "Visit site".</p>
+      </div>
+      <div class="chip">
+        <h4>Post template</h4>
+        <p><b>Hook · receipt · framework.</b> Branded image card — never raw screenshots. Max 3 hashtags. Capitalise #Bharat.</p>
+      </div>
+      <div class="chip dark">
+        <h4>Cadence</h4>
+        <div class="row"><span>MON</span><b>Opinion / hot-take</b></div>
+        <div class="row"><span>WED</span><b>Case study · receipts</b></div>
+        <div class="row"><span>FRI</span><b>Playbook · framework</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="track">
+    <span>WEB 06</span><span class="blue">BUILT TO COMPOUND</span><span>NOT JUST CONVERT</span><span class="blue">DESIGN IS THE STRATEGY</span>
+    <span>WEB 06</span><span class="blue">BUILT TO COMPOUND</span><span>NOT JUST CONVERT</span><span class="blue">DESIGN IS THE STRATEGY</span>
+  </div>
+</div>
+
+<!-- ======= 06 WEB ======= -->
+<section class="sec" id="web">
+  <div class="sec-head">
+    <div>
+      <div class="num">06 / WEBSITE</div>
+      <div class="title">Colour, <span class="serif">mapped</span><br/>to <em>interface.</em></div>
+    </div>
+    <div class="right">NAV · HERO · CARD · CTA · FOOTER<br/><b>groviadigi.co · homepage</b></div>
+  </div>
+
+  <div class="web-wrap">
+    <div class="web-mock">
+      <div class="web-nav">
+        <div class="left">
+          <div class="gwm on-dark" style="font-size:22px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+          <div class="links"><span>WORK</span><span>SERVICES</span><span>WRITING</span><span>ABOUT</span></div>
+        </div>
+        <div class="right">
+          <div class="pin"><span class="pulse" style="width:6px;height:6px"></span>AJMER · 10:42 IST</div>
+          <div class="cta">Start a project →</div>
+        </div>
+      </div>
+      <div class="web-hero">
+        <div class="eye"><span class="pulse" style="width:6px;height:6px;background:var(--sand)"></span>PERFORMANCE × BRAND · EST. 2024</div>
+        <h2>Built to <em>compound</em><br/><span class="serif">not just</span> convert<span style="color:var(--sand)">.</span></h2>
+        <p class="sub">We ship the full marketing machine — creative, media, and data — for founders who treat India like the home market it actually is.</p>
+        <div class="ctas">
+          <div class="p">See the work →</div>
+          <div class="g">Book a 20-min call</div>
+        </div>
+        <div class="logos">
+          TRUSTED BY —
+          <span class="l">Kushal</span><span class="l">Sambhav</span><span class="l">Tatva</span><span class="l">Rustic Wheel</span><span class="l">Daksha</span>
+        </div>
+      </div>
+      <div class="web-sec">
+        <h3>Three disciplines. <em>One</em> flywheel.</h3>
+        <div class="cards">
+          <div class="wcard a">
+            <div class="num">01 / CREATIVE</div>
+            <h4>Stories that earn the scroll.</h4>
+            <p>Reels, carousels, brand films — written for the Indian feed, never a global template.</p>
+            <div class="arr"></div>
+          </div>
+          <div class="wcard b">
+            <div class="num">02 / MEDIA</div>
+            <h4>Spend that pays rent.</h4>
+            <p>Meta · Google · DV360 · Amazon — with weekly receipts, not monthly theatre.</p>
+            <div class="arr"></div>
+          </div>
+          <div class="wcard c">
+            <div class="num">03 / DATA</div>
+            <h4>A dashboard you'll actually open.</h4>
+            <p>CAC · LTV · creative ranking · next-week's bets — one view, owned by you.</p>
+            <div class="arr"></div>
+          </div>
+        </div>
+      </div>
+      <div class="web-footer">
+        <div class="top">
+          <div>
+            <div class="big">Let's make<br/>your market <em>loud<span class="serif">.</span></em></div>
+            <div style="margin-top:22px" class="label" style="color:rgba(241,237,226,.55)">HELLO@GROVIADIGI.CO · +91 98200 00000</div>
+          </div>
+          <div><h5>Studio</h5><ul><li>Work</li><li>Services</li><li>Clients</li><li>Playbook</li></ul></div>
+          <div><h5>Office</h5><ul><li>Ajmer HQ</li><li>Jaipur · Rajasthan</li><li>Remote · IN</li><li>Partnerships</li></ul></div>
+          <div><h5>Socials</h5><ul><li>Instagram</li><li>LinkedIn</li><li>YouTube</li><li>Substack</li></ul></div>
+        </div>
+        <div class="bot">
+          <span>© GROVIADIGI LABS PVT. LTD. 2026</span>
+          <span>MADE IN AJMER · FOR THE INDIAN INTERNET</span>
+          <span>V 1.0 · BOOK 001</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cu-wrap">
+      <div class="cu"><div class="sw2" style="background:var(--ink)"></div><div class="r">NAVBAR</div><div class="n">Midnight Ink + Blue CTA</div></div>
+      <div class="cu"><div class="sw2" style="background:linear-gradient(135deg,var(--teal) 0 60%,var(--blue) 60% 100%)"></div><div class="r">HERO</div><div class="n">Teal ground · Blue accent type</div></div>
+      <div class="cu"><div class="sw2" style="background:var(--blue)"></div><div class="r">PRIMARY CTA</div><div class="n">Blue pill · Cream label</div></div>
+      <div class="cu"><div class="sw2" style="background:var(--cream)"></div><div class="r">BODY</div><div class="n">Aravalli Cream · editorial</div></div>
+      <div class="cu"><div class="sw2" style="background:var(--ink);border-top:4px solid var(--blue)"></div><div class="r">FOOTER</div><div class="n">Ink · Blue headings</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee fast reverse">
+  <div class="track">
+    <span>PATTERN 07</span><span class="blue">SUBTLE WEAVE</span><span>LOUD G-LOOP</span><span class="blue">AMBIENT GLOW</span><span>MERCH · PACKAGING · IRL</span>
+    <span>PATTERN 07</span><span class="blue">SUBTLE WEAVE</span><span>LOUD G-LOOP</span><span class="blue">AMBIENT GLOW</span><span>MERCH · PACKAGING · IRL</span>
+  </div>
+</div>
+
+<!-- ======= 07 PATTERN ======= -->
+<section class="sec" id="pattern">
+  <div class="sec-head">
+    <div>
+      <div class="num">07 / PATTERN</div>
+      <div class="title">A quiet <em>weave</em><br/><span class="serif">behind</span> the loud.</div>
+    </div>
+    <div class="right">3 TEXTURES · SUBTLE · BOLD · AMBIENT<br/><b>For screen + packaging + merch</b></div>
+  </div>
+
+  <div class="pat-wrap">
+    <div class="pbox pat-a">
+      <div class="pt" style="color:var(--sand)">A · DIAGONAL WEAVE</div>
+      <div class="fg"></div>
+      <div class="pn" style="color:rgba(241,237,226,.6)">DEFAULT · BODY &amp; SECTION FILLS</div>
+    </div>
+    <div class="pbox pat-b">
+      <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+        <defs>
+          <pattern id="star" x="0" y="0" width="72" height="72" patternUnits="userSpaceOnUse">
+            <g fill="#0B5E7A" opacity=".85">
+              <path d="M36 20 L38 34 L52 36 L38 38 L36 52 L34 38 L20 36 L34 34 Z"/>
+            </g>
+            <circle cx="10" cy="10" r="2" fill="#1FA9D6" opacity=".7"/>
+            <circle cx="62" cy="62" r="2" fill="#1FA9D6" opacity=".7"/>
+          </pattern>
+        </defs>
+        <rect width="400" height="400" fill="url(#star)"/>
+      </svg>
+      <div class="pt" style="color:var(--teal)">B · ✦ STAR MOTIF</div>
+      <div class="pn" style="color:rgba(14,27,36,.5)">CAMPAIGN · MERCH · PACKAGING</div>
+    </div>
+    <div class="pbox pat-c">
+      <div class="noise"></div>
+      <div class="pt" style="color:var(--blue-l)">C · AMBIENT GLOW</div>
+      <div class="pn" style="color:rgba(241,237,226,.5)">AMBIENT · HERO BACKGROUNDS</div>
+    </div>
+  </div>
+
+  <div class="pat-notes">
+    <div class="pnc"><div class="h">USAGE</div><p>Patterns sit under type, never over it. Opacity never exceeds 12% on cream, 20% on ink. If a section feels busy, drop the pattern entirely — the grid is enough rhythm.</p></div>
+    <div class="pnc"><div class="h">PAIRINGS</div><p>A on teal for editorial, B on cream for merch + shipping tape + tote bags, C behind hero lines only — always soft, always off-centre.</p></div>
+    <div class="pnc"><div class="h">SPOT USE</div><p>The ✦ star motif pulled from the wordmark can be cropped into campaign frames, Instagram story backgrounds, and full-bleed on OOH placements.</p></div>
+  </div>
+</section>
+
+<div class="marquee teal-bar">
+  <div class="track">
+    <span>STATIONERY 08</span><span>BUSINESS CARD</span><span>LETTERHEAD</span><span>350 GSM · MATTE</span><span>BLUE SPOT · DEBOSS</span><span>MADE IN AJMER</span>
+    <span>STATIONERY 08</span><span>BUSINESS CARD</span><span>LETTERHEAD</span><span>350 GSM · MATTE</span><span>BLUE SPOT · DEBOSS</span><span>MADE IN AJMER</span>
+  </div>
+</div>
+
+<!-- ======= 08 STATIONERY ======= -->
+<section class="sec" id="stationery">
+  <div class="sec-head">
+    <div>
+      <div class="num">08 / STATIONERY</div>
+      <div class="title">The brand <span class="serif">on</span><br/><em>paper.</em></div>
+    </div>
+    <div class="right">BUSINESS CARD · LETTERHEAD<br/><b>Matte 350gsm · blue spot · deboss</b></div>
+  </div>
+
+  <div class="stat-wrap">
+    <div class="bc-stack">
+      <div class="bc front">
+        <div class="row">
+          <div class="gwm" style="font-size:22px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+          <div class="tag" style="color:var(--ink-3)">+91 · AJMER</div>
+        </div>
+        <div class="bot">
+          <div>
+            <div class="nm">Aarav Sharma</div>
+            <div class="ti" style="color:var(--ink-3)">FOUNDER · HEAD OF GROWTH</div>
+          </div>
+          <div class="ct" style="color:var(--ink-3)">
+            AARAV@GROVIADIGI.CO<br/>
+            +91 98290 84210<br/>
+            GROVIADIGI.CO
+          </div>
+        </div>
+      </div>
+      <div class="bc back">
+        <div class="row">
+          <div class="tag">RECTO · 90 × 55 MM · 350GSM</div>
+          <div class="tag">MATTE + BLUE SPOT</div>
+        </div>
+        <div class="huge">G<em>d</em><span class="serif" style="color:var(--blue-l);font-weight:400">.</span></div>
+        <div class="bot">
+          <div class="tag">GROW · CONFIDENT · INDIAN</div>
+          <div class="tag">EST. 2024 · AJMER</div>
+        </div>
+      </div>
+      <div class="bc-spec">
+        <div class="h">CARD SPEC</div>
+        <ul>
+          <li>90 × 55 mm · rounded 3 mm</li>
+          <li>350 gsm Munken Pure matte</li>
+          <li>Front — 4C on cream base</li>
+          <li>Back — teal flood · debossed "Gd."</li>
+          <li>Edge paint — Digi Blue on all 4 sides</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="letter">
+      <div class="bar"></div>
+      <div class="hd">
+        <div>
+          <div class="gwm" style="font-size:32px"><span class="g1">Grovia</span><span class="g2">digi</span></div>
+          <div class="label" style="margin-top:6px">LABS PVT. LTD. · CIN U72900RJ2024PTC000000</div>
+        </div>
+        <div class="meta">
+          2ND FLR · KUTCHEHRY ROAD<br/>
+          CIVIL LINES · AJMER<br/>
+          RAJASTHAN 305001 · INDIA<br/>
+          HELLO@GROVIADIGI.CO
+        </div>
+      </div>
+      <div class="date">20 · APRIL · 2026 &nbsp;·&nbsp; REF / GD-2026-0412</div>
+      <div class="body">
+        <p class="greet">Dear Ms. <em>Iyer,</em></p>
+        <p>Thanks for the call on Tuesday — this note is the short version of what we agreed. We'll take Kushal Kitchens from "good Instagram" to a measured, bottom-funnel machine. Ninety days. One dashboard. Weekly receipts.</p>
+        <p>We've attached a one-page scope, a proposed media split across Meta and Google, and a creative brief your team can sign off by Friday. The goal is simple — land CAC under ₹420 without leaning on discounts.</p>
+        <p>If anything in the attached doesn't feel right, reply to this thread. If it does — we start Monday.</p>
+        <p class="sig">— Aarav Sharma</p>
+        <div class="label">FOUNDER · GROVIADIGI LABS</div>
+      </div>
+      <div class="watermark">Gd.</div>
+      <div class="footer">
+        <span>GROVIADIGI.CO</span>
+        <span>GROW · CONFIDENT · INDIAN</span>
+        <span>PAGE 01 / 01</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee huge ink-bar">
+  <div class="track">
+    <span>END OF BOOK 001</span><span style="color:var(--blue-l)">GROW LOUD CONFIDENT</span><span>GROVIADIGI ®</span>
+    <span>END OF BOOK 001</span><span style="color:var(--blue-l)">GROW LOUD CONFIDENT</span><span>GROVIADIGI ®</span>
+  </div>
+</div>
+
+<!-- ======= CLOSING ======= -->
+<section class="book-end">
+  <div class="eyebrow">END OF BOOK · 001 · AJMER · APR 2026</div>
+  <div class="mk">
+    GROW<span class="blue">.</span><br/>
+    <span class="serif">loud.</span><br/>
+    <em>CONFIDENT<span style="color:var(--teal)">.</span></em>
+  </div>
+  <div class="credit">GROVIADIGI BRAND GUIDELINES · V 3.0 · APR 2026 · MADE IN AJMER · RAJASTHAN · INDIA</div>
+</section>
+
+</body>
+</html>

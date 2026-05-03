@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const services = [
   {
     n: "01",
@@ -25,7 +27,7 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Services = memo(() => {
   return (
     <section id="services" className="bg-paper py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
@@ -34,38 +36,46 @@ const Services = () => {
             <p className="font-mono-tag text-ink-muted reveal">[ 02 — Services ]</p>
           </div>
           <div className="md:col-span-9">
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.95] tracking-tight text-ink reveal">
+            <h2 className="font-display text-5xl md:text-7xl text-teal reveal">
               Four disciplines.
-              <span className="italic font-light text-ink-soft"> One system.</span>
+              <span className="font-serif text-blue ml-3"> One system.</span>
             </h2>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-px bg-ink/10 border border-ink/10">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {services.map((s) => (
-            <article
-              key={s.n}
-              className="group relative bg-paper p-8 md:p-12 transition-colors duration-500 hover:bg-paper-deep reveal"
-            >
-              <div className="flex items-baseline justify-between mb-10">
-                <span className="font-mono-tag text-ink-muted">{s.n}</span>
-                <span className="h-2 w-2 rounded-full bg-ink/20 group-hover:bg-bright transition-colors" />
-              </div>
-              <h3 className="font-display text-3xl md:text-4xl text-ink mb-4">{s.title}</h3>
-              <p className="text-ink-soft text-base md:text-lg leading-relaxed mb-8 max-w-md">{s.body}</p>
-              <ul className="flex flex-wrap gap-2">
-                {s.items.map((i) => (
-                  <li key={i} className="font-mono-tag border border-ink/15 px-3 py-1 rounded-full text-ink-soft">
-                    {i}
-                  </li>
-                ))}
-              </ul>
-            </article>
+            <div key={s.n} className="reveal">
+              <article
+                className="group relative h-full bg-paper border border-ink/10 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-out hover:bg-paper-deep dark:hover:bg-paper hover:scale-[1.03] hover:z-10 hover:shadow-2xl dark:hover:shadow-white/10 dark:hover:border-white/30 cursor-pointer interactive-cursor gpu-layer"
+              >
+                <div className="p-8 md:p-12">
+                  <div className="flex items-baseline justify-between mb-10">
+                    <span className="font-mono-tag text-ink-muted">{s.n}</span>
+                    <span className="h-2 w-2 rounded-full bg-ink/20 group-hover:bg-bright transition-colors" />
+                  </div>
+                  <h3 className="font-display text-3xl md:text-4xl text-ink mb-4">{s.title}</h3>
+                  <p className="text-ink-soft text-base md:text-lg leading-relaxed mb-8 max-w-md">{s.body}</p>
+                  <ul className="flex flex-wrap gap-2">
+                    {s.items.map((i) => (
+                      <li
+                        key={i}
+                        className="font-mono-tag border border-ink/15 px-3 py-1 rounded-full text-ink-soft transition-all duration-300 hover:scale-110 hover:text-ink hover:border-ink cursor-pointer"
+                      >
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
+});
+
+Services.displayName = "Services";
 
 export default Services;

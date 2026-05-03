@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
+        display: ['Archivo', 'sans-serif'],
+        serif: ['Instrument Serif', 'serif'],
+        mono: ['JetBrains Mono', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -23,6 +25,19 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+        },
+        blue: {
+          DEFAULT: "hsl(var(--blue))",
+          light: "hsl(var(--blue-l))",
+        },
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+        },
+        sand: {
+          DEFAULT: "hsl(var(--sand))",
+        },
         paper: {
           DEFAULT: "hsl(var(--paper))",
           deep: "hsl(var(--paper-deep))",
@@ -33,8 +48,8 @@ export default {
           muted: "hsl(var(--ink-muted))",
         },
         bright: {
-          DEFAULT: "hsl(var(--accent-bright))",
-          foreground: "hsl(var(--accent-bright-foreground))",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         invert: {
           DEFAULT: "hsl(var(--invert-bg))",
