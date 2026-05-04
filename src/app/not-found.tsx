@@ -9,13 +9,13 @@ export default function NotFound() {
           404<span className="text-bright">.</span>
         </h1>
         <p className="text-xl md:text-2xl text-ink-soft mb-10 max-w-md mx-auto leading-relaxed">
-          This page doesn't exist — but the studio does.
+          Hmm. This page doesn&apos;t exist — but our growth strategies for your business definitely do.
         </p>
         <Link
           href="/"
           className="pill-cta text-base inline-flex"
         >
-          Return home
+          Take me home
           <span aria-hidden>→</span>
         </Link>
       </div>
