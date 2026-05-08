@@ -3,10 +3,10 @@
 import { useState, useEffect, memo, useCallback } from "react";
 
 const steps = [
-  { n: "I", t: "Listen", d: "We start with the business — not the brief. Audits, interviews, market truth." },
-  { n: "II", t: "Frame", d: "We define the one move that matters this quarter and the system around it." },
-  { n: "III", t: "Make", d: "Cross-discipline pods ship work weekly — strategy, design, media, content in one room." },
-  { n: "IV", t: "Compound", d: "We measure what moves the P&L, kill what doesn't, and reinvest in what does." },
+  { n: "01", t: "Listen", d: "Every engagement starts with us asking the right questions. Your goals, your customers, your numbers, your gaps. No assumptions." },
+  { n: "02", t: "Strategise", d: "We build a custom roadmap not a template. Channel mix, content pillars, KPIs, and a 90-day execution plan you can actually hold us to." },
+  { n: "03", t: "Execute", d: "Our team runs the campaigns, builds the systems, ships the content. You get weekly updates and real dashboards." },
+  { n: "04", t: "Optimise & Scale", d: "We measure what works, kill what doesn't, and double down on the winners. Growth isn't a one-time launch it's a compounding system." },
 ];
 
 const Process = memo(() => {
@@ -32,7 +32,7 @@ const Process = memo(() => {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 relative z-10">
         <div className="grid md:grid-cols-12 gap-10 mb-20 md:mb-28">
           <div className="md:col-span-3">
-            <p className="font-mono-tag text-invert-fg-muted reveal">[ 03 — Process ]</p>
+            <p className="font-mono-tag text-invert-fg-muted reveal">[ 04 — Process ]</p>
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">

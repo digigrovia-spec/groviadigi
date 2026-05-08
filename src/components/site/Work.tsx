@@ -17,7 +17,7 @@ const offers = [
     n: "03",
     title: "Growth Partner",
     timing: "Quarterly",
-    body: "Embedded studio. Strategy, design, media and content under one retainer — measured against revenue, not hours.",
+    body: "Embedded studio. Strategy, design, media and content under one retainer measured against revenue, not hours.",
   },
 ];
 
@@ -27,7 +27,7 @@ const Work = memo(() => {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10 mb-20 md:mb-28">
           <div className="md:col-span-3">
-            <p className="font-mono-tag text-ink-muted reveal">[ 04 — Ways to work ]</p>
+            <p className="font-mono-tag text-ink-muted reveal">[ 05 — Ways to work ]</p>
           </div>
           <div className="md:col-span-9 flex items-end justify-between gap-10">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">

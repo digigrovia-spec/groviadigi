@@ -46,9 +46,14 @@ const Contact = memo(() => {
           <div className="md:col-span-12">
             <p className="font-mono-tag text-invert-fg-muted reveal mb-8">[ 08 — Start ]</p>
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
-              Let's build something
-              <span className="font-serif text-blue ml-3"> that compounds.</span>
+              Let&apos;s build something{" "}
+              <span className="font-serif text-blue">extraordinary together.</span>
             </h2>
+            <p className="mt-8 max-w-2xl text-invert-fg-soft text-lg md:text-xl leading-relaxed font-sans reveal">
+              Whether you&apos;re launching your first campaign or rebuilding your entire 
+              digital presence we&apos;re ready when you are. Send us a note. 
+              We reply within 24 hours.
+            </p>
           </div>
         </div>
 
@@ -58,7 +63,7 @@ const Contact = memo(() => {
               <form onSubmit={onSubmit} className="md:col-span-7 space-y-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <label className="block">
-                    <span className="font-mono-tag text-invert-fg-muted">Name</span>
+                    <span className="font-mono-tag text-invert-fg-muted">Your Name</span>
                     <input
                       required
                       name="name"
@@ -80,41 +85,87 @@ const Contact = memo(() => {
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
                   <label className="block">
-                    <span className="font-mono-tag text-invert-fg-muted">Company</span>
+                    <span className="font-mono-tag text-invert-fg-muted">Phone / WhatsApp</span>
                     <input
-                      name="company"
-                      type="text"
+                      required
+                      name="phone"
+                      type="tel"
                       className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
-                      placeholder="Where you work"
+                      placeholder="+91..."
                     />
                   </label>
                   <label className="block">
-                    <span className="font-mono-tag text-invert-fg-muted">Designation</span>
+                    <span className="font-mono-tag text-invert-fg-muted">Business / Brand Name</span>
                     <input
-                      name="designation"
+                      required
+                      name="company"
                       type="text"
                       className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
-                      placeholder="Your role"
+                      placeholder="Your brand"
                     />
                   </label>
                 </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <label className="block">
+                    <span className="font-mono-tag text-invert-fg-muted">Industry</span>
+                    <select
+                      name="industry"
+                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg focus:border-bright outline-none transition-colors appearance-none"
+                    >
+                      <option value="restaurants" className="bg-invert text-invert-fg">Restaurants & Food</option>
+                      <option value="gyms" className="bg-invert text-invert-fg">Gyms & Fitness</option>
+                      <option value="jewellery" className="bg-invert text-invert-fg">Jewellery & Lifestyle</option>
+                      <option value="food-manufacturing" className="bg-invert text-invert-fg">Food Manufacturing</option>
+                      <option value="travel" className="bg-invert text-invert-fg">Travel Agencies</option>
+                      <option value="startup-sme" className="bg-invert text-invert-fg">Startup / SME</option>
+                      <option value="other" className="bg-invert text-invert-fg">Other</option>
+                    </select>
+                  </label>
+                  <label className="block">
+                    <span className="font-mono-tag text-invert-fg-muted">Monthly Budget</span>
+                    <select
+                      name="budget"
+                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg focus:border-bright outline-none transition-colors appearance-none"
+                    >
+                      <option value="under-25k" className="bg-invert text-invert-fg">Under ₹25K</option>
+                      <option value="25k-60k" className="bg-invert text-invert-fg">₹25K – ₹60K</option>
+                      <option value="60k-1.5l" className="bg-invert text-invert-fg">₹60K – ₹1.5L</option>
+                      <option value="1.5l-plus" className="bg-invert text-invert-fg">₹1.5L+</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div className="space-y-4">
+                  <span className="font-mono-tag text-invert-fg-muted block">Services Interested In</span>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {["Social Media", "Paid Ads", "SEO", "GEO", "Email", "Lead Gen", "Web Dev", "AI & CRM"].map(s => (
+                      <label key={s} className="flex items-center gap-2 cursor-pointer group">
+                        <input type="checkbox" name="services" value={s} className="hidden peer" />
+                        <div className="w-4 h-4 border border-invert-fg/20 peer-checked:bg-bright peer-checked:border-bright transition-all" />
+                        <span className="text-sm text-invert-fg/60 group-hover:text-invert-fg transition-colors">{s}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
                 <label className="block">
-                  <span className="font-mono-tag text-invert-fg-muted">The brief</span>
+                  <span className="font-mono-tag text-invert-fg-muted">Tell us about your goals</span>
                   <textarea
                     required
                     name="brief"
                     rows={4}
                     className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none resize-none transition-colors"
-                    placeholder="Tell us what you're trying to move."
+                    placeholder="Tell us what you&apos;re trying to move."
                   />
                 </label>
 
                 <button
                   type="submit"
                   disabled={sending}
-                  className="inline-flex items-center gap-3 rounded-full px-6 py-3 transition-all duration-500 bg-bright text-white font-medium hover:opacity-90 disabled:opacity-60"
+                  className="inline-flex items-center gap-3 rounded-full px-8 py-4 transition-all duration-500 bg-bright text-white font-medium hover:opacity-90 disabled:opacity-60 text-lg"
                 >
-                  {sending ? "Sending…" : "Send the brief"}
+                  {sending ? "Sending…" : "Send My Enquiry"}
                   <span aria-hidden>→</span>
                 </button>
               </form>
@@ -123,10 +174,10 @@ const Contact = memo(() => {
                 <div>
                   <p className="font-mono-tag text-invert-fg-muted mb-3">Direct</p>
                   <a
-                    href="mailto:hello@groviadigi.com"
-                    className="font-display text-2xl md:text-3xl link-underline"
+                    href="mailto:Hello@groviadigi.in"
+                    className="font-display text-base xs:text-lg sm:text-2xl md:text-3xl link-underline whitespace-nowrap"
                   >
-                    hello@groviadigi.com
+                    Hello@groviadigi.in
                   </a>
                 </div>
                 <div>
@@ -134,15 +185,13 @@ const Contact = memo(() => {
                   <p className="text-invert-fg-soft/80 leading-relaxed">
                     Ajmer, Rajasthan
                     <br />
-                    Mon — Fri · 10:00 — 19:00 IST
+                    Mon – Sat · 10:00 – 19:00 IST
                   </p>
                 </div>
                 <div>
-                  <p className="font-mono-tag text-invert-fg-muted mb-3">Booking</p>
-                  <p className="text-invert-fg-soft/80 leading-relaxed">
-                    Open for founding clients.
-                    <br />
-                    Three partners at studio rates.
+                  <p className="font-mono-tag text-invert-fg-muted mb-3">WhatsApp</p>
+                  <p className="text-invert-fg-soft/80 leading-relaxed font-display text-xl">
+                    +91 98290 84210
                   </p>
                 </div>
               </aside>

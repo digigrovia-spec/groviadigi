@@ -3,27 +3,51 @@ import { memo } from "react";
 const services = [
   {
     n: "01",
-    title: "Brand & Identity",
-    body: "Positioning, naming, visual systems and verbal identity that signal premium without shouting.",
-    items: ["Brand strategy", "Visual identity", "Messaging", "Guidelines"],
+    title: "Social Media Marketing",
+    body: "Platform-native content that stops the scroll and starts conversations. Reels, carousels, community management, and brand voice the full ecosystem.",
+    items: ["Reels & Video", "Content Strategy", "Community Mgmt", "Brand Voice"],
   },
   {
     n: "02",
     title: "Performance Marketing",
-    body: "Paid media engineered around incrementality, not vanity. Meta, Google, LinkedIn, programmatic.",
-    items: ["Paid social", "Paid search", "CRO", "Attribution"],
+    body: "High-ROI Meta, Google, and YouTube ads engineered around your sales targets, not vanity metrics. Every rupee tracked. Every click optimised.",
+    items: ["Meta Ads", "Google Ads", "Conversion Ops", "ROI Tracking"],
   },
   {
     n: "03",
-    title: "Content & SEO",
-    body: "Editorial-grade content built around search intent and long-term authority. We compound demand.",
-    items: ["SEO strategy", "Editorial", "Technical SEO", "Link earning"],
+    title: "SEO Search Engine Optimisation",
+    body: "Rank higher. Get found. Stay there. Technical audits, keyword strategy, and authority building that compounds month after month.",
+    items: ["Technical Audit", "Keyword Strategy", "Local SEO", "Content Auth"],
   },
   {
     n: "04",
-    title: "Web & Product",
-    body: "Sites that do real work — fast, accessible, conversion-tuned. Built for growth, designed to last.",
-    items: ["Design", "Development", "Optimization", "Analytics"],
+    title: "GEO Generative Engine Optimisation",
+    body: "The future of search is here. We optimise your brand to appear in ChatGPT, Perplexity, and Google AI Overview answers.",
+    items: ["AI Search Opt", "ChatGPT SEO", "LLM Citations", "Future Proof"],
+  },
+  {
+    n: "05",
+    title: "Email Marketing",
+    body: "From cold outreach to nurture flows strategic email campaigns that turn strangers into subscribers and customers into advocates.",
+    items: ["Cold Outreach", "Drip Campaigns", "Nurture Flows", "Newsletters"],
+  },
+  {
+    n: "06",
+    title: "Lead Generation",
+    body: "End-to-end systems landing pages, lead magnets, and funnels that feed your sales pipeline with qualified prospects.",
+    items: ["Sales Funnels", "Lead Magnets", "Landing Pages", "CRM Sync"],
+  },
+  {
+    n: "07",
+    title: "Website Development",
+    body: "Lightning-fast, mobile-first websites built to perform. From simple business sites to full e-commerce platforms.",
+    items: ["Next.js / React", "E-commerce", "Mobile-first", "Core Vitals"],
+  },
+  {
+    n: "08",
+    title: "AI & CRM Systems",
+    body: "Zoho, HubSpot, and AI-enhanced workflows that auto-capture leads and segment audiences. Your sales machine, on autopilot.",
+    items: ["Zoho / HubSpot", "Workflows", "Sales Auto", "AI Scoring"],
   },
 ];
 
@@ -33,7 +57,7 @@ const Services = memo(() => {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10 mb-20 md:mb-28">
           <div className="md:col-span-3">
-            <p className="font-mono-tag text-ink-muted reveal">[ 02 — Services ]</p>
+            <p className="font-mono-tag text-ink-muted reveal">[ 03 — Services ]</p>
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">

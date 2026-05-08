@@ -3,23 +3,23 @@ import { memo } from "react";
 const principles = [
   {
     n: "01",
-    t: "Outcomes over outputs",
-    d: "We don't bill by the deck. Every engagement ships against a number you'd defend in a board meeting.",
+    t: "Results-First, Always",
+    d: "Vanity metrics don't pay the bills. Every campaign we run is tied directly to your revenue goals. If it doesn't move the needle, we don't do it.",
   },
   {
     n: "02",
-    t: "Founder in the room",
-    d: "No account layer, no junior swap. The people who pitch are the people who build — start to ship.",
+    t: "AI-Augmented Execution",
+    d: "We blend the speed of AI with the strategy of senior marketers. Smarter campaigns. Faster turnaround. Better outcomes.",
   },
   {
     n: "03",
-    t: "Build to compound",
-    d: "Brand, content and performance treated as one system. Each release makes the next one cheaper.",
+    t: "Full-Service Under One Roof",
+    d: "Strategy, creative, ads, SEO, web, automation all of it, one team. No more chasing freelancers or stitching together half-baked work.",
   },
   {
     n: "04",
-    t: "Honest reporting",
-    d: "What worked, what didn't, what we're killing this week. No vanity dashboards.",
+    t: "Local Roots, National Reach",
+    d: "Built in Ajmer. Trusted across India. We understand the Indian market and still bring world-class digital execution.",
   },
 ];
 
@@ -29,18 +29,13 @@ const Results = memo(() => {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10 mb-20">
           <div className="md:col-span-3">
-            <p className="font-mono-tag text-ink-muted mb-6 reveal">[ 05 — What we promise ]</p>
+            <p className="font-mono-tag text-ink-muted mb-6 reveal">[ 06 — Why Grovia Digi ]</p>
           </div>
           <div className="md:col-span-9 mt-4 md:mt-0">
             <h2 className="font-display text-5xl md:text-7xl leading-1 text-teal reveal">
-              No receipts yet.
-              <span className="font-serif text-blue ml-3"> A standard, instead.</span>
+              Why Brands Choose
+              <span className="font-serif text-blue ml-3"> Grovia Digi</span>
             </h2>
-            <p className="mt-8 max-w-2xl text-ink-soft text-lg md:text-xl leading-relaxed reveal">
-              We're a new studio — which means we won't show you someone else's
-              numbers and call them ours. Here's the bar we're holding ourselves
-              to from day one.
-            </p>
           </div>
         </div>
 

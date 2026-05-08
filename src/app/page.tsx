@@ -7,6 +7,7 @@ import { RevealController } from "@/components/ui/reveal-controller";
 // Below-the-fold components — dynamically imported to reduce initial JS bundle.
 // These won't block the hero section from rendering.
 const Services = dynamic(() => import("@/components/site/Services"), { ssr: true });
+const Problem = dynamic(() => import("@/components/site/Problem"), { ssr: true });
 const Process = dynamic(() => import("@/components/site/Process"), { ssr: true });
 const Work = dynamic(() => import("@/components/site/Work"), { ssr: true });
 const Results = dynamic(() => import("@/components/site/Results"), { ssr: true });
@@ -30,7 +31,7 @@ export default function Page() {
               "url": "https://groviadigi.com",
               "logo": "https://groviadigi.com/logo.png",
               "description": "Premium digital marketing agency built in Ajmer, Rajasthan. SEO, social media, performance marketing, GEO, email, lead generation, web development & AI-CRM systems. Trusted across India.",
-              "foundingDate": "2024",
+              "foundingDate": "2026",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ajmer",
@@ -40,7 +41,7 @@ export default function Page() {
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-98290-84210",
-                "email": "hello@groviadigi.co",
+                "email": "Hello@groviadigi.in",
                 "contactType": "customer service",
                 "availableLanguage": ["English", "Hindi"]
               },
@@ -58,7 +59,7 @@ export default function Page() {
               "@id": "https://groviadigi.com",
               "url": "https://groviadigi.com",
               "telephone": "+91-98290-84210",
-              "email": "hello@groviadigi.co",
+              "email": "Hello@groviadigi.in",
               "priceRange": "₹₹",
               "address": {
                 "@type": "PostalAddress",
@@ -258,6 +259,7 @@ export default function Page() {
       <Nav />
       <Hero />
       <Marquee />
+      <div className="section-perf"><Problem /></div>
       <div className="section-perf"><Services /></div>
       <div className="section-perf"><Process /></div>
       <div className="section-perf"><Work /></div>

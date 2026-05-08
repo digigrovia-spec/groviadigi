@@ -250,6 +250,7 @@
        Reduces VRAM usage; elements still composite when hovered. */
     contain: layout style;
   }
+
   .gpu-layer:hover {
     will-change: transform;
   }

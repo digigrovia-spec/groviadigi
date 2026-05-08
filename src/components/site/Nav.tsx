@@ -41,7 +41,7 @@ const Nav = memo(() => {
     { href: "#work", label: "Work" },
     { href: "#services", label: "Services" },
     { href: "#process", label: "Process" },
-    { href: "#studio", label: "Studio" },
+    { href: "#industries", label: "Industries" },
   ];
 
   return (

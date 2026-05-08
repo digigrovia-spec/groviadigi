@@ -39,7 +39,7 @@ const getIconUrl = (slug: string) => {
 const Marquee = memo(() => {
   const row = [...tools, ...tools];
   return (
-    <div className="w-full pt-4 md:pt-8 pb-0">
+    <div className="w-full pt-0 pb-0">
       <div className="w-full text-center mb-4">
         <span className="font-mono uppercase tracking-[0.2em] text-xs md:text-sm text-teal/60 dark:text-white/50 font-medium">
           Partnered With

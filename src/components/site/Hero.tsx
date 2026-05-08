@@ -46,7 +46,7 @@ const Hero = memo(() => {
     <section
       ref={sectionRef}
       id="top"
-      className="relative overflow-hidden bg-paper grain pt-24 pb-24 md:pt-32 md:pb-32"
+      className="relative overflow-hidden bg-paper grain pt-24 pb-12 md:pt-32 md:pb-16"
       onMouseMove={parallaxEnabled ? handleMouseMove : undefined}
       onMouseLeave={parallaxEnabled ? handleMouseLeave : undefined}
     >
@@ -54,66 +54,56 @@ const Hero = memo(() => {
         {/* Top meta line */}
         <div className="flex items-center justify-between font-mono-tag text-ink-muted mb-16 md:mb-24">
           <span>Index — 001</span>
-          <span className="hidden md:inline">New studio · Founding cohort</span>
-          <span>EST · {year || "2026"}</span>
+          <span className="hidden md:inline">Marketing That Doesn&apos;t Just Look Good. It Grows Businesses.</span>
+          <span>EST · 2026</span>
         </div>
 
         <h1
           ref={titleRef}
-          className="font-display text-ink leading-[0.85] text-[14vw] md:text-[15.5vw] lg:text-[14.2vw] xl:text-[13.6vw] w-full"
+          className="font-display text-ink leading-[0.85] text-[12vw] md:text-[13vw] lg:text-[12vw] xl:text-[11.5vw] w-full"
           style={{
             willChange: parallaxEnabled ? "transform" : "auto",
             transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <span className="block">Growth,</span>
+          <span className="block">Marketing</span>
           <span className="block font-serif">
-            beautifully<span className="text-blue">.</span>
+            that grows<span className="text-blue">.</span>
           </span>
-          <span className="block">engineered.</span>
+          <span className="block">Businesses.</span>
         </h1>
 
         <div className="mt-16 md:mt-24 grid md:grid-cols-12 gap-10 items-end">
-          <div className="md:col-span-5 md:col-start-1">
-            <p className="font-mono-tag text-ink-muted mb-4">[ 01 — What we do ]</p>
+          <div className="md:col-span-6 md:col-start-1">
+            <p className="font-mono-tag text-ink-muted mb-4">[ 01 — Who we are ]</p>
             <p className="text-ink-soft text-lg md:text-xl leading-relaxed font-sans">
-              Groviadigi is a new digital studio building brand systems and
-              performance engines for founders who want growth without the
-              agency theatre. Small by design. Hungry by default.
+              We&apos;re a digital marketing agency built in Ajmer for ambitious Indian brands. 
+              From restaurants and jewellery houses to startups and SMEs we run the strategy, 
+              creative, ads, SEO, and AI systems that fill your pipeline and keep it full.
             </p>
           </div>
 
           <div className="md:col-span-4 md:col-start-9 flex flex-col gap-5">
-            {/* Availability card */}
-            <div className="border border-ink/15 rounded-sm p-5 bg-paper-deep/40 backdrop-blur-sm">
-              <div className="flex items-center justify-between mb-10">
-                <div className="flex items-center gap-2">
-                  <span className="pulse-dot" aria-hidden />
-                  <span className="font-mono-tag text-ink-soft">Founding clients · open</span>
-                </div>
-                <span className="font-mono-tag text-ink-muted">0 / 3</span>
-              </div>
-              <p className="font-display text-2xl text-ink leading-[0.9]">
-                Three founding partners <span className="font-serif text-blue-light">at studio rates</span> for the work that builds our book.
-              </p>
-              <div className="mt-12 h-px w-full bg-ink/10 relative overflow-hidden">
-                <span className="absolute inset-y-0 left-0 w-0 bg-blue" />
-              </div>
-            </div>
-
             <Magnetic>
               <a href="#contact" className="pill-cta justify-between text-base w-full">
-                Start a project
+                Book a Free Strategy Call
                 <span aria-hidden>→</span>
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="#work" className="pill-ghost justify-between text-base w-full">
-                See selected work
+              <a href="#services" className="pill-ghost justify-between text-base w-full">
+                See What We Do
                 <span aria-hidden>↓</span>
               </a>
             </Magnetic>
           </div>
+        </div>
+
+        {/* Trust Strip */}
+        <div className="mt-24 pt-8 border-t border-ink/10">
+          <p className="font-mono-tag text-ink-muted text-center tracking-widest uppercase text-xs md:text-sm">
+            Built in Ajmer · Trusted across India · AI-Augmented · Results-Obsessed · Est. 2026
+          </p>
         </div>
       </div>
     </section>
