@@ -18,9 +18,9 @@ const Studio = memo(() => {
             <p className="font-mono-tag text-ink-muted reveal">[ 07 — Industries ]</p>
           </div>
           <div className="md:col-span-9">
-            <h2 className="font-display text-5xl md:text-7xl text-teal reveal">
-              Built for Brands{" "}
-              <span className="font-serif text-blue">That Mean Business</span>
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+              <span className="block">Built for Brands</span>
+              <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">That Mean Business</span>
             </h2>
             <p className="mt-8 max-w-2xl text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">
               We don&apos;t pretend to be experts in everything. We&apos;ve gone deep in six

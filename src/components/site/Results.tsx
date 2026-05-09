@@ -32,9 +32,9 @@ const Results = memo(() => {
             <p className="font-mono-tag text-ink-muted mb-6 reveal">[ 06 — Why Grovia Digi ]</p>
           </div>
           <div className="md:col-span-9 mt-4 md:mt-0">
-            <h2 className="font-display text-5xl md:text-7xl leading-1 text-teal reveal">
-              Why Brands Choose
-              <span className="font-serif text-blue ml-3"> Grovia Digi</span>
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+              <span className="block">Why Brands Choose</span>
+              <span className="block font-serif text-blue dark:text-white mt-2 md:mt-4">Grovia Digi</span>
             </h2>
           </div>
         </div>

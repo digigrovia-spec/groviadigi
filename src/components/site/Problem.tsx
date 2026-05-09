@@ -10,8 +10,8 @@ const Problem = memo(() => {
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
-              Your business deserves{" "}
-              <span className="font-serif text-blue">to be seen.</span>
+              <span className="block">Your business deserves</span>
+              <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">to be seen.</span>
             </h2>
             <div className="mt-12 grid md:grid-cols-2 gap-12">
               <p className="text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">

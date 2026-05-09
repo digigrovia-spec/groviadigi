@@ -31,8 +31,8 @@ const Work = memo(() => {
           </div>
           <div className="md:col-span-9 flex items-end justify-between gap-10">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
-              Three doors.
-              <span className="font-serif text-blue ml-3"> One studio.</span>
+              <span className="block">Three doors.</span>
+              <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">One studio.</span>
             </h2>
             <a href="#contact" className="hidden md:inline-flex items-center gap-2 font-mono-tag text-ink reveal group py-1 whitespace-nowrap border-b border-teal/20 hover:border-teal transition-colors">
               <span className="opacity-60">Start a conversation</span>

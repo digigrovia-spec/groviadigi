@@ -61,8 +61,8 @@ const Services = memo(() => {
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
-              Four disciplines.
-              <span className="font-serif text-blue ml-3"> One system.</span>
+              <span className="block">Four disciplines.</span>
+              <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">One system.</span>
             </h2>
           </div>
         </div>
