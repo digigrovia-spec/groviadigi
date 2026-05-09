@@ -27,9 +27,9 @@ const Footer = memo(() => {
           <div className="md:col-span-2">
             <p className="font-mono-tag text-invert-fg-muted mb-4">Studio</p>
             <ul className="space-y-2 text-invert-fg-soft/80">
-              <li><a href="#work" className="link-underline">Work</a></li>
               <li><a href="#services" className="link-underline">Services</a></li>
               <li><a href="#process" className="link-underline">Process</a></li>
+              <li><a href="#work" className="link-underline">Work</a></li>
               <li><a href="#industries" className="link-underline">Industries</a></li>
             </ul>
           </div>
@@ -54,8 +54,8 @@ const Footer = memo(() => {
             <p className="font-mono-tag text-invert-fg-muted mb-4">Contact</p>
             <ul className="space-y-2 text-invert-fg-soft/80">
               <li className="whitespace-nowrap">Hello@groviadigi.in</li>
-              <li>+91 98290 84210</li>
-              <li>Ajmer, Rajasthan</li>
+              <li>+91 93520 00935</li>
+              <li>Rajasthan</li>
             </ul>
           </div>
         </div>

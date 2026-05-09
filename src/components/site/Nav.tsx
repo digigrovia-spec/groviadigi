@@ -38,9 +38,9 @@ const Nav = memo(() => {
   }, []);
 
   const links = [
-    { href: "#work", label: "Work" },
     { href: "#services", label: "Services" },
     { href: "#process", label: "Process" },
+    { href: "#work", label: "Work" },
     { href: "#industries", label: "Industries" },
   ];
 

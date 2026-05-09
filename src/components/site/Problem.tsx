@@ -15,15 +15,15 @@ const Problem = memo(() => {
             </h2>
             <div className="mt-12 grid md:grid-cols-2 gap-12">
               <p className="text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">
-                You&apos;re great at what you do running a restaurant, building a fitness 
-                community, crafting jewellery, growing a startup. But being great 
-                isn&apos;t enough anymore. If your customers can&apos;t find you online, 
+                You&apos;re great at what you do running a restaurant, building a fitness
+                community, crafting jewellery, growing a startup. But being great
+                isn&apos;t enough anymore. If your customers can&apos;t find you online,
                 they&apos;re finding your competitors instead.
               </p>
               <p className="text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">
-                That&apos;s where we come in. Grovia Digi builds digital presence 
-                that <strong>attracts the right audience, engages them with content 
-                they actually care about, and converts them into paying customers</strong> 
+                That&apos;s where we come in. Grovia Digi builds digital presence
+                that <strong>attracts the right audience, engages them with content
+                  they actually care about, and converts them into paying customers</strong>
                 month after month, predictably.
               </p>
             </div>

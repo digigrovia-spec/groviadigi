@@ -23,7 +23,7 @@ const Studio = memo(() => {
               <span className="font-serif text-blue">That Mean Business</span>
             </h2>
             <p className="mt-8 max-w-2xl text-ink-soft text-lg md:text-xl leading-relaxed font-sans reveal">
-              We don&apos;t pretend to be experts in everything. We&apos;ve gone deep in six 
+              We don&apos;t pretend to be experts in everything. We&apos;ve gone deep in six
               industries and we know what works in each.
             </p>
           </div>

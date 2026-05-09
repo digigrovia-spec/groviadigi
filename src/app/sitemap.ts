@@ -118,7 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Local landing page — Critical
     {
-      url: `${baseUrl}/digital-marketing-agency-ajmer`,
+      url: `${baseUrl}/digital-marketing-agency-rajasthan`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 1, // Critical local SEO page

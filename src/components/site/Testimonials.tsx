@@ -13,9 +13,9 @@ const Testimonials = memo(() => {
         <figure className="max-w-5xl reveal">
           <blockquote className="font-display text-3xl md:text-5xl leading-[1.15] text-ink">
             <span className="text-bright">“</span>
-            We started Grovia Digi because we were tired of watching great Indian 
-            businesses lose to inferior competitors who simply &quot;got&quot; digital. 
-            You shouldn&apos;t have to. We&apos;ll work like our own business depends on 
+            We started Grovia Digi because we were tired of watching great Indian
+            businesses lose to inferior competitors who simply &quot;got&quot; digital.
+            You shouldn&apos;t have to. We&apos;ll work like our own business depends on
             yours because, in a way, it does.
             <span className="text-bright">”</span>
           </blockquote>

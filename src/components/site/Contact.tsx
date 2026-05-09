@@ -5,6 +5,7 @@ import { toast } from "sonner";
 
 const Contact = memo(() => {
   const [sending, setSending] = useState(false);
+  const [industry, setIndustry] = useState("");
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -107,39 +108,53 @@ const Contact = memo(() => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                  <label className="block">
-                    <span className="font-mono-tag text-invert-fg-muted">Industry</span>
-                    <select
-                      name="industry"
-                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg focus:border-bright outline-none transition-colors appearance-none"
-                    >
-                      <option value="restaurants" className="bg-invert text-invert-fg">Restaurants & Food</option>
-                      <option value="gyms" className="bg-invert text-invert-fg">Gyms & Fitness</option>
-                      <option value="jewellery" className="bg-invert text-invert-fg">Jewellery & Lifestyle</option>
-                      <option value="food-manufacturing" className="bg-invert text-invert-fg">Food Manufacturing</option>
-                      <option value="travel" className="bg-invert text-invert-fg">Travel Agencies</option>
-                      <option value="startup-sme" className="bg-invert text-invert-fg">Startup / SME</option>
-                      <option value="other" className="bg-invert text-invert-fg">Other</option>
-                    </select>
-                  </label>
+                  <div className="space-y-8">
+                    <label className="block">
+                      <span className="font-mono-tag text-invert-fg-muted">Industry</span>
+                      <select
+                        name="industry"
+                        onChange={(e) => setIndustry(e.target.value)}
+                        className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg focus:border-bright outline-none transition-colors appearance-none"
+                      >
+                        <option value="restaurants" className="bg-invert text-invert-fg">Restaurants & Food</option>
+                        <option value="gyms" className="bg-invert text-invert-fg">Gyms & Fitness</option>
+                        <option value="jewellery" className="bg-invert text-invert-fg">Jewellery & Lifestyle</option>
+                        <option value="food-manufacturing" className="bg-invert text-invert-fg">Food Manufacturing</option>
+                        <option value="travel" className="bg-invert text-invert-fg">Travel Agencies</option>
+                        <option value="startup-sme" className="bg-invert text-invert-fg">Startup / SME</option>
+                        <option value="other" className="bg-invert text-invert-fg">Other</option>
+                      </select>
+                    </label>
+
+                    {industry === "other" && (
+                      <label className="block animate-in fade-in slide-in-from-top-2 duration-500">
+                        <span className="font-mono-tag text-invert-fg-muted">Please specify industry</span>
+                        <input
+                          required
+                          name="other_industry"
+                          type="text"
+                          className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
+                          placeholder="Your industry"
+                        />
+                      </label>
+                    )}
+                  </div>
+
                   <label className="block">
                     <span className="font-mono-tag text-invert-fg-muted">Monthly Budget</span>
-                    <select
+                    <input
                       name="budget"
-                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg focus:border-bright outline-none transition-colors appearance-none"
-                    >
-                      <option value="under-25k" className="bg-invert text-invert-fg">Under ₹25K</option>
-                      <option value="25k-60k" className="bg-invert text-invert-fg">₹25K – ₹60K</option>
-                      <option value="60k-1.5l" className="bg-invert text-invert-fg">₹60K – ₹1.5L</option>
-                      <option value="1.5l-plus" className="bg-invert text-invert-fg">₹1.5L+</option>
-                    </select>
+                      type="text"
+                      className="mt-2 w-full bg-transparent border-b border-invert-fg/20 py-3 text-invert-fg placeholder:text-invert-fg/30 focus:border-bright outline-none transition-colors"
+                      placeholder="e.g. ₹50k - ₹1L (Optional)"
+                    />
                   </label>
                 </div>
 
                 <div className="space-y-4">
                   <span className="font-mono-tag text-invert-fg-muted block">Services Interested In</span>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {["Social Media", "Paid Ads", "SEO", "GEO", "Email", "Lead Gen", "Web Dev", "AI & CRM"].map(s => (
+                    {["Social Media", "Performance Marketing", "SEO", "GEO", "Email", "Lead Gen", "Web Dev", "AI & CRM"].map(s => (
                       <label key={s} className="flex items-center gap-2 cursor-pointer group">
                         <input type="checkbox" name="services" value={s} className="hidden peer" />
                         <div className="w-4 h-4 border border-invert-fg/20 peer-checked:bg-bright peer-checked:border-bright transition-all" />
@@ -183,7 +198,7 @@ const Contact = memo(() => {
                 <div>
                   <p className="font-mono-tag text-invert-fg-muted mb-3">Studio</p>
                   <p className="text-invert-fg-soft/80 leading-relaxed">
-                    Ajmer, Rajasthan
+                    Rajasthan
                     <br />
                     Mon – Sat · 10:00 – 19:00 IST
                   </p>
@@ -191,7 +206,7 @@ const Contact = memo(() => {
                 <div>
                   <p className="font-mono-tag text-invert-fg-muted mb-3">WhatsApp</p>
                   <p className="text-invert-fg-soft/80 leading-relaxed font-display text-xl">
-                    +91 98290 84210
+                    +91 93520 00935
                   </p>
                 </div>
               </aside>

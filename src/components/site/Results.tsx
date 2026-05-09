@@ -19,7 +19,7 @@ const principles = [
   {
     n: "04",
     t: "Local Roots, National Reach",
-    d: "Built in Ajmer. Trusted across India. We understand the Indian market and still bring world-class digital execution.",
+    d: "Built in Rajasthan. Trusted across India. We understand the Indian market and still bring world-class digital execution.",
   },
 ];
 

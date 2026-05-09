@@ -41,7 +41,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   metadataBase: new URL("https://groviadigi.com"),
   title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
-  description: "Premium digital marketing agency built in Ajmer, trusted across India. SEO, social media, paid ads, GEO, web & AI-CRM systems. Book your free strategy call.",
+  description: "Premium digital marketing agency built in Rajasthan, trusted across India. SEO, social media, performance marketing, GEO, web & AI-CRM systems. Book your free strategy call.",
   keywords: [
     // Primary
     "digital marketing agency in india",
@@ -49,18 +49,18 @@ export const metadata = {
     "best digital marketing agency",
     "ai digital marketing agency",
     "digital marketing for small business",
-    // Local — Ajmer
-    "digital marketing agency in ajmer",
-    "digital marketing company in ajmer",
-    "best digital marketing agency in ajmer",
-    "seo services in ajmer",
-    "social media marketing agency in ajmer",
-    "google ads agency in ajmer",
-    "website development company in ajmer",
-    "digital marketing services ajmer rajasthan",
-    // Rajasthan
+    // Local — Rajasthan
     "digital marketing agency in rajasthan",
-    "best seo company in rajasthan",
+    "digital marketing company in rajasthan",
+    "best digital marketing agency in rajasthan",
+    "seo services in rajasthan",
+    "social media marketing agency in rajasthan",
+    "google ads agency in rajasthan",
+    "website development company in rajasthan",
+    "digital marketing services rajasthan",
+    // Rajasthan
+    "digital marketing agency in rajasthan state",
+    "best seo company in rajasthan region",
     // Services
     "performance marketing agency",
     "seo services india",
@@ -80,7 +80,7 @@ export const metadata = {
   authors: [{ name: "Grovia Digi" }],
   openGraph: {
     title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
-    description: "Premium digital marketing agency built in Ajmer, trusted across India. SEO, social media, paid ads, GEO, web & AI-CRM systems.",
+    description: "Premium digital marketing agency built in Rajasthan, trusted across India. SEO, social media, performance marketing, GEO, web & AI-CRM systems.",
     url: "https://groviadigi.com",
     siteName: "Grovia Digi",
     images: [
@@ -88,7 +88,7 @@ export const metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Grovia Digi — Digital Marketing Agency in Ajmer, India",
+        alt: "Grovia Digi — Digital Marketing Agency in Rajasthan, India",
       },
     ],
     locale: "en_IN",
@@ -97,7 +97,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
-    description: "Premium digital marketing agency built in Ajmer. SEO, paid ads, GEO, web & AI-CRM. Free strategy call.",
+    description: "Premium digital marketing agency built in Rajasthan. SEO, performance marketing, GEO, web & AI-CRM. Free strategy call.",
     images: ["/og-image.png"],
   },
   robots: {

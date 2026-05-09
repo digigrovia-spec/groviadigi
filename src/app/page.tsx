@@ -30,17 +30,17 @@ export default function Page() {
               "alternateName": "Groviadigi",
               "url": "https://groviadigi.com",
               "logo": "https://groviadigi.com/logo.png",
-              "description": "Premium digital marketing agency built in Ajmer, Rajasthan. SEO, social media, performance marketing, GEO, email, lead generation, web development & AI-CRM systems. Trusted across India.",
+              "description": "Premium digital marketing agency built in Rajasthan. SEO, social media, performance marketing, GEO, email, lead generation, web development & AI-CRM systems. Trusted across India.",
               "foundingDate": "2026",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Ajmer",
+                "addressLocality": "Rajasthan",
                 "addressRegion": "Rajasthan",
                 "addressCountry": "IN"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-98290-84210",
+                "telephone": "+91-93520-00935",
                 "email": "Hello@groviadigi.in",
                 "contactType": "customer service",
                 "availableLanguage": ["English", "Hindi"]
@@ -58,13 +58,13 @@ export default function Page() {
               "image": "https://groviadigi.com/og-image.png",
               "@id": "https://groviadigi.com",
               "url": "https://groviadigi.com",
-              "telephone": "+91-98290-84210",
+              "telephone": "+91-93520-00935",
               "email": "Hello@groviadigi.in",
               "priceRange": "₹₹",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Ajmer",
-                "addressLocality": "Ajmer",
+                "streetAddress": "Rajasthan",
+                "addressLocality": "Rajasthan",
                 "addressRegion": "Rajasthan",
                 "postalCode": "305001",
                 "addressCountry": "IN"
@@ -84,11 +84,10 @@ export default function Page() {
                 "closes": "19:00"
               },
               "areaServed": [
-                { "@type": "City", "name": "Ajmer" },
                 { "@type": "State", "name": "Rajasthan" },
                 { "@type": "Country", "name": "India" }
               ],
-              "hasMap": "https://maps.google.com/?q=Ajmer,Rajasthan,India"
+              "hasMap": "https://maps.google.com/?q=Rajasthan,India"
             },
             {
               "@context": "https://schema.org",
@@ -195,15 +194,15 @@ export default function Page() {
                   "name": "How long does it take to see results from digital marketing?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Paid ads can deliver leads within days. Social media engagement compounds over 1–3 months. SEO and content marketing typically show meaningful results in 4–6 months and accelerate from there."
+                    "text": "Performance marketing can deliver leads within days. Social media engagement compounds over 1–3 months. SEO and content marketing typically show meaningful results in 4–6 months and accelerate from there."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Do you only work with Ajmer-based businesses?",
+                  "name": "Do you only work with Rajasthan-based businesses?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Not at all. We're based in Ajmer, Rajasthan, but we work with brands across India. Our entire workflow is digital-first — strategy calls, creative reviews, reporting, training — all remote. Geography doesn't limit results."
+                    "text": "Not at all. We're based in Rajasthan, but we work with brands across India. Our entire workflow is digital-first — strategy calls, creative reviews, reporting, training — all remote. Geography doesn't limit results."
                   }
                 },
                 {
