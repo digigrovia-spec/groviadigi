@@ -61,8 +61,7 @@ const Services = memo(() => {
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
-              <span className="block">Four disciplines.</span>
-              <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">One system.</span>
+              Four disciplines. <span className="font-serif text-blue dark:text-white">One system.</span>
             </h2>
           </div>
         </div>
@@ -78,7 +77,7 @@ const Services = memo(() => {
                     <span className="font-mono-tag text-ink-muted">{s.n}</span>
                     <span className="h-2 w-2 rounded-full bg-ink/20 group-hover:bg-bright transition-colors" />
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl text-ink mb-4">{s.title}</h3>
+                  <h3 className="font-display text-3xl md:text-4xl text-teal mb-4">{s.title}</h3>
                   <p className="text-ink-soft text-base md:text-lg leading-relaxed mb-8 max-w-md">{s.body}</p>
                   <ul className="flex flex-wrap gap-2">
                     {s.items.map((i) => (

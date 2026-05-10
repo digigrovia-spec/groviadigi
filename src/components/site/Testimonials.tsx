@@ -11,7 +11,10 @@ const Testimonials = memo(() => {
         </div>
 
         <figure className="max-w-5xl reveal">
-          <blockquote className="font-display text-3xl md:text-5xl leading-[1.15] text-ink">
+          <blockquote 
+            className="font-display text-3xl md:text-5xl leading-[1.15] text-ink"
+            style={{ wordSpacing: "0.15em" }}
+          >
             <span className="text-bright">“</span>
             We started Grovia Digi because we were tired of watching great Indian
             businesses lose to inferior competitors who simply &quot;got&quot; digital.

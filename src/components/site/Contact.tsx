@@ -48,7 +48,7 @@ const Contact = memo(() => {
             <p className="font-mono-tag text-invert-fg-muted reveal mb-8">[ 08 — Start ]</p>
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
               <span className="block">Let&apos;s build something</span>
-              <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">extraordinary together.</span>
+              <span className="font-serif text-white dark:text-white block mt-2 md:mt-4">extraordinary together.</span>
             </h2>
             <p className="mt-8 max-w-2xl text-invert-fg-soft text-lg md:text-xl leading-relaxed font-sans reveal">
               Whether you&apos;re launching your first campaign or rebuilding your entire 

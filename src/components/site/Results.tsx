@@ -34,7 +34,7 @@ const Results = memo(() => {
           <div className="md:col-span-9 mt-4 md:mt-0">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
               <span className="block">Why Brands Choose</span>
-              <span className="block font-serif text-blue dark:text-white mt-2 md:mt-4">Grovia Digi</span>
+              <span className="block font-serif text-blue dark:text-white mt-2 md:mt-4">Grovia Digi ?</span>
             </h2>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Results = memo(() => {
                     <span className="font-mono-tag text-ink-muted">{p.n}</span>
                     <span className="font-mono-tag text-bright">PRINCIPLE</span>
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl text-ink mb-4">{p.t}</h3>
+                  <h3 className="font-display text-3xl md:text-4xl text-teal mb-4">{p.t}</h3>
                   <p className="text-ink-soft text-base md:text-lg leading-relaxed max-w-md">{p.d}</p>
                 </div>
               </article>
