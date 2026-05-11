@@ -20,7 +20,7 @@ const Footer = memo(() => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-6">
             <p className="font-display text-6xl md:text-8xl leading-none">
-              Grovia<span className="italic font-light text-invert-fg-soft/70">digi</span>
+              Grovia<span className="italic font-light text-teal">digi</span>
               <span className="text-bright">.</span>
             </p>
           </div>
@@ -51,7 +51,7 @@ const Footer = memo(() => {
             </div>
           </div>
           <div className="md:col-span-2">
-            <p className="font-mono-tag text-invert-fg-muted mb-4">Contact</p>
+            <a href="#contact" className="font-mono-tag text-invert-fg-muted mb-4 block hover:text-teal transition-colors">Contact</a>
             <ul className="space-y-2 text-invert-fg-soft/80">
               <li className="whitespace-nowrap">Hello@groviadigi.in</li>
               <li>+91 93520 00935</li>

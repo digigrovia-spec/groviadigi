@@ -30,7 +30,7 @@ const Work = memo(() => {
             <p className="font-mono-tag text-ink-muted reveal">[ 05 — Ways to work ]</p>
           </div>
           <div className="md:col-span-9 flex items-end justify-between gap-10">
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-ink dark:text-teal reveal">
               Three doors. <span className="font-serif text-blue dark:text-white">One studio.</span>
             </h2>
             <a href="#contact" className="hidden md:inline-flex items-center gap-2 font-mono-tag text-ink reveal group py-1 whitespace-nowrap border-b border-teal/20 hover:border-teal transition-colors">

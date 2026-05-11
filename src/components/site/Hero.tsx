@@ -60,17 +60,17 @@ const Hero = memo(() => {
 
         <h1
           ref={titleRef}
-          className="font-display text-ink leading-[0.85] text-[12vw] md:text-[13vw] lg:text-[12vw] xl:text-[11.5vw] w-full"
+          className="font-display text-ink dark:text-teal leading-[0.85] text-[12vw] md:text-[13vw] lg:text-[12vw] xl:text-[11.5vw] w-full"
           style={{
             willChange: parallaxEnabled ? "transform" : "auto",
             transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <span className="block mb-2 md:mb-4">Marketing</span>
+          <span className="block text-white mb-2 md:mb-4">Marketing</span>
           <span className="block font-serif mb-2 md:mb-4">
             <span className="text-blue">that grows</span>
           </span>
-          <span className="block">Businesses.</span>
+          <span className="block text-white">Businesses.</span>
         </h1>
 
         <div className="mt-16 md:mt-24 grid md:grid-cols-12 gap-10 items-end">

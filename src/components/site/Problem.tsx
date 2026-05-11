@@ -9,7 +9,7 @@ const Problem = memo(() => {
             <p className="font-mono-tag text-ink-muted reveal">[ 02 — The Problem ]</p>
           </div>
           <div className="md:col-span-9">
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-ink dark:text-teal reveal">
               <span className="block">Your business deserves</span>
               <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">to be seen.</span>
             </h2>

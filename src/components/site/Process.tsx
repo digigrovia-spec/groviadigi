@@ -98,7 +98,7 @@ const Process = memo(() => {
                       <span className="font-display text-blue text-5xl">{s.n}</span>
                       <span className="font-mono-tag text-invert-fg-muted">STEP</span>
                     </div>
-                    <h3 className="font-display text-3xl mb-3">{s.t}</h3>
+                    <h3 className="font-display text-3xl text-teal mb-3">{s.t}</h3>
                     <p className="text-invert-fg-soft/80 leading-relaxed font-sans">{s.d}</p>
                   </div>
                 </div>

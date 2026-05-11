@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { LoadingScreen } from "@/components/ui/loading-screen";
 
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -129,6 +130,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
       <body className={inter.className}>
         <Providers>
+
           <LoadingScreen />
           <SmoothScroll />
           {children}

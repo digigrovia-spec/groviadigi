@@ -18,7 +18,7 @@ const Studio = memo(() => {
             <p className="font-mono-tag text-ink-muted reveal">[ 07 — Industries ]</p>
           </div>
           <div className="md:col-span-9">
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
+            <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-ink dark:text-teal reveal">
               <span className="block">Built for Brands</span>
               <span className="font-serif text-blue dark:text-white block mt-2 md:mt-4">That Mean Business</span>
             </h2>
@@ -34,7 +34,7 @@ const Studio = memo(() => {
             <div key={m.t} className="reveal">
               <div className="group bg-paper border border-ink/10 h-full transition-[transform,background-color,box-shadow,border-color] duration-500 ease-out hover:bg-paper-deep dark:hover:bg-paper hover:scale-[1.03] hover:z-10 hover:shadow-2xl dark:hover:shadow-white/10 dark:hover:border-white/30 cursor-pointer interactive-cursor gpu-layer">
                 <div className="p-8 md:p-12">
-                  <h3 className="font-display text-2xl md:text-3xl text-ink mb-4">{m.t}</h3>
+                  <h3 className="font-display text-2xl md:text-3xl text-teal mb-4">{m.t}</h3>
                   <p className="text-ink-soft text-base leading-relaxed">{m.d}</p>
                 </div>
               </div>

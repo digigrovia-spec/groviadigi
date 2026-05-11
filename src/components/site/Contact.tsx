@@ -39,7 +39,6 @@ const Contact = memo(() => {
 
   return (
     <section
-      id="contact"
       className="bg-invert text-invert-fg py-28 md:py-40 relative overflow-hidden grain"
     >
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 relative z-10">
@@ -58,7 +57,7 @@ const Contact = memo(() => {
           </div>
         </div>
 
-        <div className="reveal mt-16">
+        <div id="contact" className="reveal mt-16 scroll-mt-24">
           <div className="bg-invert-deep/40 border border-invert-fg/10 transition-[transform,box-shadow,border-color] duration-700 ease-out hover:shadow-2xl hover:shadow-invert-fg/10 hover:border-invert-fg/30 hover:scale-[1.01] interactive-cursor gpu-layer">
             <div className="grid md:grid-cols-12 gap-10 p-8 md:p-12 lg:p-16">
               <form onSubmit={onSubmit} className="md:col-span-7 space-y-8">
@@ -180,7 +179,7 @@ const Contact = memo(() => {
                   disabled={sending}
                   className="inline-flex items-center gap-3 rounded-full px-8 py-4 transition-all duration-500 bg-bright text-white font-medium hover:opacity-90 disabled:opacity-60 text-lg"
                 >
-                  {sending ? "Sending…" : "Send My Enquiry"}
+                  {sending ? "Sending…" : "Submit"}
                   <span aria-hidden>→</span>
                 </button>
               </form>
