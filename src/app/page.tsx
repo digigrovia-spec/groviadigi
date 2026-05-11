@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
 import Marquee from "@/components/site/Marquee";
@@ -19,7 +20,8 @@ const Footer = dynamic(() => import("@/components/site/Footer"), { ssr: true });
 export default function Page() {
   return (
     <main className="bg-paper text-ink">
-      <script
+      <Script
+        id="json-ld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([

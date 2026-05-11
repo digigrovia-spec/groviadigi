@@ -44,13 +44,29 @@ const Nav = memo(() => {
     { href: "#industries", label: "Industries" },
   ];
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[padding,background-color,backdrop-filter] duration-500 transform-gpu will-change-[padding,background-color,backdrop-filter] gpu-layer ${scrolled ? "py-3 backdrop-blur-sm bg-paper/80 border-b border-ink/10" : "py-6 bg-transparent"
         }`}
     >
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="#top" className="flex items-center gap-2" aria-label="Groviadigi Home">
+        <a
+          href="#top"
+          onClick={(e) => handleScroll(e, "#top")}
+          className="flex items-center gap-2"
+          aria-label="Groviadigi Home"
+        >
           <span className="font-display text-2xl">
             <span className="text-teal">Grovia</span><span className="text-blue">digi</span>
           </span>
@@ -59,7 +75,11 @@ const Nav = memo(() => {
         <ul className="hidden md:flex items-center gap-10 font-mono-tag text-ink-soft">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="link-underline hover:text-ink">
+              <a
+                href={l.href}
+                onClick={(e) => handleScroll(e, l.href)}
+                className="link-underline hover:text-ink"
+              >
                 {l.label}
               </a>
             </li>
@@ -69,7 +89,11 @@ const Nav = memo(() => {
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
           <Magnetic>
-            <a href="#contact" className="pill-cta text-sm">
+            <a
+              href="#contact"
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="pill-cta text-sm"
+            >
               Start a project
               <span aria-hidden>→</span>
             </a>
@@ -93,13 +117,27 @@ const Nav = memo(() => {
           <ul className="flex flex-col px-6 py-6 gap-4">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} onClick={() => setOpen(false)} className="font-display text-3xl text-ink">
+                <a
+                  href={l.href}
+                  onClick={(e) => {
+                    setOpen(false);
+                    handleScroll(e, l.href);
+                  }}
+                  className="font-display text-3xl text-ink"
+                >
                   {l.label}
                 </a>
               </li>
             ))}
             <li>
-              <a href="#contact" onClick={() => setOpen(false)} className="pill-cta mt-2">
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  setOpen(false);
+                  handleScroll(e, "#contact");
+                }}
+                className="pill-cta mt-2"
+              >
                 Start a project <span>→</span>
               </a>
             </li>

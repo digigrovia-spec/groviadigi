@@ -1,3 +1,5 @@
+"use client";
+
 import { memo } from "react";
 import { Instagram, Linkedin, Dribbble } from "lucide-react";
 
@@ -14,6 +16,17 @@ const Behance = ({ size = 24, ...props }: any) => (
 );
 
 const Footer = memo(() => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <footer className="bg-invert text-invert-fg border-t border-invert-fg/10">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16">
@@ -27,10 +40,10 @@ const Footer = memo(() => {
           <div className="md:col-span-2">
             <p className="font-mono-tag text-invert-fg-muted mb-4">Studio</p>
             <ul className="space-y-2 text-invert-fg-soft/80">
-              <li><a href="#services" className="link-underline">Services</a></li>
-              <li><a href="#process" className="link-underline">Process</a></li>
-              <li><a href="#work" className="link-underline">Work</a></li>
-              <li><a href="#industries" className="link-underline">Industries</a></li>
+              <li><a href="#services" onClick={(e) => handleScroll(e, "#services")} className="link-underline">Services</a></li>
+              <li><a href="#process" onClick={(e) => handleScroll(e, "#process")} className="link-underline">Process</a></li>
+              <li><a href="#work" onClick={(e) => handleScroll(e, "#work")} className="link-underline">Work</a></li>
+              <li><a href="#industries" onClick={(e) => handleScroll(e, "#industries")} className="link-underline">Industries</a></li>
             </ul>
           </div>
           <div className="md:col-span-2">
@@ -51,7 +64,7 @@ const Footer = memo(() => {
             </div>
           </div>
           <div className="md:col-span-2">
-            <a href="#contact" className="font-mono-tag text-invert-fg-muted mb-4 block hover:text-teal transition-colors">Contact</a>
+            <a href="#contact" onClick={(e) => handleScroll(e, "#contact")} className="font-mono-tag text-invert-fg-muted mb-4 block hover:text-teal transition-colors">Contact</a>
             <ul className="space-y-2 text-invert-fg-soft/80">
               <li className="whitespace-nowrap">Hello@groviadigi.in</li>
               <li>+91 93520 00935</li>

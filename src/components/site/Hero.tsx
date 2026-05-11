@@ -42,6 +42,17 @@ const Hero = memo(() => {
     if (titleRef.current) titleRef.current.style.transform = "translate3d(0, 0, 0)";
   }, []);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -85,13 +96,21 @@ const Hero = memo(() => {
 
           <div className="md:col-span-4 md:col-start-9 flex flex-col gap-5">
             <Magnetic>
-              <a href="#contact" className="pill-cta justify-between text-base w-full">
+              <a
+                href="#contact"
+                onClick={(e) => handleScroll(e, "#contact")}
+                className="pill-cta justify-between text-base w-full"
+              >
                 Book a Free Strategy Call
                 <span aria-hidden>→</span>
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="#services" className="pill-ghost justify-between text-base w-full">
+              <a
+                href="#services"
+                onClick={(e) => handleScroll(e, "#services")}
+                className="pill-ghost justify-between text-base w-full"
+              >
                 See What We Do
                 <span aria-hidden>↓</span>
               </a>

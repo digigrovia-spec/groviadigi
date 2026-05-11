@@ -1,3 +1,5 @@
+"use client";
+
 import { memo } from "react";
 
 const offers = [
@@ -22,6 +24,17 @@ const offers = [
 ];
 
 const Work = memo(() => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section id="work" className="bg-paper py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
@@ -33,7 +46,11 @@ const Work = memo(() => {
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-ink dark:text-teal reveal">
               Three doors. <span className="font-serif text-blue dark:text-white">One studio.</span>
             </h2>
-            <a href="#contact" className="hidden md:inline-flex items-center gap-2 font-mono-tag text-ink reveal group py-1 whitespace-nowrap border-b border-teal/20 hover:border-teal transition-colors">
+            <a
+              href="#contact"
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="hidden md:inline-flex items-center gap-2 font-mono-tag text-ink reveal group py-1 whitespace-nowrap border-b border-teal/20 hover:border-teal transition-colors"
+            >
               <span className="opacity-60">Start a conversation</span>
               <span className="text-xl transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
@@ -45,6 +62,7 @@ const Work = memo(() => {
             <div key={o.n} className="reveal">
               <a
                 href="#contact"
+                onClick={(e) => handleScroll(e, "#contact")}
                 className="group block bg-paper border border-ink/10 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-out hover:bg-paper-deep dark:hover:bg-paper hover:scale-[1.01] hover:z-10 hover:shadow-2xl dark:hover:shadow-white/10 dark:hover:border-white/30 cursor-pointer gpu-layer"
               >
                 <div className="grid md:grid-cols-12 gap-6 items-baseline px-6 md:px-12 py-10 md:py-14">
