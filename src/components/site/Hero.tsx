@@ -77,11 +77,11 @@ const Hero = memo(() => {
             transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <span className="block text-white mb-2 md:mb-4">Marketing</span>
+          <span className="block dark:text-white mb-2 md:mb-4">Marketing</span>
           <span className="block font-serif mb-2 md:mb-4">
             <span className="text-blue">that grows</span>
           </span>
-          <span className="block text-white">Businesses.</span>
+          <span className="block dark:text-white">Businesses.</span>
         </h1>
 
         <div className="mt-16 md:mt-24 grid md:grid-cols-12 gap-10 items-end">
