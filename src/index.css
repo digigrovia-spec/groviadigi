@@ -8,13 +8,13 @@
 @layer base {
   :root {
     /* Core Brand Tokens */
-    --background: 42 27% 92%;
+    --background: 44 35% 92%;
     /* Aravalli Cream #F1EDE2 */
     --foreground: 205 24% 10%;
     /* Midnight Ink #0E1B24 */
 
-    --paper: 42 27% 92%;
-    --paper-deep: 42 20% 88%;
+    --paper: 44 35% 92%;
+    --paper-deep: 46 30% 86%;
     --ink: 205 24% 10%;
     --ink-soft: 205 18% 22%;
     --ink-muted: 205 12% 40%;
@@ -34,31 +34,31 @@
     /* Semantic Mappings */
     --primary: 195 83% 26%;
     /* Teal */
-    --primary-foreground: 42 27% 92%;
+    --primary-foreground: 44 35% 92%;
 
     --secondary: 195 75% 48%;
     /* Blue */
-    --secondary-foreground: 42 27% 92%;
+    --secondary-foreground: 44 35% 92%;
 
     --accent: 195 75% 48%;
     /* Blue */
-    --accent-foreground: 42 27% 92%;
+    --accent-foreground: 44 35% 92%;
 
     --bright: 195 75% 48%;
-    --bright-foreground: 42 27% 92%;
+    --bright-foreground: 44 35% 92%;
 
-    --card: 42 27% 92%;
+    --card: 44 35% 92%;
     --card-foreground: 205 24% 10%;
 
-    --popover: 42 27% 92%;
+    --popover: 44 35% 92%;
     --popover-foreground: 205 24% 10%;
 
-    --muted: 42 15% 85%;
+    --muted: 44 15% 85%;
     --muted-foreground: 205 12% 40%;
 
     --destructive: 11 100% 65%;
     /* Coral as destructive/urgent */
-    --destructive-foreground: 42 27% 92%;
+    --destructive-foreground: 44 35% 92%;
 
     --border: 195 83% 26% / 0.18;
     /* Using teal for lines as per kit */
@@ -70,9 +70,9 @@
     /* Inverted surface (Ink mode) */
     --invert-bg: 205 24% 10%;
     --invert-bg-deep: 205 24% 8%;
-    --invert-fg: 42 27% 92%;
-    --invert-fg-soft: 42 20% 88%;
-    --invert-fg-muted: 42 10% 75%;
+    --invert-fg: 44 35% 92%;
+    --invert-fg-soft: 46 30% 86%;
+    --invert-fg-muted: 44 10% 75%;
     --invert-border: 205 24% 25%;
 
     /* Effects */
@@ -80,37 +80,36 @@
     --shadow-soft: 0 14px 34px -10px hsl(var(--ink) / 0.25);
     --ease-kinetic: cubic-bezier(0.22, 1, 0.36, 1);
 
-    --sidebar-background: 42 27% 92%;
+    --sidebar-background: 44 35% 92%;
     --sidebar-foreground: 205 24% 10%;
     --sidebar-primary: 195 83% 26%;
-    --sidebar-primary-foreground: 42 27% 92%;
-    --sidebar-accent: 195 75% 48%;
-    --sidebar-accent-foreground: 42 27% 92%;
+    --sidebar-primary-foreground: 44 35% 92%;
+    --sidebar-accent-foreground: 44 35% 92%;
     --sidebar-border: 195 83% 26% / 0.18;
     --sidebar-ring: 195 75% 48%;
   }
 
   .dark {
     --background: 205 24% 7%;
-    --foreground: 42 27% 94%;
+    --foreground: 44 27% 94%;
     --paper: 205 24% 7%;
     --paper-deep: 205 20% 11%;
-    --ink: 42 27% 94%;
-    --ink-soft: 42 20% 82%;
-    --ink-muted: 42 10% 65%;
+    --ink: 44 27% 94%;
+    --ink-soft: 44 20% 82%;
+    --ink-muted: 44 10% 65%;
 
     --card: 205 24% 7%;
-    --card-foreground: 42 27% 94%;
+    --card-foreground: 44 27% 94%;
 
     --primary: 195 72% 59%;
     /* Use blue-light in dark mode */
     --primary-foreground: 205 24% 7%;
 
     --secondary: 195 75% 48%;
-    --secondary-foreground: 42 27% 94%;
+    --secondary-foreground: 44 27% 94%;
 
     --muted: 205 15% 15%;
-    --muted-foreground: 42 10% 65%;
+    --muted-foreground: 44 10% 65%;
 
     --accent: 195 75% 48%;
     --accent-foreground: 205 24% 7%;
