@@ -12,16 +12,43 @@ const Contact = memo(() => {
     setSending(true);
 
     const formData = new FormData(e.currentTarget);
-    // Add your Web3Forms Access Key here
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS || "");
+    formData.append("subject", "New Brief from " + formData.get("name"));
+    formData.append("from_name", "Grovidigi Website");
+
+    // Handle multiple services checkboxes
+    const services = Array.from(formData.getAll("services")).join(", ");
+    formData.delete("services");
+    formData.append("services", services);
+
+    // Clean up industry if "other" is selected
+    if (formData.get("industry") === "other") {
+      formData.set("industry", formData.get("other_industry") as string);
+    }
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
+      const sheetData = new URLSearchParams();
+      formData.forEach((value, key) => {
+        sheetData.append(key, value.toString());
       });
 
-      const data = await response.json();
+      // Send both requests at the same time
+      const [web3Response] = await Promise.all([
+        fetch(process.env.NEXT_PUBLIC_WEB3FORMS_URL || "", {
+          method: "POST",
+          body: formData
+        }),
+        fetch(process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL || "", {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: sheetData.toString()
+        })
+      ]);
+
+      const data = await web3Response.json();
 
       if (data.success) {
         setSending(false);
@@ -32,6 +59,7 @@ const Contact = memo(() => {
         toast.error(data.message || "Something went wrong. Please try again.");
       }
     } catch (error) {
+      console.error("Submission Error:", error);
       setSending(false);
       toast.error("Failed to send. Please check your connection.");
     }
