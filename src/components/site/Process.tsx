@@ -3,10 +3,10 @@
 import { useState, useEffect, memo, useCallback } from "react";
 
 const steps = [
-  { n: "01", t: "Listen", d: "Every engagement starts with us asking the right questions. Your goals, your customers, your numbers, your gaps. No assumptions." },
-  { n: "02", t: "Strategise", d: "We build a custom roadmap not a template. Channel mix, content pillars, KPIs, and a 90-day execution plan you can actually hold us to." },
-  { n: "03", t: "Execute", d: "Our team runs the campaigns, builds the systems, ships the content. You get weekly updates and real dashboards." },
-  { n: "04", t: "Optimise & Scale", d: "We measure what works, kill what doesn't, and double down on the winners. Growth isn't a one-time launch it's a compounding system." },
+  { n: "01", t: "Plan", d: "Tell us your dream destination and preferences. We'll consult with you to understand exactly what you're looking for in your next journey." },
+  { n: "02", t: "Curate", d: "Our travel experts design a personalized itinerary, selecting the best flights, accommodations, and experiences tailored just for you." },
+  { n: "03", t: "Book", d: "Once you're happy with the plan, we handle all the bookings and paperwork, from visa assistance to insurance and local transport." },
+  { n: "04", t: "Experience", d: "Travel with confidence. We provide 24/7 support throughout your trip, ensuring every moment of your adventure is perfect." },
 ];
 
 const Process = memo(() => {
@@ -26,23 +26,23 @@ const Process = memo(() => {
 
   return (
     <section
-      id="process"
+      id="packages"
       className="bg-invert text-invert-fg py-28 md:py-40 relative overflow-hidden grain"
     >
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 relative z-10">
         <div className="grid md:grid-cols-12 gap-10 mb-20 md:mb-28">
           <div className="md:col-span-3">
-            <p className="font-mono-tag text-invert-fg-muted reveal">[ 04 — Process ]</p>
+            <p className="font-mono-tag text-invert-fg-muted reveal">[ 04 — Journey ]</p>
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-teal reveal">
-              A method, <span className="font-serif text-white dark:text-white">not a pitch deck.</span>
+              Your path to <span className="font-serif text-white dark:text-white">unforgettable memories.</span>
             </h2>
           </div>
         </div>
 
         <div className="relative">
-          {/* Wire line — CSS-only, no Framer Motion */}
+          {/* Wire line — CSS-only */}
           <div className="absolute top-1/2 left-0 w-full h-px bg-invert-fg/10 -translate-y-1/2 hidden md:block z-0 overflow-hidden">
             <div
               className="absolute top-0 h-full bg-blue process-wire-pulse"
@@ -81,13 +81,12 @@ const Process = memo(() => {
                   setIsHovered(true);
                 }}
               >
-                {/* Pure CSS transitions — no Framer Motion needed */}
                 <div
                   className="group border h-full cursor-pointer interactive-cursor"
                   style={{
                     transition: "transform 0.5s ease-out, border-color 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out",
                     transform: activeStep === idx ? "scale(1.06)" : "scale(1)",
-                    borderColor: activeStep === idx ? "hsl(195 75% 48%)" : "hsl(42 27% 92% / 0.1)",
+                    borderColor: activeStep === idx ? "hsl(45 100% 50%)" : "hsl(42 27% 92% / 0.1)",
                     backgroundColor: activeStep === idx ? "hsl(205 24% 8%)" : "hsl(205 24% 10%)",
                     boxShadow: activeStep === idx ? "0 25px 50px -12px rgba(0,0,0,0.5)" : "none",
                     zIndex: activeStep === idx ? 20 : 10,
@@ -96,7 +95,7 @@ const Process = memo(() => {
                   <div className="p-8 md:p-10">
                     <div className="flex items-center justify-between mb-12">
                       <span className="font-display text-blue text-5xl">{s.n}</span>
-                      <span className="font-mono-tag text-invert-fg-muted">STEP</span>
+                      <span className="font-mono-tag text-invert-fg-muted">PHASE</span>
                     </div>
                     <h3 className="font-display text-3xl text-teal mb-3">{s.t}</h3>
                     <p className="text-invert-fg-soft/80 leading-relaxed font-sans">{s.d}</p>

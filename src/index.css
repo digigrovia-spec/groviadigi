@@ -19,32 +19,32 @@
     --ink-soft: 205 18% 22%;
     --ink-muted: 205 12% 40%;
 
-    /* Brand Colors */
-    --teal: 195 83% 26%;
-    /* Groviadigi Teal #0B5E7A */
-    --blue: 195 75% 48%;
-    /* Digi Blue #1FA9D6 */
-    --blue-l: 195 72% 59%;
-    /* Digi Blue Light #4BC0E3 */
-    --coral: 11 100% 65%;
-    /* Rajasthan Coral #FF6B4A */
-    --sand: 40 62% 73%;
-    /* Pushkar Sand #E6C98F */
+    /* Brand Colors - Africa Theme */
+    --teal: 178 100% 15%;
+    /* Deep African Green #004B49 -> changed to a deep forest green */
+    --blue: 45 100% 50%;
+    /* Savanna Gold #FFD700 -> changed to gold */
+    --blue-l: 45 100% 70%;
+    /* Light Gold */
+    --coral: 15 75% 55%;
+    /* Terracotta #E2725B */
+    --sand: 34 57% 70%;
+    /* Kalahari Sand #D2B48C */
 
     /* Semantic Mappings */
-    --primary: 195 83% 26%;
-    /* Teal */
+    --primary: 178 100% 15%;
+    /* Deep African Green */
     --primary-foreground: 44 35% 92%;
 
-    --secondary: 195 75% 48%;
-    /* Blue */
+    --secondary: 45 100% 50%;
+    /* Savanna Gold */
     --secondary-foreground: 44 35% 92%;
 
-    --accent: 195 75% 48%;
-    /* Blue */
+    --accent: 45 100% 50%;
+    /* Savanna Gold */
     --accent-foreground: 44 35% 92%;
 
-    --bright: 195 75% 48%;
+    --bright: 45 100% 50%;
     --bright-foreground: 44 35% 92%;
 
     --card: 44 35% 92%;
@@ -60,10 +60,10 @@
     /* Coral as destructive/urgent */
     --destructive-foreground: 44 35% 92%;
 
-    --border: 195 83% 26% / 0.18;
-    /* Using teal for lines as per kit */
-    --input: 195 83% 26% / 0.18;
-    --ring: 195 75% 48%;
+    --border: 178 100% 15% / 0.18;
+    /* Using deep green for lines */
+    --input: 178 100% 15% / 0.18;
+    --ring: 45 100% 50%;
 
     --radius: 0.25rem;
 
@@ -82,11 +82,11 @@
 
     --sidebar-background: 44 35% 92%;
     --sidebar-foreground: 205 24% 10%;
-    --sidebar-primary: 195 83% 26%;
+    --sidebar-primary: 178 100% 15%;
     --sidebar-primary-foreground: 44 35% 92%;
     --sidebar-accent-foreground: 44 35% 92%;
-    --sidebar-border: 195 83% 26% / 0.18;
-    --sidebar-ring: 195 75% 48%;
+    --sidebar-border: 178 100% 15% / 0.18;
+    --sidebar-ring: 45 100% 50%;
   }
 
   .dark {
@@ -101,22 +101,22 @@
     --card: 205 24% 7%;
     --card-foreground: 44 27% 94%;
 
-    --primary: 195 72% 59%;
-    /* Use blue-light in dark mode */
+    --primary: 45 100% 70%;
+    /* Light Gold in dark mode */
     --primary-foreground: 205 24% 7%;
 
-    --secondary: 195 75% 48%;
+    --secondary: 45 100% 50%;
     --secondary-foreground: 44 27% 94%;
 
     --muted: 205 15% 15%;
     --muted-foreground: 44 10% 65%;
 
-    --accent: 195 75% 48%;
+    --accent: 45 100% 50%;
     --accent-foreground: 205 24% 7%;
 
     --border: 205 24% 20%;
     --input: 205 24% 20%;
-    --ring: 195 75% 48%;
+    --ring: 45 100% 50%;
 
     --invert-bg: 205 24% 4%;
     --invert-bg-deep: 205 24% 2%;

@@ -3,51 +3,51 @@ import { memo } from "react";
 const services = [
   {
     n: "01",
-    title: "Social Media Marketing",
-    body: "Platform-native content that stops the scroll and starts conversations. Reels, carousels, community management, and brand voice the full ecosystem.",
-    items: ["Reels & Video", "Content Strategy", "Community Mgmt", "Brand Voice"],
+    title: "Air Ticketing",
+    body: "Best-in-class flight booking services to any destination worldwide. We ensure the most competitive rates and smooth itineraries for your journey.",
+    items: ["Global Reach", "Best Rates", "Flexible Dates", "24/7 Support"],
   },
   {
     n: "02",
-    title: "Performance Marketing",
-    body: "High-ROI Meta, Google, and YouTube ads engineered around your sales targets, not vanity metrics. Every rupee tracked. Every click optimised.",
-    items: ["Meta Ads", "Google Ads", "Conversion Ops", "ROI Tracking"],
+    title: "Visa Assistance",
+    body: "Expert guidance through the complex visa application process. We simplify the paperwork so you can focus on your upcoming adventure.",
+    items: ["Documentation", "Application Support", "Expert Advice", "Fast Track"],
   },
   {
     n: "03",
-    title: "SEO Search Engine Optimisation",
-    body: "Rank higher. Get found. Stay there. Technical audits, keyword strategy, and authority building that compounds month after month.",
-    items: ["Technical Audit", "Keyword Strategy", "Local SEO", "Content Auth"],
+    title: "Travel Insurance",
+    body: "Travel with peace of mind. Our comprehensive insurance packages cover health, luggage, and trip cancellations for total security.",
+    items: ["Medical Cover", "Trip Cancellation", "Luggage Protection", "Global Support"],
   },
   {
     n: "04",
-    title: "GEO Generative Engine Optimisation",
-    body: "The future of search is here. We optimise your brand to appear in ChatGPT, Perplexity, and Google AI Overview answers.",
-    items: ["AI Search Opt", "ChatGPT SEO", "LLM Citations", "Future Proof"],
+    title: "Hotel Booking",
+    body: "From boutique hotels to luxury resorts, we find the perfect stay that fits your style and budget across the globe.",
+    items: ["Luxury Resorts", "Boutique Stays", "Verified Reviews", "Exclusive Deals"],
   },
   {
     n: "05",
-    title: "Email Marketing",
-    body: "From cold outreach to nurture flows strategic email campaigns that turn strangers into subscribers and customers into advocates.",
-    items: ["Cold Outreach", "Drip Campaigns", "Nurture Flows", "Newsletters"],
+    title: "Holiday Packages",
+    body: "Curated vacation trips designed for every kind of explorer. Adventure awaits in the world's most breathtaking destinations.",
+    items: ["Family Trips", "Honeymoons", "Adventure Tours", "Cultural Stays"],
   },
   {
     n: "06",
-    title: "Lead Generation",
-    body: "End-to-end systems landing pages, lead magnets, and funnels that feed your sales pipeline with qualified prospects.",
-    items: ["Sales Funnels", "Lead Magnets", "Landing Pages", "CRM Sync"],
+    title: "Luxury Safaris",
+    body: "Experience the wild like never before with our exclusive luxury safari packages, crafted to exceed every expectation in the African bush.",
+    items: ["Game Drives", "Luxury Lodges", "Expert Guides", "Private Tours"],
   },
   {
     n: "07",
-    title: "Website Development",
-    body: "Lightning-fast, mobile-first websites built to perform. From simple business sites to full e-commerce platforms.",
-    items: ["Next.js / React", "E-commerce", "Mobile-first", "Core Vitals"],
+    title: "Car Rental",
+    body: "Reliable and comfortable transportation at your destination. Choose from a wide fleet of vehicles to explore at your own pace.",
+    items: ["SUV / Sedan", "Chauffeur Drive", "Global Partners", "Airport Pickup"],
   },
   {
     n: "08",
-    title: "AI & CRM Systems",
-    body: "Zoho, HubSpot, and AI-enhanced workflows that auto-capture leads and segment audiences. Your sales machine, on autopilot.",
-    items: ["Zoho / HubSpot", "Workflows", "Sales Auto", "AI Scoring"],
+    title: "MICE Arrangements",
+    body: "Professional management for Meetings, Incentives, Conferences, and Exhibitions. We handle the logistics so you can focus on the business.",
+    items: ["Corporate Events", "Conference Logistics", "Team Building", "Incentive Travel"],
   },
 ];
 
@@ -61,7 +61,7 @@ const Services = memo(() => {
           </div>
           <div className="md:col-span-9">
             <h2 className="font-display text-5xl md:text-7xl leading-[0.85] text-ink dark:text-teal reveal">
-              Four disciplines. <span className="font-serif text-blue dark:text-white">One system.</span>
+              World-class travel. <span className="font-serif text-blue dark:text-white">Seamlessly delivered.</span>
             </h2>
           </div>
         </div>

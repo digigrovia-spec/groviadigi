@@ -40,65 +40,42 @@ const jetbrainsMono = JetBrains_Mono({
 
 
 export const metadata = {
-  metadataBase: new URL("https://groviadigi.com"),
-  title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
-  description: "Premium digital marketing agency built in Rajasthan, trusted across India. SEO, social media, performance marketing, GEO, web & AI-CRM systems. Book your free strategy call.",
+  metadataBase: new URL("https://lamairatravel.com"),
+  title: "Lamaira Travel — Luxury Travel & Safari Experiences in Accra, Ghana",
+  description: "Your trusted travel and tours company in Accra, Ghana. We provide flight tickets, tour packages, hotel bookings, and unforgettable safari experiences worldwide.",
   keywords: [
-    // Primary
-    "digital marketing agency in india",
-    "digital marketing services",
-    "best digital marketing agency",
-    "ai digital marketing agency",
-    "digital marketing for small business",
-    // Local — Rajasthan
-    "digital marketing agency in rajasthan",
-    "digital marketing company in rajasthan",
-    "best digital marketing agency in rajasthan",
-    "seo services in rajasthan",
-    "social media marketing agency in rajasthan",
-    "google ads agency in rajasthan",
-    "website development company in rajasthan",
-    "digital marketing services rajasthan",
-    // Rajasthan
-    "digital marketing agency in rajasthan state",
-    "best seo company in rajasthan region",
-    // Services
-    "performance marketing agency",
-    "seo services india",
-    "generative engine optimization",
-    "email marketing services india",
-    "lead generation agency india",
-    "website development company in india",
-    "crm setup services",
-    "social media marketing services",
-    // GEO differentiator
-    "geo services",
-    "ai search optimization",
-    "chatgpt seo services",
-    "google ai overview optimization",
-    "answer engine optimization",
+    "travel agency accra ghana",
+    "luxury safari packages africa",
+    "flight tickets accra",
+    "visa assistance ghana",
+    "hotel booking services",
+    "holiday packages africa",
+    "car rental accra",
+    "cruise trips",
+    "international travel partner ghana",
+    "best travel agency accra",
   ],
-  authors: [{ name: "Grovia Digi" }],
+  authors: [{ name: "Lamaira Travel" }],
   openGraph: {
-    title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
-    description: "Premium digital marketing agency built in Rajasthan, trusted across India. SEO, social media, performance marketing, GEO, web & AI-CRM systems.",
-    url: "https://groviadigi.com",
-    siteName: "Grovia Digi",
+    title: "Lamaira Travel — Luxury Travel & Safari Experiences in Accra, Ghana",
+    description: "Your trusted travel and tours company in Accra, Ghana. We provide flight tickets, tour packages, hotel bookings, and unforgettable safari experiences worldwide.",
+    url: "https://lamairatravel.com",
+    siteName: "Lamaira Travel",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Grovia Digi — Digital Marketing Agency in Rajasthan, India",
+        alt: "Lamaira Travel — Luxury Travel & Safari Experiences",
       },
     ],
-    locale: "en_IN",
+    locale: "en_GH",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
-    description: "Premium digital marketing agency built in Rajasthan. SEO, performance marketing, GEO, web & AI-CRM. Free strategy call.",
+    title: "Lamaira Travel — Luxury Travel & Safari Experiences in Accra, Ghana",
+    description: "Your trusted travel and tours company in Accra, Ghana. Flight tickets, tour packages, and unforgettable safari experiences.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -117,7 +94,7 @@ export const metadata = {
     apple: "/favicon.svg",
   },
   alternates: {
-    canonical: "https://groviadigi.com",
+    canonical: "https://lamairatravel.com",
   },
 };
 
