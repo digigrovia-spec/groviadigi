@@ -40,11 +40,12 @@ const Nav = memo(() => {
   const links = [
     { href: "#services", label: "Services" },
     { href: "#packages", label: "Packages" },
-    { href: "#gallery", label: "Gallery" },
+    { href: "/audit", label: "Audit" },
     { href: "#about", label: "About Us" },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/")) return;
     e.preventDefault();
     const targetId = href.replace("#", "");
     const elem = document.getElementById(targetId);
