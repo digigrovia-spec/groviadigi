@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Instagram, Linkedin, Dribbble } from "lucide-react";
 
-const Behance = ({ size = 24, ...props }: any) => (
+const Behance = ({ size = 24, ...props }: { size?: number; [key: string]: unknown }) => (
   <svg
     width={size}
     height={size}
@@ -39,12 +39,13 @@ const Nav = memo(() => {
 
   const links = [
     { href: "#services", label: "Services" },
-    { href: "#process", label: "Process" },
-    { href: "#work", label: "Work" },
-    { href: "#industries", label: "Industries" },
+    { href: "#packages", label: "Packages" },
+    { href: "/audit", label: "Audit" },
+    { href: "#about", label: "About Us" },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/")) return;
     e.preventDefault();
     const targetId = href.replace("#", "");
     const elem = document.getElementById(targetId);
@@ -65,10 +66,10 @@ const Nav = memo(() => {
           href="#top"
           onClick={(e) => handleScroll(e, "#top")}
           className="flex items-center gap-2"
-          aria-label="Groviadigi Home"
+          aria-label="Lamaira Travel Home"
         >
           <span className="font-display text-2xl">
-            <span className="text-teal">Grovia</span><span className="text-blue">digi</span>
+            <span className="text-teal">Lamaira</span> <span className="text-blue">Travel</span>
           </span>
         </a>
 
@@ -94,7 +95,7 @@ const Nav = memo(() => {
               onClick={(e) => handleScroll(e, "#contact")}
               className="pill-cta text-sm"
             >
-              Start a project
+              Book Now
               <span aria-hidden>→</span>
             </a>
           </Magnetic>
@@ -138,7 +139,7 @@ const Nav = memo(() => {
                 }}
                 className="pill-cta mt-2"
               >
-                Start a project <span>→</span>
+                Book Now <span>→</span>
               </a>
             </li>
           </ul>

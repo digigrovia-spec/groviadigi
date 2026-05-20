@@ -2,6 +2,7 @@
 
 import { useRef, useCallback, useEffect, useState, memo } from "react";
 import { Magnetic } from "@/components/ui/magnetic";
+import { Africa3D } from "@/components/ui/Africa3D";
 
 /**
  * Hero section using GPU-accelerated CSS transitions for parallax.
@@ -64,33 +65,38 @@ const Hero = memo(() => {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 relative z-10">
         {/* Top meta line */}
         <div className="flex items-center justify-between font-mono-tag text-ink-muted mb-16 md:mb-24">
-          <span>Index — 001</span>
-          <span className="hidden md:inline">Marketing That Doesn&apos;t Just Look Good. It Grow Businesses.</span>
-          <span>EST · 2026</span>
+          <span>Accra · Ghana</span>
+          <span className="hidden md:inline">Luxury Travel & Safari Experiences Crafted for You.</span>
+          <span>EST · 2015</span>
         </div>
 
-        <h1
-          ref={titleRef}
-          className="font-display text-ink dark:text-teal leading-[0.85] text-[12vw] md:text-[13vw] lg:text-[12vw] xl:text-[11.5vw] w-full"
-          style={{
-            willChange: parallaxEnabled ? "transform" : "auto",
-            transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
-          }}
-        >
-          <span className="block dark:text-white mb-2 md:mb-4">Marketing</span>
-          <span className="block font-serif mb-2 md:mb-4">
-            <span className="text-blue">that grows</span>
-          </span>
-          <span className="block dark:text-white">Businesses.</span>
-        </h1>
+        <div className="relative grid lg:grid-cols-2 items-center gap-10">
+          <h1
+            ref={titleRef}
+            className="font-display text-ink dark:text-teal leading-[0.85] text-[12vw] md:text-[13vw] lg:text-[10vw] xl:text-[9vw] w-full"
+            style={{
+              willChange: parallaxEnabled ? "transform" : "auto",
+              transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+            }}
+          >
+            <span className="block dark:text-white mb-2 md:mb-4">Explore</span>
+            <span className="block font-serif mb-2 md:mb-4">
+              <span className="text-blue">the heart of</span>
+            </span>
+            <span className="block dark:text-white">Africa.</span>
+          </h1>
+          <div className="hidden lg:block">
+            <Africa3D />
+          </div>
+        </div>
 
         <div className="mt-16 md:mt-24 grid md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-6 md:col-start-1">
-            <p className="font-mono-tag text-ink-muted mb-4">[ 01 — Who we are ]</p>
+            <p className="font-mono-tag text-ink-muted mb-4">[ 01 — Your Journey ]</p>
             <p className="text-ink-soft text-lg md:text-xl leading-relaxed font-sans">
-              We&apos;re a digital marketing agency built in Rajasthan for ambitious Indian brands.
-              From restaurants and jewellery houses to startups and SMEs we run the strategy,
-              creative, ads, SEO, and AI systems that fill your pipeline and keep it full.
+              Lamaira Travel is your trusted international travel partner based in Accra.
+              From thrilling safari adventures to seamless luxury escapes, we curate
+              experiences that go beyond the ordinary. Where will your next journey take you?
             </p>
           </div>
 
@@ -101,7 +107,7 @@ const Hero = memo(() => {
                 onClick={(e) => handleScroll(e, "#contact")}
                 className="pill-cta justify-between text-base w-full"
               >
-                Book a Free Strategy Call
+                Book Your Adventure
                 <span aria-hidden>→</span>
               </a>
             </Magnetic>
@@ -111,7 +117,7 @@ const Hero = memo(() => {
                 onClick={(e) => handleScroll(e, "#services")}
                 className="pill-ghost justify-between text-base w-full"
               >
-                See What We Do
+                Explore Services
                 <span aria-hidden>↓</span>
               </a>
             </Magnetic>
@@ -121,7 +127,7 @@ const Hero = memo(() => {
         {/* Trust Strip */}
         <div className="mt-24 pt-8 border-t border-ink/10">
           <p className="font-mono-tag text-ink-muted text-center tracking-widest uppercase text-xs md:text-sm">
-            Built in Rajasthan · Trusted across India · AI-Augmented · Results-Obsessed · Est. 2026
+            Based in Accra · Luxury Safaris · Global Reach · 10+ Years Experience · Est. 2015
           </p>
         </div>
       </div>
