@@ -136,7 +136,7 @@
   .meta-chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
   .meta-chip strong{color:var(--ink);font-weight:600}
   .event-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
-  .event-price{text-align:right;flex-shrink:0}
+  .event-price{text-align:right;flex-shrink:0;padding-top:36px}
 
   /* TABLE */
   .tbl-wrap{border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -195,6 +195,43 @@
   .footer-mid strong{color:rgba(241,237,226,.7)}
   .footer-right p{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(241,237,226,.5)}
   .footer-right a{color:var(--blue-l);text-decoration:none}
+
+  /* ── MOBILE RESPONSIVE ── */
+  @media(max-width:900px){
+    .topbar-inner{padding:12px 20px}
+    .hero{padding:48px 20px 44px}
+    .pkg-grid{grid-template-columns:1fr;gap:12px}
+    .pkg-half{grid-column:span 1}
+    .section{padding:48px 20px}
+    .section-header{margin-bottom:28px}
+    .services-table th,.services-table td{padding:9px 10px;font-size:11px}
+    .footer-inner{flex-direction:column;gap:18px;padding:28px 20px}
+  }
+  @media(max-width:600px){
+    .topbar-inner{padding:10px 16px}
+    .tb-title{font-size:15px}
+    .tb-right{display:none}
+    .hero{padding:36px 16px 32px}
+    .hero-pills{gap:6px}
+    .hero-pill{font-size:9px;padding:5px 11px}
+    .marquee .track span{font-size:13px}
+    .section{padding:36px 16px}
+    .pkg-summary{padding:20px 16px 12px}
+    .pkg-highlights{padding:8px 10px}
+    .toggle-btn{margin:6px 12px 12px;font-size:10px}
+    .pkg-details-inner{padding:14px 16px 18px}
+    .feats li{font-size:12px}
+    .price-amt{font-size:32px !important}
+    .event-top{flex-direction:column;gap:8px}
+    .event-price{text-align:left;padding-top:0}
+    .pkg-badge{top:12px;right:12px;font-size:8px}
+    .services-table{font-size:10px}
+    .services-table th,.services-table td{padding:7px 8px}
+    .tnc-bar{padding:0 16px}
+    .section-eyebrow{font-size:9px}
+    .section-head{font-size:clamp(28px,7vw,40px)}
+    .feats-2col{grid-template-columns:1fr !important}
+  }
 
   @media print {
     @page { margin: 15mm 12mm; size: A4; }
