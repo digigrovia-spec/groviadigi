@@ -138,6 +138,8 @@
   .event-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
   .event-price{text-align:right;flex-shrink:0;padding-top:36px}
   .event-scope-line{font-size:11px;color:var(--ink-3);margin-top:2px;font-family:var(--mono);letter-spacing:.06em}
+  .event-price-row{justify-content:flex-end}
+  .event-price-amt{font-size:34px}
 
   /* TABLE */
   .tbl-wrap{border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -225,8 +227,8 @@
     .price-amt{font-size:32px !important}
     .event-top{flex-direction:column;gap:0}
     .event-price{text-align:left;padding-top:4px}
-    .event-price .price-row{justify-content:flex-start !important}
-    .event-price .price-amt{font-size:42px !important}
+    .event-price-row{justify-content:flex-start}
+    .event-price-amt{font-size:42px;color:var(--ink)}
     .event-scope-line{font-size:11px}
     .pkg-badge{top:12px;right:12px;font-size:8px}
     .services-table{font-size:10px}
@@ -456,7 +458,7 @@
             <div class="pkg-sub" style="max-width:400px;">Pre-event &amp; during-event only &middot; Starts 40 days before &middot; Price increases for shorter windows</div>
           </div>
           <div class="event-price">
-            <div class="price-row" style="justify-content:flex-end;"><span class="price-amt" style="font-size:34px;">&#8377;35K</span></div>
+            <div class="price-row event-price-row"><span class="price-amt event-price-amt">&#8377;35K</span></div>
             <div class="event-scope-line">/month &middot; Based on event scope</div>
           </div>
         </div>
