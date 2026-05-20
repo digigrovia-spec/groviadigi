@@ -43,7 +43,8 @@ const Results = memo(() => {
           {principles.map((p) => (
             <div key={p.n} className="reveal">
               <article
-                className="group relative h-full bg-invert-deep border border-white/10 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-out hover:bg-ink-soft hover:scale-[1.03] hover:z-10 hover:shadow-2xl hover:shadow-blue/10 hover:border-blue/30 cursor-pointer interactive-cursor gpu-layer"
+                style={{ backgroundColor: 'hsl(205 24% 8%)' }}
+                className="group relative h-full border border-white/10 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-out hover:bg-ink-soft hover:scale-[1.03] hover:z-10 hover:shadow-2xl hover:shadow-white/10 hover:border-white/30 cursor-pointer interactive-cursor gpu-layer"
               >
                 <div className="p-8 md:p-12">
                   <div className="flex items-baseline justify-between mb-10">
