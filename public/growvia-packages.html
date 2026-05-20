@@ -231,8 +231,20 @@
     .event-price-amt{font-size:42px;color:var(--ink)}
     .event-scope-line{font-size:11px}
     .pkg-badge{top:12px;right:12px;font-size:8px}
-    .services-table{font-size:10px}
-    .services-table th,.services-table td{padding:7px 8px}
+    .tbl-wrap{border:none;border-radius:0;overflow:visible;background:transparent}
+    .tbl-wrap table,.tbl-wrap thead,.tbl-wrap tbody,.tbl-wrap tr,.tbl-wrap th,.tbl-wrap td{display:block;width:100%}
+    .tbl-wrap thead tr{display:none}
+    .tbl-wrap tbody tr{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+    .tbl-wrap tbody tr.grp-row{border-radius:8px;margin-bottom:4px;margin-top:8px}
+    .tbl-wrap tbody tr td{padding:10px 14px;border-bottom:1px solid var(--line);font-size:12.5px;line-height:1.45}
+    .tbl-wrap tbody tr td:last-child{border-bottom:none;padding:8px 14px 13px}
+    .tbl-wrap tbody tr.grp-row td{border-bottom:none;padding:8px 14px}
+    .pc{font-size:17px}
+    .svc-n{font-size:13.5px}
+    .sec-head{grid-template-columns:1fr;gap:6px}
+    .sec-right{text-align:left;white-space:normal}
+    .excl-chips{gap:6px}
+    .excl-chip{font-size:10px;padding:4px 10px}
     .tnc-bar{padding:0 16px}
     .section-eyebrow{font-size:9px}
     .section-head{font-size:clamp(28px,7vw,40px)}
@@ -305,9 +317,57 @@
 
 <main>
 
+  <!-- SERVICES TABLE -->
   <div class="sec-head no-border">
     <div>
-      <div class="sec-num">01 &#8212; Packages</div>
+      <div class="sec-num">01 &#8212; &#192; La Carte</div>
+      <div class="sec-title">Individual <em>Services</em></div>
+    </div>
+    <div class="sec-right">Mix &amp; match for<br>Custom Package (P06)</div>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th style="width:34%">Service</th><th>Inclusions &amp; Notes</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr class="grp-row"><td colspan="3">&#127912; &nbsp;Content Creation</td></tr>
+        <tr><td><span class="svc-n">Video Editing + Poster Making</span><span class="svc-s">One-time service</span></td><td>5 normal quality videos &middot; 3 design revisions included</td><td class="pc">&#8377;20,000</td></tr>
+        <tr><td><span class="svc-n">Video Shoot</span><span class="svc-s">Location-dependent availability</span></td><td>On-location shoot &middot; 2 revisions &middot; Availability varies by region</td><td class="pc">&#8377;15,000</td></tr>
+        <tr><td><span class="svc-n">Logo + Brand Kit</span><span class="svc-s">One-time, includes brand kit</span></td><td>Full brand kit + logo &middot; 4 revision rounds</td><td class="pc">&#8377;10,000</td></tr>
+        <tr><td><span class="svc-n">Video Editing &#8212; Per Video</span></td><td>Normal &nbsp;&middot;&nbsp; Medium &nbsp;&middot;&nbsp; High quality (incl. motion graphics)</td><td class="pc pc-range">&#8377;1K &nbsp;/&nbsp; &#8377;2.5K &nbsp;/&nbsp; &#8377;3.5K</td></tr>
+        <tr class="grp-row"><td colspan="3">&#128187; &nbsp;Web &amp; Landing Pages</td></tr>
+        <tr><td><span class="svc-n">Landing Page</span><span class="svc-s">Single page, no animation</span></td><td>1 landing page &middot; 2 revisions included</td><td class="pc">&#8377;10,000</td></tr>
+        <tr><td><span class="svc-n">Animated Website</span><span class="svc-s">Standard delivery</span></td><td>Animated website &#8212; standard timeline</td><td class="pc">&#8377;10,000</td></tr>
+        <tr><td><span class="svc-n">Animated Website</span><span class="svc-s">Same-day delivery</span></td><td>Rush delivery &#8212; delivered same day</td><td class="pc pc-range">&#8377;30,000</td></tr>
+        <tr><td><span class="svc-n">E-Commerce Website</span><span class="svc-s">One-time build</span></td><td>Full e-commerce setup</td><td class="pc pc-range">&#8377;50K &#8211; &#8377;1,00,000</td></tr>
+        <tr class="grp-row"><td colspan="3">&#128269; &nbsp;SEO &amp; GEO</td></tr>
+        <tr><td><span class="svc-n">SEO Only</span><span class="svc-s">Monthly</span></td><td>Search engine optimisation &#8212; 1 website</td><td class="pc">&#8377;20,000<span class="pc-muted">/mo</span></td></tr>
+        <tr><td><span class="svc-n">GEO Only</span><span class="svc-s">Monthly</span></td><td>Generative engine optimisation &#8212; 1 website</td><td class="pc">&#8377;15,000<span class="pc-muted">/mo</span></td></tr>
+        <tr class="grp-row"><td colspan="3">&#128226; &nbsp;Social Media &amp; Ads</td></tr>
+        <tr><td><span class="svc-n">Social Media Management</span><span class="svc-s">Monthly, per platform</span></td><td>Strategy + content + posting for 1 platform</td><td class="pc">&#8377;15,000<span class="pc-muted">/mo</span></td></tr>
+        <tr><td><span class="svc-n">Paid Ads Management</span><span class="svc-s">Monthly</span></td><td>LinkedIn Ads or Meta Ads &#8212; ad spend billed separately</td><td class="pc">&#8377;10,000<span class="pc-muted">/mo</span></td></tr>
+        <tr class="grp-row"><td colspan="3">&#128231; &nbsp;Email Marketing</td></tr>
+        <tr><td><span class="svc-n">Email Campaign</span><span class="svc-s">Per campaign</span></td><td>Design + copy + send for 1 campaign</td><td class="pc">&#8377;5,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="excl-banner">
+    <div class="excl-icon">&#9888;&#65039;</div>
+    <div class="excl-text">
+      <strong>Not included in any package unless explicitly stated</strong>
+      <div class="excl-chips">
+        <span class="excl-chip">Ad Spend / Media Budget</span>
+        <span class="excl-chip">Domain &amp; Hosting</span>
+        <span class="excl-chip">Stock Photos / Music Licences</span>
+        <span class="excl-chip">GST (18%)</span>
+        <span class="excl-chip">Third-party Tool Subscriptions</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div>
+      <div class="sec-num">02 &#8212; Packages</div>
       <div class="sec-title">Our <em>Packages</em></div>
     </div>
     <div class="sec-right">Click any card<br>to view details</div>
@@ -527,54 +587,6 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- SERVICES TABLE -->
-  <div class="sec-head">
-    <div>
-      <div class="sec-num">02 &#8212; &#192; La Carte</div>
-      <div class="sec-title">Individual <em>Services</em></div>
-    </div>
-    <div class="sec-right">Mix &amp; match for<br>Custom Package (P06)</div>
-  </div>
-  <div class="tbl-wrap">
-    <table>
-      <thead><tr><th style="width:34%">Service</th><th>Inclusions &amp; Notes</th><th>Price</th></tr></thead>
-      <tbody>
-        <tr class="grp-row"><td colspan="3">&#127912; &nbsp;Content Creation</td></tr>
-        <tr><td><span class="svc-n">Video Editing + Poster Making</span><span class="svc-s">One-time service</span></td><td>5 normal quality videos &middot; 3 design revisions included</td><td class="pc">&#8377;20,000</td></tr>
-        <tr><td><span class="svc-n">Video Shoot</span><span class="svc-s">Location-dependent availability</span></td><td>On-location shoot &middot; 2 revisions &middot; Availability varies by region</td><td class="pc">&#8377;15,000</td></tr>
-        <tr><td><span class="svc-n">Logo + Brand Kit</span><span class="svc-s">One-time, includes brand kit</span></td><td>Full brand kit + logo &middot; 4 revision rounds</td><td class="pc">&#8377;10,000</td></tr>
-        <tr><td><span class="svc-n">Video Editing &#8212; Per Video</span></td><td>Normal &nbsp;&middot;&nbsp; Medium &nbsp;&middot;&nbsp; High quality (incl. motion graphics)</td><td class="pc pc-range">&#8377;1K &nbsp;/&nbsp; &#8377;2.5K &nbsp;/&nbsp; &#8377;3.5K</td></tr>
-        <tr class="grp-row"><td colspan="3">&#128187; &nbsp;Web &amp; Landing Pages</td></tr>
-        <tr><td><span class="svc-n">Landing Page</span><span class="svc-s">Single page, no animation</span></td><td>1 landing page &middot; 2 revisions included</td><td class="pc">&#8377;10,000</td></tr>
-        <tr><td><span class="svc-n">Animated Website</span><span class="svc-s">Standard delivery</span></td><td>Animated website &#8212; standard timeline</td><td class="pc">&#8377;10,000</td></tr>
-        <tr><td><span class="svc-n">Animated Website</span><span class="svc-s">Same-day delivery</span></td><td>Rush delivery &#8212; delivered same day</td><td class="pc pc-range">&#8377;30,000</td></tr>
-        <tr><td><span class="svc-n">E-Commerce Website</span><span class="svc-s">One-time build</span></td><td>Full e-commerce setup</td><td class="pc pc-range">&#8377;50K &#8211; &#8377;1,00,000</td></tr>
-        <tr class="grp-row"><td colspan="3">&#128269; &nbsp;SEO &amp; GEO</td></tr>
-        <tr><td><span class="svc-n">SEO Only</span><span class="svc-s">Monthly</span></td><td>Search engine optimisation &#8212; 1 website</td><td class="pc">&#8377;20,000<span class="pc-muted">/mo</span></td></tr>
-        <tr><td><span class="svc-n">GEO Only</span><span class="svc-s">Monthly</span></td><td>Generative engine optimisation &#8212; 1 website</td><td class="pc">&#8377;15,000<span class="pc-muted">/mo</span></td></tr>
-        <tr class="grp-row"><td colspan="3">&#128226; &nbsp;Social Media &amp; Ads</td></tr>
-        <tr><td><span class="svc-n">Social Media Management</span><span class="svc-s">Monthly, per platform</span></td><td>Strategy + content + posting for 1 platform</td><td class="pc">&#8377;15,000<span class="pc-muted">/mo</span></td></tr>
-        <tr><td><span class="svc-n">Paid Ads Management</span><span class="svc-s">Monthly</span></td><td>LinkedIn Ads or Meta Ads &#8212; ad spend billed separately</td><td class="pc">&#8377;10,000<span class="pc-muted">/mo</span></td></tr>
-        <tr class="grp-row"><td colspan="3">&#128231; &nbsp;Email Marketing</td></tr>
-        <tr><td><span class="svc-n">Email Campaign</span><span class="svc-s">Per campaign</span></td><td>Design + copy + send for 1 campaign</td><td class="pc">&#8377;5,000</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="excl-banner">
-    <div class="excl-icon">&#9888;&#65039;</div>
-    <div class="excl-text">
-      <strong>Not included in any package unless explicitly stated</strong>
-      <div class="excl-chips">
-        <span class="excl-chip">Ad Spend / Media Budget</span>
-        <span class="excl-chip">Domain &amp; Hosting</span>
-        <span class="excl-chip">Stock Photos / Music Licences</span>
-        <span class="excl-chip">GST (18%)</span>
-        <span class="excl-chip">Third-party Tool Subscriptions</span>
-      </div>
-    </div>
   </div>
 
   <!-- T&C -->
