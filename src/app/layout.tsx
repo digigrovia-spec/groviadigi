@@ -14,7 +14,7 @@ const GA_MEASUREMENT_ID = "G-H95KS7EC5W"; // ← PASTE YOUR ID HERE
 
 // TODO: Replace with your Google Search Console verification code
 // Get it from: GSC → Add Property → HTML tag → content="..."
-const GSC_VERIFICATION = "_2MQEmNn4y1i7-R2yNfKDM26P_gi1gtdobumv3BVdFg"; // ← PASTE YOUR CODE HERE
+const GSC_VERIFICATION = "4_FTybkU_g1VkR1xkpNoHryMVoQXp3nA_o4nAmmCJgA"; // ← PASTE YOUR CODE HERE
 // ─────────────────────────────────────────────────────────────────────────────
 
 
