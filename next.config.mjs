@@ -26,9 +26,38 @@ const nextConfig = {
   },
 
   // Empty turbopack config silences the webpack warning
-  // (Next.js 16 uses Turbopack by default; no webpack overrides needed
-  //  since framer-motion is no longer used in any component)
   turbopack: {},
+
+  // ─── Security & SEO HTTP Headers ─────────────────────────────────────────
+  // Applied to every route. Improves security posture & search engine trust.
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          // Prevent MIME-type sniffing
+          { key: "X-Content-Type-Options",    value: "nosniff" },
+          // Block clickjacking — page can only be framed by same origin
+          { key: "X-Frame-Options",            value: "SAMEORIGIN" },
+          // Stop legacy XSS filter (modern browsers use CSP instead)
+          { key: "X-XSS-Protection",           value: "1; mode=block" },
+          // Send full referrer on same-origin, only origin on cross-origin
+          { key: "Referrer-Policy",             value: "strict-origin-when-cross-origin" },
+          // Disable unnecessary browser features
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          },
+          // Force HTTPS for 1 year (only enable once site is live on HTTPS)
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains; preload",
+          },
+        ],
+      },
+    ];
+  },
+  // ─────────────────────────────────────────────────────────────────────────
 };
 
 export default nextConfig;

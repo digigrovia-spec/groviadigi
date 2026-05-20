@@ -1,10 +1,21 @@
 import "../index.css";
 import { Inter, Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { Providers } from "./providers";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { LoadingScreen } from "@/components/ui/loading-screen";
+
+// ─── Analytics & Verification ────────────────────────────────────────────────
+// TODO: Replace with your real GA4 Measurement ID (e.g. G-XXXXXXXXXX)
+// Get it from: GA4 → Admin → Data Streams → your stream → Measurement ID
+const GA_MEASUREMENT_ID = "G-H95KS7EC5W"; // ← PASTE YOUR ID HERE
+
+// TODO: Replace with your Google Search Console verification code
+// Get it from: GSC → Add Property → HTML tag → content="..."
+const GSC_VERIFICATION = "_2MQEmNn4y1i7-R2yNfKDM26P_gi1gtdobumv3BVdFg"; // ← PASTE YOUR CODE HERE
+// ─────────────────────────────────────────────────────────────────────────────
 
 
 const inter = Inter({
@@ -40,7 +51,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 
 export const metadata = {
-  metadataBase: new URL("https://groviadigi.com"),
+  metadataBase: new URL("https://groviadigi.in"),
   title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
   description: "Premium digital marketing agency built in Rajasthan, trusted across India. SEO, social media, performance marketing, GEO, web & AI-CRM systems. Book your free strategy call.",
   keywords: [
@@ -79,10 +90,14 @@ export const metadata = {
     "answer engine optimization",
   ],
   authors: [{ name: "Grovia Digi" }],
+  // Google Search Console ownership verification
+  verification: {
+    google: GSC_VERIFICATION,
+  },
   openGraph: {
     title: "Grovia Digi — Digital Marketing Agency in India | AI-Powered Growth",
     description: "Premium digital marketing agency built in Rajasthan, trusted across India. SEO, social media, performance marketing, GEO, web & AI-CRM systems.",
-    url: "https://groviadigi.com",
+    url: "https://groviadigi.in",
     siteName: "Grovia Digi",
     images: [
       {
@@ -117,7 +132,7 @@ export const metadata = {
     apple: "/favicon.svg",
   },
   alternates: {
-    canonical: "https://groviadigi.com",
+    canonical: "https://groviadigi.in",
   },
 };
 
@@ -128,9 +143,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        {/* Google Analytics 4 — loads after page is interactive to not block render */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <Providers>
-
           <LoadingScreen />
           <SmoothScroll />
           {children}

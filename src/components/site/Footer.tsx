@@ -49,7 +49,7 @@ const Footer = memo(() => {
           <div className="md:col-span-2">
             <p className="font-mono-tag text-invert-fg-muted mb-4">Social</p>
             <div className="flex gap-4 text-invert-fg-soft/80">
-              <a href="#" aria-label="Instagram" className="hover:text-bright transition-colors">
+              <a href="https://www.instagram.com/groviadigi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-bright transition-colors">
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
               <a href="#" aria-label="LinkedIn" className="hover:text-bright transition-colors">

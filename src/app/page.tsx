@@ -30,8 +30,8 @@ export default function Page() {
               "@type": "Organization",
               "name": "Grovia Digi",
               "alternateName": "Groviadigi",
-              "url": "https://groviadigi.com",
-              "logo": "https://groviadigi.com/logo.png",
+              "url": "https://groviadigi.in",
+              "logo": "https://groviadigi.in/logo.png",
               "description": "Premium digital marketing agency built in Rajasthan. SEO, social media, performance marketing, GEO, email, lead generation, web development & AI-CRM systems. Trusted across India.",
               "foundingDate": "2026",
               "address": {
@@ -57,9 +57,9 @@ export default function Page() {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Grovia Digi",
-              "image": "https://groviadigi.com/og-image.png",
-              "@id": "https://groviadigi.com",
-              "url": "https://groviadigi.com",
+              "image": "https://groviadigi.in/og-image.png",
+              "@id": "https://groviadigi.in",
+              "url": "https://groviadigi.in",
               "telephone": "+91-93520-00935",
               "email": "Hello@groviadigi.in",
               "priceRange": "₹₹",
@@ -249,7 +249,7 @@ export default function Page() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://groviadigi.com"
+                  "item": "https://groviadigi.in"
                 }
               ]
             }
