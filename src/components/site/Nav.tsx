@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, memo } from "react";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Instagram, Linkedin, Dribbble } from "lucide-react";
@@ -84,6 +85,11 @@ const Nav = memo(() => {
               </a>
             </li>
           ))}
+          <li>
+            <Link href="/blog" className="link-underline hover:text-ink">
+              Blog
+            </Link>
+          </li>
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
@@ -129,6 +135,15 @@ const Nav = memo(() => {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                href="/blog"
+                onClick={() => setOpen(false)}
+                className="font-display text-3xl text-ink"
+              >
+                Blog
+              </Link>
+            </li>
             <li>
               <a
                 href="#contact"
