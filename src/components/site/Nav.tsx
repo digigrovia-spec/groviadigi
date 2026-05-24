@@ -2,6 +2,7 @@
 
 import { useEffect, useState, memo } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Instagram, Linkedin, Dribbble } from "lucide-react";
@@ -21,6 +22,8 @@ const Behance = ({ size = 24, ...props }: any) => (
 const Nav = memo(() => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     let ticking = false;
@@ -39,20 +42,18 @@ const Nav = memo(() => {
   }, []);
 
   const links = [
-    { href: "#services", label: "Services" },
-    { href: "#process", label: "Process" },
-    { href: "#work", label: "Work" },
-    { href: "#industries", label: "Industries" },
+    { anchor: "#services", label: "Services" },
+    { anchor: "#process", label: "Process" },
+    { anchor: "#work", label: "Work" },
+    { anchor: "#industries", label: "Industries" },
   ];
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
     e.preventDefault();
-    const targetId = href.replace("#", "");
+    const targetId = anchor.replace("#", "");
     const elem = document.getElementById(targetId);
     if (elem) {
-      elem.scrollIntoView({
-        behavior: "smooth",
-      });
+      elem.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -62,31 +63,45 @@ const Nav = memo(() => {
         }`}
     >
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a
-          href="#top"
-          onClick={(e) => handleScroll(e, "#top")}
-          className="flex items-center gap-2"
-          aria-label="Groviadigi Home"
-        >
-          <span className="font-display text-2xl">
-            <span className="text-teal">Grovia</span><span className="text-blue">digi</span>
-          </span>
-        </a>
+        {isHome ? (
+          <a
+            href="#top"
+            onClick={(e) => handleScroll(e, "#top")}
+            className="flex items-center gap-2"
+            aria-label="Groviadigi Home"
+          >
+            <span className="font-display text-2xl">
+              <span className="text-teal">Grovia</span><span className="text-blue">digi</span>
+            </span>
+          </a>
+        ) : (
+          <Link href="/" className="flex items-center gap-2" aria-label="Groviadigi Home">
+            <span className="font-display text-2xl">
+              <span className="text-teal">Grovia</span><span className="text-blue">digi</span>
+            </span>
+          </Link>
+        )}
 
         <ul className="hidden md:flex items-center gap-10 font-mono-tag text-ink-soft">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                onClick={(e) => handleScroll(e, l.href)}
-                className="link-underline hover:text-ink"
-              >
-                {l.label}
-              </a>
+            <li key={l.anchor}>
+              {isHome ? (
+                <a
+                  href={l.anchor}
+                  onClick={(e) => handleScroll(e, l.anchor)}
+                  className="link-underline hover:text-ink"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link href={`/${l.anchor}`} className="link-underline hover:text-ink">
+                  {l.label}
+                </Link>
+              )}
             </li>
           ))}
           <li>
-            <Link href="/blog" className="link-underline hover:text-ink">
+            <Link href="/blog" className={`link-underline hover:text-ink ${!isHome && pathname === "/blog" ? "text-teal" : ""}`}>
               Blog
             </Link>
           </li>
@@ -95,14 +110,19 @@ const Nav = memo(() => {
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
           <Magnetic>
-            <a
-              href="#contact"
-              onClick={(e) => handleScroll(e, "#contact")}
-              className="pill-cta text-sm"
-            >
-              Start a project
-              <span aria-hidden>→</span>
-            </a>
+            {isHome ? (
+              <a
+                href="#contact"
+                onClick={(e) => handleScroll(e, "#contact")}
+                className="pill-cta text-sm"
+              >
+                Start a project <span aria-hidden>→</span>
+              </a>
+            ) : (
+              <Link href="/#contact" className="pill-cta text-sm">
+                Start a project <span aria-hidden>→</span>
+              </Link>
+            )}
           </Magnetic>
         </div>
 
@@ -122,17 +142,24 @@ const Nav = memo(() => {
         <div id="mobile-menu" className="md:hidden border-t border-ink/10 bg-paper">
           <ul className="flex flex-col px-6 py-6 gap-4">
             {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={(e) => {
-                    setOpen(false);
-                    handleScroll(e, l.href);
-                  }}
-                  className="font-display text-3xl text-ink"
-                >
-                  {l.label}
-                </a>
+              <li key={l.anchor}>
+                {isHome ? (
+                  <a
+                    href={l.anchor}
+                    onClick={(e) => { setOpen(false); handleScroll(e, l.anchor); }}
+                    className="font-display text-3xl text-ink"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={`/${l.anchor}`}
+                    onClick={() => setOpen(false)}
+                    className="font-display text-3xl text-ink"
+                  >
+                    {l.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li>
@@ -145,16 +172,19 @@ const Nav = memo(() => {
               </Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  setOpen(false);
-                  handleScroll(e, "#contact");
-                }}
-                className="pill-cta mt-2"
-              >
-                Start a project <span>→</span>
-              </a>
+              {isHome ? (
+                <a
+                  href="#contact"
+                  onClick={(e) => { setOpen(false); handleScroll(e, "#contact"); }}
+                  className="pill-cta mt-2"
+                >
+                  Start a project <span>→</span>
+                </a>
+              ) : (
+                <Link href="/#contact" onClick={() => setOpen(false)} className="pill-cta mt-2">
+                  Start a project <span>→</span>
+                </Link>
+              )}
             </li>
           </ul>
           <div className="flex gap-6 px-6 py-8 border-t border-ink/5">

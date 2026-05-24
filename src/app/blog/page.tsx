@@ -13,20 +13,16 @@ export default function BlogPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="relative bg-teal overflow-hidden pt-40 pb-24 px-6 md:px-10 grain">
-        <div className="mx-auto max-w-[1400px] relative z-10">
+      <section className="relative overflow-hidden pt-40 pb-24 px-6 md:px-10">
+        <div className="mx-auto max-w-[1400px]">
           <p className="font-mono-tag text-blue mb-6">Grow Loud · Insights</p>
-          <h1 className="font-display text-7xl md:text-[10vw] text-paper leading-none mb-8">
+          <h1 className="font-display text-7xl md:text-[10vw] text-ink leading-none mb-8">
             The Blog.
           </h1>
-          <p className="font-sans text-lg md:text-xl text-paper/80 max-w-xl leading-relaxed">
+          <p className="font-sans text-lg md:text-xl text-ink-soft max-w-xl leading-relaxed">
             Real tactics. Real data. Built for Indian businesses ready to grow — SEO, GEO, social media, performance ads, and AI-powered systems.
           </p>
         </div>
-        <div
-          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-blue/10 blur-[120px] pointer-events-none"
-          aria-hidden="true"
-        />
       </section>
 
       {/* Coming Soon */}
