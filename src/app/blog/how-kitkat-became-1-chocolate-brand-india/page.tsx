@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
       "A marketer's breakdown of the 90-year-old brand that just made India its largest market globally — and turned a chocolate wrapper into a Faraday cage.",
     url: "https://groviadigi.in/blog/how-kitkat-became-1-chocolate-brand-india",
     siteName: "Grovia Digi",
-    images: [{ url: "/blog/kitkat-cover.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/kitkat-case-study-cover.png", width: 1200, height: 630 }],
     locale: "en_IN",
     type: "article",
   },
@@ -47,13 +46,11 @@ export default function KitKatBlogPost() {
 
       {/* ── Cover Image ── */}
       <div className="w-full pt-[72px]">
-        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-ink">
-          <Image
-            src="/blog/kitkat-cover.jpg"
-            alt="How KitKat Became the #1 Chocolate Brand in India — Grovia Digi Case Study"
-            fill
-            className="object-cover object-center"
-            priority
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 pt-10">
+          <img
+            src="/images/kitkat-case-study-cover.png"
+            alt="How KitKat Became the #1 Chocolate Brand in India - Marketing Case Study"
+            className="w-full rounded-2xl shadow-lg"
           />
         </div>
       </div>

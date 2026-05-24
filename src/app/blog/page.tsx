@@ -18,7 +18,7 @@ const publishedPosts = [
     author: "Abhuday Tripathi",
     date: "May 2026",
     readTime: "12 min read",
-    cover: "/blog/kitkat-cover.jpg",
+    cover: "/images/kitkat-case-study-cover.png",
   },
 ];
 
