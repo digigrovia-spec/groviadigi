@@ -286,6 +286,17 @@
      Runs every frame while the section is near, so the twist settles after you stop. */
   const sstep = (a, b, v) => { const t = clamp((v - a) / (b - a)); return t * t * (3 - 2 * t); };
   let wv = 0, wLastY = null, wIdle = 0;
+  // card videos play only while the section is near the screen (never in lite mode, where posters show)
+  let workVideosOn = false;
+  const workVideos = $$('.card-video');
+  if (workVideos.length && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => {
+      const on = e.isIntersecting && !lite && !reduce;
+      if (on === workVideosOn) return;
+      workVideosOn = on; wIdle = 0;
+      workVideos.forEach(v => { if (on) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause(); });
+    }, { rootMargin: '200px 0px' }).observe($('#work'));
+  }
   const strand = window.GroviaStrand ? new window.GroviaStrand($('.work-sticky'), cards) : null;
   function carousel(y) {
     // load the 3D strand a little before the section arrives
@@ -294,7 +305,7 @@
     const dy = wLastY == null ? 0 : y - wLastY; wLastY = y;
     const want = clamp(Math.abs(dy) / 26);
     wv += (want - wv) * (want > wv ? .22 : .05);           // quick to wind up, slow to unwind
-    if (Math.abs(dy) < .01 && wv < .002) { if (++wIdle > 2) return; } else wIdle = 0;
+    if (Math.abs(dy) < .01 && wv < .002 && !workVideosOn) { if (++wIdle > 2) return; } else wIdle = 0;   // playing videos need every frame
     const wp = clamp((y - L.work.t) / (L.work.h - vh));
     const shift = wp * L.trackShift;
     const centre = L.cards[0] + shift;
@@ -329,7 +340,7 @@
       wTitle.textContent = cards[nearest].dataset.title;
       wType.textContent = cards[nearest].dataset.type;
       wCount.textContent = `${nearest + 1} of ${cards.length}`;
-      if (cards[nearest].dataset.href) wLink.href = cards[nearest].dataset.href;
+      if (cards[nearest].dataset.href) { wLink.href = cards[nearest].dataset.href; wLink.textContent = cards[nearest].dataset.cta || 'Read the case study →'; }
     }
     if (wPtr) workHover();                                 // cards slid under a still pointer
   }
@@ -354,6 +365,7 @@
     tip.querySelector('p').textContent = d.dek;
     st[0].querySelector('em').textContent = d.s1; st[0].querySelector('i').textContent = d.l1;
     st[1].querySelector('em').textContent = d.s2; st[1].querySelector('i').textContent = d.l2;
+    tip.querySelector('u').textContent = d.cta ? 'Click to see the service →' : 'Click to read the case study →';
   }
   function workHover() {
     const i = frontCardAt(wPtr.x, wPtr.y);
@@ -421,6 +433,7 @@
     document.documentElement.classList.add('lite');
     if (lenis) { const y = lenis.scroll; lenis.destroy(); lenis = null; window.scrollTo(0, y); }
     if (strand) strand.destroy();
+    workVideos.forEach(v => v.pause()); workVideosOn = false;
     if (rb) rb.lite = true;
     letters.forEach(el => (el.style.filter = ''));
     offerWrap.style.filter = '';

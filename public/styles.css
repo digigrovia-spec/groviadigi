@@ -486,3 +486,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .why-grid{grid-template-columns:1fr}
   .lform{grid-template-columns:1fr}
 }
+
+/* work cards with video */
+.card:has(.card-video){background:#0D0B26}
+.card-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0D0B26}
+.ui-video{background:transparent;pointer-events:none}
+.card-label{position:absolute;left:1.1em;bottom:1.1em;display:flex;align-items:center;height:2.3em;padding:0 1em;border-radius:99px;background:rgba(255,255,255,.95);color:var(--ink);font-weight:700;font-size:.95em;line-height:1;white-space:nowrap;box-shadow:0 8px 24px -10px rgba(0,0,0,.5)}

@@ -44,6 +44,9 @@
     }`;
   const FRAG = `
     uniform sampler2D uMap;
+    uniform sampler2D uVid;   // the card's video, when it has one
+    uniform float uHasVid;
+    uniform vec4 uVidUV;      // xy: scale, zw: offset, so the video covers the card without stretching
     uniform vec2 uSize;
     uniform float uR;
     varying vec2 vUv;
@@ -51,6 +54,11 @@
     float box(vec2 p, vec2 b, float r) { vec2 q = abs(p) - b + r; return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - r; }
     void main() {
       vec4 tex = texture2D(uMap, vUv);
+      if (uHasVid > 0.5) {
+        // the captured card is a transparent overlay (title bar, labels) drawn over the playing video
+        vec3 v = texture2D(uVid, vUv * uVidUV.xy + uVidUV.zw).rgb;
+        tex = vec4(mix(v, tex.rgb, tex.a), 1.0);
+      }
       vec2 p = (vUv - 0.5) * uSize;
       float d = box(p, uSize * 0.5, uR);
       float a = 1.0 - smoothstep(-1.0, 1.0, d);
@@ -115,11 +123,11 @@
         const cv = await window.html2canvas(card, {
           scale, backgroundColor: null, logging: false, useCORS: true,
           // copy only what the card needs; skipping the rest of the page keeps each capture short
-          ignoreElements: el => el !== card && !el.contains(card) && !card.contains(el) && /^(SECTION|HEADER|FOOTER|NAV|ASIDE|CANVAS)$/.test(el.tagName),
+          ignoreElements: el => el.tagName === 'VIDEO' || (el !== card && !el.contains(card) && !card.contains(el) && /^(SECTION|HEADER|FOOTER|NAV|ASIDE|CANVAS)$/.test(el.tagName)),
           onclone: doc => {
             const host = doc.querySelector(".work-sticky"); if (host) host.classList.remove("strand-on");
             const rail = doc.getElementById("cards"); if (rail) rail.style.transform = "none";
-            doc.querySelectorAll(".card").forEach(c => { c.style.transform = "none"; });
+            doc.querySelectorAll(".card").forEach((c, k) => { c.style.transform = "none"; if (this.cards[k] && this.cards[k].querySelector(".card-video")) c.style.background = "transparent"; });
           },
         });
         const tex = new T.CanvasTexture(cv);
@@ -131,6 +139,14 @@
       }
       } finally { fix.remove(); }
       const old = this.textures; this.textures = textures;
+      // one live texture per card video
+      if (!this.vids) this.vids = this.cards.map(c => {
+        const v = c.querySelector(".card-video");
+        if (!v) return null;
+        const t = new T.VideoTexture(v);
+        t.minFilter = T.LinearFilter; t.magFilter = T.LinearFilter; t.generateMipmaps = false;
+        return t;
+      });
       old && old.forEach(t => t.dispose());
     }
 
@@ -152,10 +168,12 @@
       if (this.meshes) this.meshes.forEach(m => { this.scene.remove(m); m.geometry.dispose(); m.material.dispose(); });
       const radius = parseFloat(getComputedStyle(first).borderTopLeftRadius) || 22;
       this.meshes = this.textures.map(tex => {
+        const i = this.textures.indexOf(tex), vt = this.vids && this.vids[i];
         const mat = new T.ShaderMaterial({
           vertexShader: VERT, fragmentShader: FRAG, transparent: true, depthWrite: false,
           uniforms: {
             uMap: { value: tex }, uSize: { value: new T.Vector2(cw, ch) }, uR: { value: radius },
+            uVid: { value: vt || tex }, uHasVid: { value: vt ? 1 : 0 }, uVidUV: { value: this.coverUV(vt, cw, ch) },
             // on narrow screens the curve is spread wider, so a card is bent less and its text stays readable
             uW: { value: W < 700 ? W * 0.9 : W / 2 }, uV: { value: 0 }, uBulge: { value: Math.min(260, W * 0.2) }, uFall: { value: Math.min(420, W * (W < 700 ? 0.22 : 0.32)) },
           },
@@ -164,6 +182,19 @@
         this.scene.add(m);
         return m;
       });
+    }
+
+    // UV scale/offset so a video fills a card like object-fit: cover
+    coverUV(vt, cw, ch) {
+      const T = window.THREE, v = vt && vt.image;
+      const out = new T.Vector4(1, 1, 0, 0);
+      if (!v || !v.videoWidth) {
+        if (v) v.addEventListener("loadedmetadata", () => { if (this.meshes) this.layout(); }, { once: true });
+        return out;
+      }
+      const A = cw / ch, V = v.videoWidth / v.videoHeight;
+      if (V > A) { out.x = A / V; out.z = (1 - out.x) / 2; } else { out.y = V / A; out.w = (1 - out.y) / 2; }
+      return out;
     }
 
     async resize() {
@@ -178,6 +209,7 @@
       this.host.classList.remove("strand-on");
       if (this.meshes) this.meshes.forEach(m => { m.geometry.dispose(); m.material.dispose(); });
       if (this.textures) this.textures.forEach(t => t.dispose());
+      if (this.vids) this.vids.forEach(t => t && t.dispose());
       if (this.renderer) { this.renderer.dispose(); this.renderer.forceContextLoss && this.renderer.forceContextLoss(); }
       if (this.canvas) this.canvas.remove();
     }
