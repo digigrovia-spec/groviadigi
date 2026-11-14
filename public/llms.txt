@@ -18,7 +18,7 @@
 - One studio for CRM, automation and website, plus care after launch.
 
 ## About
-- Groviadigi is a small software and automation studio from Ajmer, Rajasthan. It began as Digiink Solutions (now part of Groviadigi). About page: https://www.groviadigi.in/about/
+- Groviadigi is a small software and automation studio from Ajmer, Rajasthan. About page: https://www.groviadigi.in/about/
 
 ## Starter offer: Follow-up Reminders
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
@@ -36,7 +36,7 @@
 Groviadigi first asks whether automation is needed at all. The recommendation can be to improve the process, automate key steps, or automate end to end.
 
 ## Proof
-- Smart Sun Power (rooftop solar installer): custom solar CRM covering leads, site surveys, quotations, installations and payments. Lead conversion rose 28% within three months of go-live. Delivered by Digiink Solutions, now part of Groviadigi.
+- Smart Sun Power (rooftop solar installer): custom solar CRM covering leads, site surveys, quotations, installations and payments. Lead conversion rose 28% within three months of go-live.
 
 ## Case studies (signed off by each client)
 - Solar CRM for Smart Sun Power: +28% lead conversion in 3 months, sales cycle 45 to 28 days. https://www.groviadigi.in/work/solar-crm-smart-sun-power/
