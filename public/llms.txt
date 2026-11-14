@@ -2,12 +2,20 @@
 
 > Groviadigi is a business automation and custom software studio based in Ajmer, Rajasthan, India. It builds custom CRMs, internal tools and dashboards, workflow automations and business websites for small and growing companies in India and abroad. Tagline: "Your Vision. Our Development."
 
-## Services
-- Custom CRM development: lead management, follow-up reminders, quotations, payments, built around the client's own sales steps.
-- Workflow and business process automation: form to CRM, sheet to email, WhatsApp alerts, scheduled reports, app integrations. People stay in the loop where judgement matters.
-- Internal tools: portals, request and approval flows, master databases, live dashboards.
-- Business websites: designed, written and built from scratch, fast and ready for search.
-- Care plans: monthly maintenance, fixes, updates and small improvements.
+## Services (published starting prices; fixed written quote before payment)
+- Custom CRM development: lead management, follow-up reminders, quotations, payments, built around the client's own sales steps. From ₹90,000, paid in 3 milestones.
+- Workflow and business process automation: form to CRM, sheet to email, WhatsApp alerts, scheduled reports, app integrations, written in code on official APIs. From ₹15,000 per workflow.
+- Internal tools: portals, request and approval flows, master databases, live dashboards. From ₹75,000.
+- Business websites: designed, written and coded from scratch, with SEO, AEO and GEO built in. From ₹30,000.
+- Care plans: monthly maintenance, fixes, updates and small improvements. From ₹5,000 a month.
+
+## Why Groviadigi
+- Honest first call: if a process change fixes the problem, Groviadigi says so instead of selling software.
+- Pure-code automation, not Zapier, Make or n8n: apps are connected directly through their official APIs, so there is no monthly platform fee, no task caps, and client data does not pass through a third-party platform.
+- Fixed scope and published starting prices.
+- People stay in charge: automation does the repetitive work; a person approves important decisions.
+- The client owns the code (in their own GitHub or Google account) and the data.
+- One studio for CRM, automation and website, plus care after launch.
 
 ## Starter offer: Missed Follow-up Fix
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
@@ -36,6 +44,9 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 
 ## Blog
 - How KitKat Became the #1 Chocolate Brand in India (case study, Abhuday Tripathi, May 2026): https://www.groviadigi.in/blog/how-kitkat-became-1-chocolate-brand-india/
+
+## Get started
+- Lead form and free 15-minute call: https://www.groviadigi.in/get-started/
 
 ## Contact
 - Website: https://www.groviadigi.in/

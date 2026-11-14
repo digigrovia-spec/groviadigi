@@ -472,17 +472,7 @@
     if (sel) sel.value = a.dataset.need;
   }));
 
-  /* ---------- form → email draft ---------- */
-  const form = $('#form'), note = $('#formNote');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const f = new FormData(form);
-    const name = (f.get('name') || '').trim(), email = (f.get('email') || '').trim();
-    if (!name || !/^\S+@\S+\.\S+$/.test(email)) { note.textContent = 'Please add your name and a valid email.'; note.className = 'form-note err'; return; }
-    const body = `Name: ${name}\nEmail: ${email}\nCompany: ${f.get('company') || '-'}\nLooking for: ${f.get('need')}\n\n${f.get('msg') || ''}`;
-    location.href = `mailto:hello@groviadigi.in?subject=${encodeURIComponent('Discovery call request: ' + name)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'Thanks. Your email app should open now.'; note.className = 'form-note ok';
-  });
+  /* ---------- forms: handled by lead.js ---------- */
 
   /* ---------- init ---------- */
   $('#yr').textContent = new Date().getFullYear();
