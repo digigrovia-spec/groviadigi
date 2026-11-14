@@ -17,12 +17,8 @@
 - The client owns the code (in their own GitHub or Google account) and the data.
 - One studio for CRM, automation and website, plus care after launch.
 
-## Team
-- Abhuday Tripathi, Founder: operations, client calls, scopes and quotes.
-- Karan, Co-founder: engineering; builds and tests every system.
-- Ishan Malpani, Co-founder: quality testing, demos and handover documentation.
-- Harshit: sales and free demos.
-- Groviadigi began as Digiink Solutions (now part of Groviadigi). About page: https://www.groviadigi.in/about/
+## About
+- Groviadigi is a small software and automation studio from Ajmer, Rajasthan. It began as Digiink Solutions (now part of Groviadigi). About page: https://www.groviadigi.in/about/
 
 ## Starter offer: Follow-up Reminders
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
