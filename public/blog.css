@@ -165,3 +165,9 @@
   .lead-card{grid-template-columns:1fr}
   .lead-card .post-cover{aspect-ratio:1200/630}
 }
+
+/* stand-alone pages built from home sections (/offer/, /services/, /process/, /faq/) */
+.page-main{padding-top:var(--nav-h)!important}
+.page-main>.sec:first-child{padding-top:clamp(36px,7vh,72px)}
+.page-h1{font-size:clamp(38px,5.6vw,80px);line-height:1;letter-spacing:-.05em;font-weight:700;max-width:18ch;text-wrap:balance}
+.page-main .sec + .sec{padding-top:0}
