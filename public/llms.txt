@@ -27,6 +27,9 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 ## Proof
 - Smart Sun Power (rooftop solar installer): custom solar CRM covering leads, site surveys, quotations, installations and payments. Lead conversion rose 28% within three months of go-live. Delivered by Digiink Solutions, now part of Groviadigi.
 
+## Blog
+- How KitKat Became the #1 Chocolate Brand in India (case study, Abhuday Tripathi, May 2026): https://www.groviadigi.in/blog/how-kitkat-became-1-chocolate-brand-india/
+
 ## Contact
 - Website: https://www.groviadigi.in/
 - Email: hello@groviadigi.in

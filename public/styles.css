@@ -242,7 +242,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .site figure{aspect-ratio:1;border-radius:1em;background:linear-gradient(160deg,#FFD9A8,#FFAF57 40%,#8A49EA);position:relative;overflow:hidden}
 .site figure::before{content:"";position:absolute;width:30%;aspect-ratio:1;border-radius:50%;background:#FFF4E2;top:14%;right:16%}
 .site figure::after{content:"";position:absolute;left:15%;right:15%;bottom:16%;height:24%;border-radius:.6em .6em .3em .3em;background:#2A2660}
-.case-badge{position:absolute;right:1.2em;top:3.6em;background:var(--ink);color:#fff;font-weight:700;padding:.35em .8em;border-radius:99px;font-size:.9em;z-index:2}
+.case-badge{position:absolute;right:1.2em;top:3.6em;display:flex;align-items:center;height:2.2em;padding:0 .95em;background:var(--ink);color:#fff;font-weight:700;border-radius:99px;font-size:.9em;line-height:1;white-space:nowrap;z-index:2}
 .steps{display:flex;gap:.5em;margin-bottom:.9em;flex-wrap:wrap}
 .steps span{font-size:.85em;font-weight:700;padding:.25em .7em;border-radius:99px;background:#F1F0F7;color:var(--ink-500)}
 .steps span.ok{background:#E3F6EC;color:#1A7F55}
@@ -394,6 +394,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .kan{grid-template-columns:repeat(3,1fr)}.kan div:last-child{display:none}
   .ui-side{display:none}
   .card{aspect-ratio:4/5}
+  .cards{--cw:min(86vw,420px)}
+  .ui{font-size:clamp(10px,3vw,12px)}
+  .work{height:420vh;height:420svh}
+  .work-sticky{padding-top:calc(var(--nav-h) + 8px)}
   .site{grid-template-columns:1fr;padding:1.4em}
   .site figure{display:none}
 }

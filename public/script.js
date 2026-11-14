@@ -282,7 +282,7 @@
   const strand = window.GroviaStrand ? new window.GroviaStrand($('.work-sticky'), cards) : null;
   function carousel(y) {
     // load the 3D strand a little before the section arrives
-    if (strand && !reduce && !strand.ready && y > L.work.t - vh * 3) strand.init().then(() => { wIdle = 0; wLastY = null; });
+    if (strand && !reduce && !strand.ready && y > L.work.t - vh * 6) strand.init().then(() => { wIdle = 0; wLastY = null; });
     if (reduce || y < L.work.t - vh * 1.2 || y > L.work.t + L.work.h) { wLastY = y; return; }
     const dy = wLastY == null ? 0 : y - wLastY; wLastY = y;
     const want = clamp(Math.abs(dy) / 26);
@@ -410,7 +410,21 @@
   $('#yr').textContent = new Date().getFullYear();
   measure();
   let rt;
-  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { measure(); strand && strand.resize().then(() => { wIdle = 0; wLastY = null; }); }, 160); }, { passive: true });
+  // Phones and tablets fire "resize" whenever the address bar slides in or out while scrolling.
+  // That only changes the height a little, and re-measuring then would make the page jump,
+  // so only a real change (width, rotation, or a big height change) re-lays the page.
+  let lastW = innerWidth, lastH = innerHeight;
+  addEventListener('resize', () => {
+    clearTimeout(rt);
+    rt = setTimeout(() => {
+      const wChanged = innerWidth !== lastW;
+      if (!wChanged && Math.abs(innerHeight - lastH) < 160) return;
+      lastW = innerWidth; lastH = innerHeight;
+      measure();
+      if (wChanged && strand) strand.resize().then(() => { wIdle = 0; wLastY = null; });
+      wIdle = 0; wLastY = null;
+    }, 200);
+  }, { passive: true });
   addEventListener('load', measure);
   document.fonts && document.fonts.ready.then(measure);
   if (reduce) { runCounters(); letters.forEach(l => (l.style.opacity = 1)); }

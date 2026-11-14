@@ -4,8 +4,8 @@
   "buildCommand": "",
   "outputDirectory": "public",
   "cleanUrls": false,
+  "trailingSlash": true,
   "redirects": [
-    { "source": "/blog", "destination": "/", "permanent": true },
-    { "source": "/blog/:path*", "destination": "/", "permanent": true }
+    { "source": "/images/kitkat-case-study-cover.png", "destination": "/images/kitkat-case-study-cover.jpg", "permanent": true }
   ]
 }

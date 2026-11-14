@@ -94,25 +94,43 @@
       this.busy = false;
     }
 
-    // draw each HTML card to a texture, flat (without its scroll transform)
+    // draw each HTML card to a texture, flat (without its scroll transform).
+    // The live page is never touched: html2canvas works on its own copy of the page, where the
+    // cards are made visible and flat. Touching the live cards (as before) flashed the plain HTML
+    // cards over the strand for a moment, which read as a glitch.
     async capture() {
       const T = window.THREE;
-      this.textures && this.textures.forEach(t => t.dispose());
-      this.textures = [];
-      const wasOn = this.host.classList.contains('strand-on');
-      this.host.classList.remove('strand-on');            // cards must be visible to be captured
+      const textures = [];
+      const scale = Math.min(2, Math.max(1.5, window.devicePixelRatio || 1));
+      // html2canvas finds the text baseline with a test <img>; the page sets img{display:block},
+      // which throws that off and drops every line of text a few pixels (the +28% badge text fell
+      // out of its pill). Undo the rule only while capturing. The one <img> on the page sits absolutely
+      // positioned in the blog card, so switching it to inline moves nothing.
+      const fix = document.createElement("style");
+      fix.textContent = "img{display:inline!important}";
+      document.head.appendChild(fix);
+      try {
       for (const card of this.cards) {
-        const keep = card.style.transform;
-        card.style.transform = 'none';
-        const cv = await window.html2canvas(card, { scale: 2, backgroundColor: null, logging: false, useCORS: true });
-        card.style.transform = keep;
+        const cv = await window.html2canvas(card, {
+          scale, backgroundColor: null, logging: false, useCORS: true,
+          // copy only what the card needs; skipping the rest of the page keeps each capture short
+          ignoreElements: el => el !== card && !el.contains(card) && !card.contains(el) && /^(SECTION|HEADER|FOOTER|NAV|ASIDE|CANVAS)$/.test(el.tagName),
+          onclone: doc => {
+            const host = doc.querySelector(".work-sticky"); if (host) host.classList.remove("strand-on");
+            const rail = doc.getElementById("cards"); if (rail) rail.style.transform = "none";
+            doc.querySelectorAll(".card").forEach(c => { c.style.transform = "none"; });
+          },
+        });
         const tex = new T.CanvasTexture(cv);
         tex.anisotropy = this.renderer.capabilities.getMaxAnisotropy();
         tex.minFilter = T.LinearMipmapLinearFilter;
         tex.generateMipmaps = true;
-        this.textures.push(tex);
+        textures.push(tex);
+        await new Promise(r => setTimeout(r, 16));       // let the page draw a frame between cards
       }
-      if (wasOn) this.host.classList.add('strand-on');
+      } finally { fix.remove(); }
+      const old = this.textures; this.textures = textures;
+      old && old.forEach(t => t.dispose());
     }
 
     layout() {
