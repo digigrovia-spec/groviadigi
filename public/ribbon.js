@@ -56,7 +56,7 @@
   class Ribbon {
     constructor(canvas, opts = {}) {
       this.c = canvas; this.ctx = canvas.getContext('2d');
-      this.reduce = !!opts.reduce;
+      this.reduce = !!opts.reduce; this.lite = !!opts.lite;
       this.p = 0; this.pull = 0; this.introAt = -1; this.acc = 0; this.lastT = 0;
       this.mouse = null;
       this.n = 0;
@@ -65,7 +65,7 @@
     // band: {w, h, top, bottom} in CSS px of the canvas; the loop fits between top and bottom
     layout(band) {
       const { w, h, top, bottom } = band;
-      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const dpr = this.lite ? 1 : Math.min(2, window.devicePixelRatio || 1);   // lite: draw at 1x
       this.dpr = dpr; this.w = w; this.h = h;
       this.c.width = Math.round(w * dpr); this.c.height = Math.round(h * dpr);
       const mobile = w <= 820;
@@ -162,8 +162,9 @@
         let dt = Math.min(0.05, this.lastT ? (now - this.lastT) / 1000 : 1 / 60);
         this.lastT = now; this.acc += dt;
         let steps = 0;
-        while (this.acc >= 1 / 120 && steps < 6) { this.step1(t, 1 / 120, wob); this.acc -= 1 / 120; steps++; }
-        if (steps === 6) this.acc = 0;
+        const maxSteps = this.lite ? 3 : 6;
+        while (this.acc >= 1 / 120 && steps < maxSteps) { this.step1(t, 1 / 120, wob); this.acc -= 1 / 120; steps++; }
+        if (steps === maxSteps) this.acc = 0;
       }
       this.draw(t);
     }
@@ -193,7 +194,7 @@
 
       // soft shadow under the ribbon, gone once we are inside it
       const sh = 1 - range(p, 0.2, 0.45);
-      if (sh > 0) {
+      if (sh > 0 && !this.lite) {                       // lite: skip the three shadow passes
         ctx.save(); ctx.translate(0, hw * 0.35);
         for (const [m, a] of [[1.15, 0.05], [1.45, 0.03], [1.8, 0.015]]) {
           ctx.strokeStyle = `rgba(13,11,38,${(a * sh).toFixed(4)})`; ctx.lineWidth = hw * 2 * m; path(); ctx.stroke();

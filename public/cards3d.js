@@ -84,6 +84,7 @@
         this.canvas = canvas;
         await document.fonts.ready;
         await this.capture();
+        if (this.failed) { this.busy = false; return; }   // lite mode was switched on meanwhile
         this.layout();
         this.ready = true;
         this.host.classList.add('strand-on');
@@ -169,6 +170,16 @@
       if (!this.ready) return;
       await this.capture();
       this.layout();
+    }
+
+    // lite mode: drop the WebGL strand and go back to the plain HTML cards
+    destroy() {
+      this.failed = true; this.ready = false;
+      this.host.classList.remove("strand-on");
+      if (this.meshes) this.meshes.forEach(m => { m.geometry.dispose(); m.material.dispose(); });
+      if (this.textures) this.textures.forEach(t => t.dispose());
+      if (this.renderer) { this.renderer.dispose(); this.renderer.forceContextLoss && this.renderer.forceContextLoss(); }
+      if (this.canvas) this.canvas.remove();
     }
 
     // shift: how far the strand has slid (px); v: scroll speed 0..1

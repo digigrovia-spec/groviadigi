@@ -1,6 +1,13 @@
 /* Groviadigi — scroll motion. Only transform/opacity are animated; one rAF loop; layout read once per resize. */
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Lite mode for low-end devices: no WebGL strand, no blur filters, no cursor light, no smooth-scroll
+  // library, a lighter ribbon. Turned on up front for weak hardware or Data Saver, and later by the
+  // frame-rate watchdog in loop() if the page cannot keep up.
+  const conn = navigator.connection || {};
+  const cores = navigator.hardwareConcurrency || 8, mem = navigator.deviceMemory || 8;
+  let lite = !!conn.saveData || mem <= 2 || cores <= 2 || (cores <= 4 && mem <= 4) || /[?&]lite(=|&|$)/.test(location.search);
+  if (lite) document.documentElement.classList.add('lite');
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -9,7 +16,7 @@
 
   /* ---------- smooth scroll (desktop; touch keeps native scrolling) ---------- */
   let lenis = null;
-  if (!reduce && window.Lenis) {
+  if (!reduce && !lite && window.Lenis) {
     // a gentler lerp glides more, both down and back up
     lenis = new Lenis({ lerp: 0.075, wheelMultiplier: 0.9, smoothWheel: true });
   }
@@ -87,7 +94,7 @@
   const nav = $('#nav');
   const hero = $('.hero'), heroTitle = $('#heroHead'), heroBottom = $('#heroBottom');
   const sticky = $('.hero-sticky'), canvas = $('#ribbonCanvas');
-  const rb = window.GroviaRibbon && canvas ? new window.GroviaRibbon(canvas, { reduce }) : null;
+  const rb = window.GroviaRibbon && canvas ? new window.GroviaRibbon(canvas, { reduce, lite }) : null;
   let heroP = 0;
   const intro = $('#intro'), introSticky = $('#introSticky'), introScene = $('#introScene');
   const stage = $('#stage'), horizon = $('#horizon'), wordWrap = $('#wordWrap');
@@ -203,7 +210,7 @@
       const tx = sd.x * .5 * k, ty = sd.y * .4 * k, r = sd.rot * .45 * k, sc = 1 + .35 * k;
       el.style.transform = `translate3d(${tx.toFixed(2)}vw,${ty.toFixed(2)}vh,0) rotate(${r.toFixed(1)}deg) scale(${sc.toFixed(3)})`;
       el.style.opacity = p.toFixed(3);
-      el.style.filter = p > .995 ? '' : `blur(${(k * 16).toFixed(1)}px)`;
+      el.style.filter = lite || p > .995 ? '' : `blur(${(k * 16).toFixed(1)}px)`;
       const er = lettersR[i];
       er.style.transform = `translate3d(${tx.toFixed(2)}vw,${(-ty).toFixed(2)}vh,0) rotate(${(-r).toFixed(1)}deg) scale(${sc.toFixed(3)})`;
       er.style.opacity = p.toFixed(3);
@@ -245,7 +252,7 @@
     // the next page's content arrives out of a blur while the square fills the screen
     const rv = sstep(.8, .96, ip);
     offerWrap.style.opacity = rv.toFixed(3);
-    offerWrap.style.filter = rv > .995 ? '' : `blur(${((1 - rv) * 14).toFixed(1)}px)`;
+    offerWrap.style.filter = lite || rv > .995 ? '' : `blur(${((1 - rv) * 14).toFixed(1)}px)`;
     offerWrap.style.transform = rv > .995 ? '' : `translate3d(0,${((1 - rv) * 40).toFixed(1)}px,0)`;
   }
 
@@ -253,7 +260,7 @@
   const light = $('#light');
   let lt = null, lp = null;
   stage.addEventListener('pointermove', e => {
-    if (e.pointerType === 'touch' || diving) return;
+    if (lite || e.pointerType === 'touch' || diving) return;
     const r = stage.getBoundingClientRect();
     lt = { x: e.clientX - r.left, y: e.clientY - r.top };
     if (!lp) lp = { ...lt };
@@ -261,7 +268,7 @@
   }, { passive: true });
   stage.addEventListener('pointerleave', () => { stage.classList.remove('lit'); lt = null; });
   function animateLight() {
-    if (!lt || !lp) return;
+    if (lite || !lt || !lp) return;
     if (Math.abs(lt.x - lp.x) + Math.abs(lt.y - lp.y) < .2) return;   // settled: nothing to repaint
     lp.x += (lt.x - lp.x) * .14; lp.y += (lt.y - lp.y) * .14;
     light.style.transform = `translate3d(${lp.x.toFixed(1)}px,${lp.y.toFixed(1)}px,0)`;
@@ -282,7 +289,7 @@
   const strand = window.GroviaStrand ? new window.GroviaStrand($('.work-sticky'), cards) : null;
   function carousel(y) {
     // load the 3D strand a little before the section arrives
-    if (strand && !reduce && !strand.ready && y > L.work.t - vh * 6) strand.init().then(() => { wIdle = 0; wLastY = null; });
+    if (strand && !reduce && !lite && !strand.ready && y > L.work.t - vh * 6) strand.init().then(() => { wIdle = 0; wLastY = null; });
     if (reduce || y < L.work.t - vh * 1.2 || y > L.work.t + L.work.h) { wLastY = y; return; }
     const dy = wLastY == null ? 0 : y - wLastY; wLastY = y;
     const want = clamp(Math.abs(dy) / 26);
@@ -292,7 +299,7 @@
     const shift = wp * L.trackShift;
     const centre = L.cards[0] + shift;
     let nearest = 0, nd = 1e9;
-    if (strand && strand.ready) {
+    if (strand && strand.ready && !lite) {
       // the WebGL strand draws the cards; the HTML cards only supply layout
       strand.update(shift, wv);
       for (let i = 0; i < cards.length; i++) { const ad = Math.abs(L.cards[i] - centre); if (ad < nd) { nd = ad; nearest = i; } }
@@ -351,7 +358,33 @@
     rb && rb.startIntro(performance.now() + 250);
   }
 
+  // Frame-rate watchdog: if frames keep taking longer than ~33 ms (under 30 fps), switch to lite mode.
+  // Frames while the page is hidden, during the opening, or while the strand captures its cards don't count.
+  let wdLast = 0, wdSum = 0, wdN = 0, wdBad = 0;
+  const wdStart = performance.now() + 3500;
+  function watchdog(t) {
+    const dt = t - wdLast; wdLast = t;
+    if (lite || t < wdStart || document.hidden || dt > 250 || (strand && strand.busy)) return;
+    wdSum += dt; wdN++;
+    if (wdN < 60) return;
+    const avg = wdSum / wdN; wdSum = 0; wdN = 0;
+    wdBad = avg > 33 ? wdBad + 1 : 0;
+    if (wdBad >= 2) goLite();
+  }
+  function goLite() {
+    lite = true;
+    document.documentElement.classList.add('lite');
+    if (lenis) { const y = lenis.scroll; lenis.destroy(); lenis = null; window.scrollTo(0, y); }
+    if (strand) strand.destroy();
+    if (rb) rb.lite = true;
+    letters.forEach(el => (el.style.filter = ''));
+    offerWrap.style.filter = '';
+    stage.classList.remove('lit');
+    measure(); wIdle = 0; wLastY = null;
+  }
+
   function loop(t) {
+    watchdog(t);
     lenis && lenis.raf(t);
     frame();
     carousel(lenis ? lenis.scroll : scrollY);
