@@ -4,6 +4,7 @@
    WHERE LEADS GO
    Set LEAD_ENDPOINT to the URL that should receive leads (a CRM web-to-lead URL, a webhook,
    an Apps Script for a Google Sheet, etc.). Each lead is POSTed there as JSON.
+   Google Sheet setup: see Website_build/google-sheet-leads.gs and LEADS_GOOGLE_SHEET.md.
    While it is empty, the form opens a pre-filled email to hello@groviadigi.in instead. */
 (() => {
   const LEAD_ENDPOINT = '';
@@ -61,8 +62,14 @@
       btn && (btn.disabled = true);
       say(note, 'Sending…', '');
       try {
-        const r = await fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) });
-        if (!r.ok) throw new Error(r.status);
+        if (/script.google(usercontent)?.com/.test(LEAD_ENDPOINT)) {
+          // Google Apps Script (Google Sheet): send as plain text so the browser makes a simple request.
+          // Apps Script answers through a redirect the browser cannot read, so a sent request counts as success.
+          await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead) });
+        } else {
+          const r = await fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) });
+          if (!r.ok) throw new Error(r.status);
+        }
         form.reset();
         say(note, form.dataset.ok || 'Thanks. We’ll reply within one working day.', 'ok');
       } catch (err) {

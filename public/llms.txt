@@ -3,7 +3,7 @@
 > Groviadigi is a business automation and custom software studio based in Ajmer, Rajasthan, India. It builds custom CRMs, internal tools and dashboards, workflow automations and business websites for small and growing companies in India and abroad. Tagline: "Your Vision. Our Development."
 
 ## Services (published starting prices; fixed written quote before payment)
-- Custom CRM development: lead management, follow-up reminders, quotations, payments, built around the client's own sales steps. From ₹90,000, paid in 3 milestones.
+- Custom CRM development: lead management, follow-up reminders, quotations, payments, built around the client’s own sales steps. From ₹90,000, paid in 3 milestones.
 - Workflow and business process automation: form to CRM, sheet to email, WhatsApp alerts, scheduled reports, app integrations, written in code on official APIs. From ₹15,000 per workflow.
 - Internal tools: portals, request and approval flows, master databases, live dashboards. From ₹75,000.
 - Business websites: designed, written and coded from scratch, with SEO, AEO and GEO built in. From ₹30,000.
@@ -42,8 +42,17 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 - Data Sorter for USAIndiaCFO: one master contact database with duplicate and usage checks. https://www.groviadigi.in/work/data-sorter-usaindiacfo/
 - CRM and lead pipeline for USAIndiaCFO: Zoho CRM, 20 mailboxes on 10 domains, six-stage pipeline. https://www.groviadigi.in/work/crm-pipeline-usaindiacfo/
 
+<!--CONTENT-->
 ## Blog
-- How KitKat Became the #1 Chocolate Brand in India (case study, Abhuday Tripathi, May 2026): https://www.groviadigi.in/blog/how-kitkat-became-1-chocolate-brand-india/
+- How we automated SEO for a finance firm without losing the human review: https://www.groviadigi.in/blog/seo-automation-with-human-review/
+- A social media dashboard that designs, learns and keeps the brand consistent: https://www.groviadigi.in/blog/social-media-dashboard-brand-consistency/
+
+## News (AI and automation, updated daily)
+- Newsroom: https://www.groviadigi.in/news/
+- 2026-11-15: IBM and Microsoft launch Imagine Enterprise, an AI agent platform with 6,000+ prebuilt agents: https://www.groviadigi.in/news/ibm-microsoft-imagine-enterprise-agent-platform/
+- 2026-11-14: Gartner: only 21% of service leaders have cut agent headcount because of AI: https://www.groviadigi.in/news/gartner-ai-customer-service-headcount-survey/
+- 2026-11-13: GitHub Agentic Workflows is now generally available: AI agents inside GitHub Actions: https://www.groviadigi.in/news/github-agentic-workflows-generally-available/
+<!--/CONTENT-->
 
 ## Get started
 - Lead form and free 15-minute call: https://www.groviadigi.in/get-started/

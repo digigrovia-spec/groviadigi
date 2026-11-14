@@ -6,6 +6,8 @@
   "cleanUrls": false,
   "trailingSlash": true,
   "redirects": [
-    { "source": "/images/kitkat-case-study-cover.png", "destination": "/images/kitkat-case-study-cover.jpg", "permanent": true }
+    { "source": "/blog/how-kitkat-became-1-chocolate-brand-india", "destination": "/blog/", "permanent": true },
+    { "source": "/images/kitkat-case-study-cover.png", "destination": "/blog/", "permanent": true },
+    { "source": "/images/kitkat-case-study-cover.jpg", "destination": "/blog/", "permanent": true }
   ]
 }

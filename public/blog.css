@@ -11,7 +11,7 @@
 /* a post card: used on the home page and the blog index */
 .post-card{display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s var(--ease);min-width:0}
 .post-card:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(52,40,140,.35);border-color:#D6D3EC}
-.post-cover{position:relative;aspect-ratio:3/2;background:var(--night);overflow:hidden}
+.post-cover{position:relative;aspect-ratio:1200/630;background:var(--night);overflow:hidden}
 .post-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .post-card:hover .post-cover img{transform:scale(1.04)}
 .post-body{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.4vw,28px);flex:1}
@@ -34,7 +34,7 @@
 .byline b{display:block;font-size:15px}
 .byline span{color:var(--ink-500)}
 .byline .rt{margin-left:auto;color:var(--ink-400);font-weight:600;white-space:nowrap}
-.article-cover{position:relative;aspect-ratio:3/2;border-radius:22px;overflow:hidden;background:var(--night);margin:0 auto clamp(28px,5vh,48px);max-width:1080px}
+.article-cover{position:relative;aspect-ratio:1200/630;border-radius:22px;overflow:hidden;background:var(--night);margin:0 auto clamp(28px,5vh,48px);max-width:1080px}
 .article-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 .prose{font-size:clamp(17px,1.25vw,18.5px);line-height:1.75;color:var(--ink-700)}
@@ -126,4 +126,42 @@
   .cs-stat-grid{grid-template-columns:1fr 1fr;gap:22px 16px}
   .cs-item{grid-template-columns:1fr;gap:10px}
   .cs-item-no{padding-left:0}
+}
+
+/* articles: short answer, figures that text wraps around, FAQs, related posts */
+.answer{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:18px 20px;margin-bottom:clamp(26px,4vh,40px)}
+.answer b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-600);margin-bottom:6px}
+.answer p{font-size:17px;line-height:1.65;color:var(--ink-700)}
+.prose figure{margin:2em 0}
+.prose figure img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
+.prose figcaption{font-size:13.5px;color:var(--ink-400);margin-top:8px;line-height:1.5}
+.prose .fig-right{float:right;width:min(42%,330px);margin:.35em 0 1em 1.6em}
+.prose .fig-wide{clear:both}
+.prose h2{clear:both}
+.prose::after{content:"";display:block;clear:both}
+.faq-block{margin-top:clamp(40px,7vh,64px)}
+.faq-block h2{font-size:clamp(24px,2.6vw,32px);letter-spacing:-.03em;margin-bottom:12px}
+.faq-block details{border-bottom:1px solid var(--line)}
+.faq-block summary{cursor:pointer;list-style:none;padding:16px 28px 16px 0;font-weight:700;font-size:17px;position:relative}
+.faq-block summary::-webkit-details-marker{display:none}
+.faq-block summary::after{content:"+";position:absolute;right:4px;top:13px;font-size:22px;font-weight:500;color:var(--violet)}
+.faq-block details[open] summary::after{content:"–"}
+.faq-block details p{padding:0 0 18px;color:var(--ink-500);line-height:1.65}
+.more{margin-top:clamp(48px,8vh,72px)}
+.more h2{font-size:22px;letter-spacing:-.02em;margin-bottom:16px}
+.more .post-grid{padding-bottom:0;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.more .post-card h3{font-size:18px}
+.more .post-card p{display:none}
+.lead-story{padding-bottom:clamp(24px,4vh,40px)}
+.lead-card{display:grid;grid-template-columns:1.25fr 1fr;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:box-shadow .4s var(--ease),transform .4s var(--ease)}
+.lead-card:hover{box-shadow:0 30px 60px -30px rgba(52,40,140,.35);transform:translateY(-3px)}
+.lead-card .post-cover{aspect-ratio:1200/630;align-self:center}
+.lead-body{padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;justify-content:center;gap:12px}
+.lead-body h2{font-size:clamp(24px,2.8vw,38px);letter-spacing:-.035em;line-height:1.1}
+.lead-body p{color:var(--ink-500)}
+.post-cover picture{display:contents}
+@media (max-width:760px){
+  .prose .fig-right{float:none;width:100%;margin:1.5em 0}
+  .lead-card{grid-template-columns:1fr}
+  .lead-card .post-cover{aspect-ratio:1200/630}
 }
