@@ -17,6 +17,13 @@
 - The client owns the code (in their own GitHub or Google account) and the data.
 - One studio for CRM, automation and website, plus care after launch.
 
+## Team
+- Abhuday Tripathi, Founder: operations, client calls, scopes and quotes.
+- Karan, Co-founder: engineering; builds and tests every system.
+- Ishan Malpani, Co-founder: quality testing, demos and handover documentation.
+- Harshit: sales and free demos.
+- Groviadigi began as Digiink Solutions (now part of Groviadigi). About page: https://www.groviadigi.in/about/
+
 ## Starter offer: Missed Follow-up Fix
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
 - Live in 10 working days. Fixed price ₹19,999 (₹14,999 for the first 5 clients, until 31 Jan 2027).
