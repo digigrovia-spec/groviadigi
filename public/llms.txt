@@ -24,7 +24,7 @@
 - Harshit: sales and free demos.
 - Groviadigi began as Digiink Solutions (now part of Groviadigi). About page: https://www.groviadigi.in/about/
 
-## Starter offer: Missed Follow-up Fix
+## Starter offer: Follow-up Reminders
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
 - Live in 10 working days. Fixed price ₹19,999 (₹14,999 for the first 5 clients, until 31 Jan 2027).
 - Money back if the team is not using it after 30 days. Fee credited against a custom CRM within 60 days.
