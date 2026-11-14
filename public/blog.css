@@ -63,3 +63,67 @@
 .back{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-400)}
 .back a{font-weight:700;color:var(--ink)}
 .home-posts{padding-bottom:28px}
+
+/* case study pages (/work/) */
+.cs-hero{padding-bottom:clamp(28px,5vh,48px)}
+.cs-kicker{font-size:14px;font-weight:700;color:var(--violet);margin-bottom:12px}
+.cs-hero h1{font-size:clamp(36px,5.6vw,80px);line-height:1;letter-spacing:-.05em;font-weight:700;max-width:18ch;text-wrap:balance}
+.cs-hero .dek{font-size:clamp(18px,1.7vw,23px);line-height:1.45;color:var(--ink-500);margin:20px 0 28px;max-width:58ch}
+.cs-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.cs-meta div{background:#fff;padding:16px 18px;min-width:0}
+.cs-meta dt{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-400);margin-bottom:4px}
+.cs-meta dd{font-weight:600;font-size:15.5px}
+.cs-meta a{color:var(--blue-600)}
+.cs-credit{font-size:13.5px;color:var(--ink-400);margin-top:14px}
+.cs-stats{background:var(--night);color:#fff;padding:clamp(28px,5vh,48px) 0;background-image:radial-gradient(60% 120% at 0% 0%,rgba(52,120,255,.25),transparent 60%),radial-gradient(60% 120% at 100% 100%,rgba(138,73,234,.3),transparent 60%)}
+.cs-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,3vw,40px)}
+.cs-stat-grid b{display:block;font-size:clamp(34px,4.6vw,64px);letter-spacing:-.05em;line-height:1;background:linear-gradient(135deg,#7FA8FF,#C9A6FF);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.cs-stat-grid span{display:block;color:#C9C6E6;font-size:14.5px;margin-top:8px;max-width:22ch}
+.cs-body{max-width:980px;padding-top:clamp(40px,8vh,80px);padding-bottom:clamp(72px,12vh,140px)}
+.cs-sec+.cs-sec,.cs-quote+.cs-sec{margin-top:clamp(44px,8vh,80px)}
+.cs-sec h2{font-size:clamp(26px,3vw,40px);letter-spacing:-.035em;line-height:1.1;margin-bottom:20px}
+.cs-lede{font-size:clamp(17px,1.4vw,20px);line-height:1.7;color:var(--ink-700);max-width:68ch}
+.cs-cards{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;counter-reset:c}
+.cs-cards li{counter-increment:c;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.cs-cards li::before{content:counter(c,decimal-leading-zero);font-size:12px;font-weight:800;color:var(--violet)}
+.cs-cards b,.cs-built b,.cs-why b,.cs-steps b{font-size:16.5px;letter-spacing:-.01em;color:var(--ink)}
+.cs-cards span,.cs-built span,.cs-why span,.cs-steps span{color:var(--ink-500);font-size:15px;line-height:1.55}
+.cs-built{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.cs-built div{background:#fff;padding:22px;display:flex;flex-direction:column;gap:6px}
+.cs-built small{font-size:12px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cs-flow{list-style:none;display:flex;flex-wrap:wrap;gap:10px;counter-reset:f}
+.cs-flow li{counter-increment:f;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:10px 18px 10px 10px;font-weight:600;font-size:15px}
+.cs-flow li::before{content:counter(f);width:26px;height:26px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:12.5px;font-weight:800;flex-shrink:0}
+.cs-table{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:#fff}
+.cs-table table{width:100%;border-collapse:collapse;min-width:560px;font-size:15px}
+.cs-table th,.cs-table td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.cs-table thead th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-400);background:#FBFBFD}
+.cs-table tbody th{font-weight:700;white-space:nowrap}
+.cs-table td:last-child{color:var(--ink);font-weight:600}
+.cs-table td{color:var(--ink-500)}
+.cs-table tr:last-child>*{border-bottom:0}
+.cs-quote{margin-top:clamp(44px,8vh,80px);padding:clamp(24px,4vw,40px);border-radius:22px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--violet)}
+.cs-quote blockquote{font-size:clamp(20px,2.2vw,28px);line-height:1.35;letter-spacing:-.02em;font-weight:600;color:var(--ink)}
+.cs-quote figcaption{margin-top:14px;color:var(--ink-500);font-size:14.5px}
+.cs-steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:14px;counter-reset:s}
+.cs-steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.cs-steps li::before{content:counter(s,decimal-leading-zero);font-size:12px;font-weight:800;color:var(--violet)}
+.cs-why{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.cs-why div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.cs-foot a{color:var(--blue-600)}
+/* work index */
+.cs-list{display:flex;flex-direction:column;border-top:1px solid var(--line);margin-bottom:clamp(72px,12vh,140px)}
+.cs-item{display:grid;grid-template-columns:56px 1fr 220px;gap:clamp(14px,3vw,40px);align-items:center;padding:clamp(22px,4vh,34px) 0;border-bottom:1px solid var(--line);transition:background .3s}
+.cs-item:hover{background:#fff}
+.cs-item-no{font-size:14px;font-weight:800;color:var(--violet);padding-left:8px}
+.cs-item-main{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cs-item-main small{font-size:13px;font-weight:700;color:var(--ink-400)}
+.cs-item-main b{font-size:clamp(21px,2.2vw,30px);letter-spacing:-.03em;line-height:1.15}
+.cs-item-main span{color:var(--ink-500);font-size:15.5px}
+.cs-item-stat b{display:block;font-size:clamp(28px,3vw,42px);letter-spacing:-.04em;line-height:1}
+.cs-item-stat small{color:var(--ink-500);font-size:13.5px}
+@media (max-width:760px){
+  .cs-stat-grid{grid-template-columns:1fr 1fr;gap:22px 16px}
+  .cs-item{grid-template-columns:1fr;gap:10px}
+  .cs-item-no{padding-left:0}
+}

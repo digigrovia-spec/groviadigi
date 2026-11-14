@@ -421,3 +421,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lite .card{box-shadow:0 18px 36px -18px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08)}
 .lite .card::after{display:none}
 .lite .post-card:hover{transform:none}
+
+/* work: hover brief + case study link */
+.work-tip{position:absolute;left:0;top:0;z-index:3;width:min(330px,80vw);background:#fff;color:var(--ink);border-radius:18px;padding:18px 18px 16px;box-shadow:0 30px 70px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.1);pointer-events:none;opacity:0;visibility:hidden;transition:opacity .22s var(--ease),visibility 0s .22s;will-change:transform}
+.work-tip.on{opacity:1;visibility:visible;transition:opacity .22s var(--ease)}
+.work-tip small{display:block;font-size:12px;font-weight:700;color:var(--violet);margin-bottom:4px}
+.work-tip b{display:block;font-size:19px;letter-spacing:-.02em;line-height:1.2}
+.work-tip p{font-size:13.5px;line-height:1.5;color:var(--ink-500);margin:6px 0 12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.work-tip-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.work-tip-stats em{display:block;font-style:normal;font-weight:800;font-size:22px;letter-spacing:-.03em;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.work-tip-stats i{display:block;font-style:normal;font-size:12px;line-height:1.35;color:var(--ink-500);margin-top:2px}
+.work-tip u{display:block;text-decoration:none;font-size:13px;font-weight:700;margin-top:11px}
+.work-sticky.pointing{cursor:pointer}
+.work-link{margin-left:14px;color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+.work-link:hover{color:#C9A6FF}
+@media (max-width:560px){.work-link{display:block;margin:6px 0 0}}

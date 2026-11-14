@@ -27,6 +27,13 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 ## Proof
 - Smart Sun Power (rooftop solar installer): custom solar CRM covering leads, site surveys, quotations, installations and payments. Lead conversion rose 28% within three months of go-live. Delivered by Digiink Solutions, now part of Groviadigi.
 
+## Case studies (signed off by each client)
+- Solar CRM for Smart Sun Power: +28% lead conversion in 3 months, sales cycle 45 to 28 days. https://www.groviadigi.in/work/solar-crm-smart-sun-power/
+- Website rebuild for USAIndiaCFO: custom site, 54 service pages, three practice hubs. https://www.groviadigi.in/work/website-usaindiacfo/
+- Growth Center for USAIndiaCFO: SEO, AEO and GEO automation with about 1% human input. https://www.groviadigi.in/work/seo-aeo-geo-automation-usaindiacfo/
+- Data Sorter for USAIndiaCFO: one master contact database with duplicate and usage checks. https://www.groviadigi.in/work/data-sorter-usaindiacfo/
+- CRM and lead pipeline for USAIndiaCFO: Zoho CRM, 20 mailboxes on 10 domains, six-stage pipeline. https://www.groviadigi.in/work/crm-pipeline-usaindiacfo/
+
 ## Blog
 - How KitKat Became the #1 Chocolate Brand in India (case study, Abhuday Tripathi, May 2026): https://www.groviadigi.in/blog/how-kitkat-became-1-chocolate-brand-india/
 

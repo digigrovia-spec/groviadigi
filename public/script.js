@@ -298,6 +298,7 @@
     const wp = clamp((y - L.work.t) / (L.work.h - vh));
     const shift = wp * L.trackShift;
     const centre = L.cards[0] + shift;
+    wShift = shift;
     let nearest = 0, nd = 1e9;
     if (strand && strand.ready && !lite) {
       // the WebGL strand draws the cards; the HTML cards only supply layout
@@ -328,8 +329,52 @@
       wTitle.textContent = cards[nearest].dataset.title;
       wType.textContent = cards[nearest].dataset.type;
       wCount.textContent = `${nearest + 1} of ${cards.length}`;
+      if (cards[nearest].dataset.href) wLink.href = cards[nearest].dataset.href;
     }
+    if (wPtr) workHover();                                 // cards slid under a still pointer
   }
+
+  /* ---------- WORK: hover shows a short brief, click opens the case study ----------
+     The front card (nearest the centre) is the one you can point at. Its flat footprint is used
+     for hit-testing, so it works the same whether WebGL or the plain cards are drawing. */
+  let wShift = 0, wPtr = null, tipFor = -1;
+  const tip = $('#workTip'), wLink = $('#workLink'), carouselEl = $('#carousel'), workSticky = $('.work-sticky');
+  function frontCardAt(x, y) {
+    const i = current, c = cards[i];
+    if (!c || !c.dataset.href) return -1;
+    const r = carouselEl.getBoundingClientRect();
+    const w = L.cw * .94, h = c.offsetHeight * .94;
+    const cx = r.left + r.width / 2 + (L.cards[i] - (L.cards[0] + wShift)), cy = r.top + r.height / 2;
+    return Math.abs(x - cx) <= w / 2 && Math.abs(y - cy) <= h / 2 ? i : -1;
+  }
+  function fillTip(c) {
+    const d = c.dataset, st = tip.querySelectorAll('.work-tip-stats span');
+    tip.querySelector('small').textContent = d.kicker + ' · ' + d.client;
+    tip.querySelector('b').textContent = d.title;
+    tip.querySelector('p').textContent = d.dek;
+    st[0].querySelector('em').textContent = d.s1; st[0].querySelector('i').textContent = d.l1;
+    st[1].querySelector('em').textContent = d.s2; st[1].querySelector('i').textContent = d.l2;
+  }
+  function workHover() {
+    const i = frontCardAt(wPtr.x, wPtr.y);
+    if (i < 0) { if (tipFor >= 0) { tip.classList.remove('on'); workSticky.classList.remove('pointing'); tipFor = -1; } return; }
+    if (i !== tipFor) { fillTip(cards[i]); tipFor = i; tip.classList.add('on'); workSticky.classList.add('pointing'); }
+    const r = workSticky.getBoundingClientRect(), tw = tip.offsetWidth, th = tip.offsetHeight;
+    let x = wPtr.x - r.left + 20, y = wPtr.y - r.top + 20;
+    if (x + tw > r.width - 12) x = wPtr.x - r.left - tw - 20;      // flip to the left near the right edge
+    if (y + th > r.height - 12) y = r.height - th - 12;
+    tip.style.transform = `translate3d(${Math.max(12, x).toFixed(0)}px,${Math.max(12, y).toFixed(0)}px,0)`;
+  }
+  workSticky.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    wPtr = { x: e.clientX, y: e.clientY }; workHover();
+  }, { passive: true });
+  workSticky.addEventListener('pointerleave', () => { wPtr = null; tip.classList.remove('on'); workSticky.classList.remove('pointing'); tipFor = -1; });
+  workSticky.addEventListener('click', e => {
+    if (e.target.closest('a, button')) return;
+    const i = frontCardAt(e.clientX, e.clientY);
+    if (i >= 0) location.href = cards[i].dataset.href;
+  });
 
   /* ---------- the ribbon: drawn every frame while the hero is on screen ---------- */
   let rbLastStill = false;
