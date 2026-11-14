@@ -492,3 +492,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .card-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0D0B26}
 .ui-video{background:transparent;pointer-events:none}
 .card-label{position:absolute;left:1.1em;bottom:1.1em;display:flex;align-items:center;height:2.3em;padding:0 1em;border-radius:99px;background:rgba(255,255,255,.95);color:var(--ink);font-weight:700;font-size:.95em;line-height:1;white-space:nowrap;box-shadow:0 8px 24px -10px rgba(0,0,0,.5)}
+
+/* phones: bigger tap targets for small text links */
+@media (max-width:760px){
+  .foot nav a,.crumbs a,.back a,.cs-foot a,.work-link,.why-proof a{display:inline-block;padding:10px 0}
+  .foot nav{gap:4px 20px}
+  .hero-bottom .link-arrow{white-space:nowrap}
+}
