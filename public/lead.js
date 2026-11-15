@@ -59,6 +59,7 @@
       const lead = Object.assign({}, data, src, { form: form.dataset.lead, page: location.href.split('#')[0], submitted_at: new Date().toISOString() });
       // tell Google Tag Manager a lead was submitted (form name only, no personal details)
       (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', lead_form: form.dataset.lead, lead_need: data.need || '' });
+      if (window.fbq) window.fbq('track', 'Lead');   // Meta Pixel, only present after marketing consent (consent.js)
       if (!LEAD_ENDPOINT) {
         emailDraft(form, data);
         say(note, 'Thanks. Your email app should open with the details filled in. If it doesn’t, write to ' + EMAIL + '.', 'ok');
