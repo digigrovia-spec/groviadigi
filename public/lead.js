@@ -4,10 +4,13 @@
    WHERE LEADS GO
    Set LEAD_ENDPOINT to the URL that should receive leads (a CRM web-to-lead URL, a webhook,
    an Apps Script for a Google Sheet, etc.). Each lead is POSTed there as JSON.
-   Google Sheet setup: see Website_build/google-sheet-leads.gs and LEADS_GOOGLE_SHEET.md.
+   Google Sheet setup: paste Website_build/google-sheet-code.gs into the Sheet's Apps Script, deploy it as a
+   Web App and put its URL in LEAD_ENDPOINT (steps in Website_build/LEADS_GOOGLE_SHEET.md).
    While it is empty, the form opens a pre-filled email to hello@groviadigi.in instead. */
 (() => {
-  const LEAD_ENDPOINT = '';
+  const LEAD_ENDPOINT = '';   // paste the Apps Script Web App URL here (ends in /exec)
+  const SHEET_SECRET = 'grovia-forms-2026';   // same as SECRET_KEY in google-sheet-code.gs (only stops casual spam: it is visible in the page)
+  const FORM_NAMES = { landing: 'Landing Page Form', contact: 'Contact Form', question: 'Ask a Question' };
   const EMAIL = 'hello@groviadigi.in';
 
   // remember where the visitor came from (ad, search, social) for the CRM
@@ -67,7 +70,19 @@
         if (/script.google(usercontent)?.com/.test(LEAD_ENDPOINT)) {
           // Google Apps Script (Google Sheet): send as plain text so the browser makes a simple request.
           // Apps Script answers through a redirect the browser cannot read, so a sent request counts as success.
-          await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead) });
+          // Google Sheet script (Website_build/google-sheet-code.gs) reads form fields as e.parameter.
+          // Field names follow the sheet's columns; extras (budget, UTM tags) get their own column automatically.
+          const body = new URLSearchParams();
+          const put = (k, v) => { if (v) body.append(k, v); };
+          put('form_name', FORM_NAMES[form.dataset.lead] || form.dataset.lead);
+          put('page_url', lead.page);
+          put('name', data.name); put('email', data.email); put('phone', data.phone); put('company', data.company);
+          put('service', data.need);
+          put('message', data.question || data.msg);
+          put('budget', data.budget);
+          ['referrer', ...KEYS].forEach(k => put(k, src[k]));
+          body.append('secret', SHEET_SECRET);
+          await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
         } else {
           const r = await fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) });
           if (!r.ok) throw new Error(r.status);
