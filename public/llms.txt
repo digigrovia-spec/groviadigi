@@ -8,7 +8,7 @@
 - Consultancy: the paid first step of every project, after a free 15-minute call. A study of how the team works and a written plan with costs. The fee depends on the project and is quoted after the free call. It is adjusted in full in the project price if the client goes ahead, and not charged if the study shows no software is needed.
 - Custom software and apps: dashboards, portals, in-house software, web and mobile apps. From ₹75,000.
 - Websites: designed, written and built from scratch, ready for Google and AI answers. From ₹30,000.
-- Care plans after launch: from ₹5,000 a month.
+- Maintenance: 3 months free with every project, then care plans from ₹5,000 a month.
 
 ## Main project: Growth Center (USAIndiaCFO)
 - A central growth system with four automations (social media, SEO/AEO/GEO, outbound email, performance marketing) reporting into one dashboard, with data stored on a one-way in-house server and a person approving every action. The firm's sales grew 15%. https://www.groviadigi.in/work/growth-center-usaindiacfo/
@@ -28,13 +28,13 @@
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
 - Live in 10 working days. Fixed price ₹19,999 (₹14,999 for the first 5 clients, until 31 Jan 2027).
 - Money back if the team is not using it after 30 days. Fee credited against a custom CRM within 60 days.
-- Custom CRM from ₹90,000 (3 milestone payments). Care plans from ₹5,000 a month.
+- Custom CRM from ₹90,000 (3 milestone payments). 3 months of free maintenance, then care plans from ₹5,000 a month.
 
 ## How Groviadigi works
 1. Free 15-minute discovery call, then a paid consultancy to map the current process (fee adjusted in the project price; not charged if no software is needed).
 2. Written scope, timeline and fixed quote before work starts.
 3. Development and testing with real data; nothing goes live without client review.
-4. Deployment, handover with training and documentation, optional monthly maintenance.
+4. Deployment, handover with training and documentation, 3 months of free maintenance, then an optional monthly care plan.
 
 ## Positioning
 Groviadigi first asks whether automation is needed at all. The recommendation can be to improve the process, automate key steps, or automate end to end.
