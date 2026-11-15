@@ -26,3 +26,6 @@ dist-ssr
 Brand-kit
 SEO keywords
 .env
+.env.*
+*.pem
+*.key
