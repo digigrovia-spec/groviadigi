@@ -24,7 +24,7 @@
     src.referrer = sessionStorage.getItem('gd_ref');
   } catch (e) { src.referrer = document.referrer || 'direct'; }
 
-  const LABELS = { name: 'Name', email: 'Email', phone: 'Phone / WhatsApp', company: 'Company', need: 'Looking for', budget: 'Budget', timeline: 'Start', msg: 'Message', question: 'Question' };
+  const LABELS = { name: 'Name', email: 'Email', phone: 'WhatsApp', company: 'Company', country: 'Country', need: 'Looking for', timeline: 'Start', msg: 'Message', question: 'Question' };
   const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
   const isPhone = v => v.replace(/\D/g, '').length >= 8;
 
@@ -45,6 +45,11 @@
       e.preventDefault();
       const data = {};
       new FormData(form).forEach((v, k) => { v = String(v).trim(); if (v) data[k] = data[k] ? data[k] + ', ' + v : v; });
+      // first + last name become one Name; country code joins the WhatsApp number
+      const full = [data.first_name, data.last_name].filter(Boolean).join(' ');
+      if (full) data.name = full;
+      if (data.phone && data.cc && !data.phone.startsWith('+')) data.phone = data.cc + ' ' + data.phone;
+      delete data.cc;
       if (data.website) { form.reset(); say(note, form.dataset.ok || 'Thanks, we got it.', 'ok'); return; }   // bot trap
       delete data.website;
 
@@ -77,10 +82,10 @@
           const put = (k, v) => { if (v) body.append(k, v); };
           put('form_name', FORM_NAMES[form.dataset.lead] || form.dataset.lead);
           put('page_url', lead.page);
-          put('name', data.name); put('email', data.email); put('phone', data.phone); put('company', data.company);
+          put('name', data.name); put('first_name', data.first_name); put('last_name', data.last_name); put('email', data.email); put('phone', data.phone); put('company', data.company); put('country', data.country);
           put('service', data.need);
           put('message', data.question || data.msg);
-          put('budget', data.budget); put('timeline', data.timeline);
+          put('timeline', data.timeline);
           ['referrer', ...KEYS].forEach(k => put(k, src[k]));
           body.append('secret', SHEET_SECRET);
           await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body });

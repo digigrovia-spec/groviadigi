@@ -580,3 +580,12 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .promo figcaption{margin-top:12px;font-size:14px;color:var(--ink-500)}
 @media (max-width:900px){.svc-intro{grid-template-columns:1fr}}
 @media (max-width:520px){.promo-play{font-size:13px;padding:7px 14px 7px 7px;margin-bottom:12px}.promo-play span{width:32px;height:32px}.promo-frame{border-radius:18px}.promo-frame video{border-radius:16px}}
+
+/* lead forms: WhatsApp number with country code */
+.wa-field{grid-column:1/-1;display:flex;flex-direction:column;gap:8px;min-width:0}
+.wa-label{font-size:13px;font-weight:700}
+.form .wa-label{color:#B9B6DA;font-weight:600}
+.lform .wa-label{color:var(--ink-700)}
+.wa-row{display:grid;grid-template-columns:minmax(0,10em) minmax(0,1fr);gap:8px}
+@media (max-width:420px){.wa-row{grid-template-columns:minmax(0,9em) minmax(0,1fr)}}
+.wa-row select,.wa-row input{width:100%;min-width:0}
