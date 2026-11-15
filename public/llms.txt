@@ -5,7 +5,7 @@
 ## Services (fixed written quote after the consultancy, before the build)
 - Custom CRM: leads, reminders, quotes and payments built around the client's sales steps.
 - Custom automation of any manual work: data entry, reports, follow-ups, emails, social posts, lead research. Written in code, no Zapier or Make fees.
-- Consultancy: the paid first step of every project, after a free 15-minute call. A study of how the team works and a written plan with costs. The fee depends on the project and is quoted after the free call. It is adjusted in full in the project price if the client goes ahead, and not charged if the study shows no software is needed.
+- Consultancy: the paid first step of every project, after a free 15-minute call. A study of how the team works and a written plan with costs. The fee depends on the project and is quoted after the free call. If the free call shows no software is needed, the process stops there at no cost. If the client goes ahead, the consultancy fee is included in the project fee. Software goes live only after the client approves it.
 - Custom software and apps: dashboards, portals, in-house software, web and mobile apps.
 - Websites: designed, written and built from scratch, ready for Google and AI answers.
 - Maintenance: 3 months free with every project, then care plans from ₹5,000 a month.
@@ -25,7 +25,7 @@
 - Groviadigi is a business automation and custom software studio in Ajmer, Rajasthan. About page: https://www.groviadigi.in/about/
 
 ## How Groviadigi works
-1. Free 15-minute discovery call, then a paid consultancy to map the current process (fee adjusted in the project price; not charged if no software is needed).
+1. Free 15-minute discovery call, then a paid consultancy to map the current process (fee included in the project fee; if the free call shows no software is needed, nothing is charged).
 2. Written scope, timeline and fixed quote before work starts.
 3. Development and testing with real data; nothing goes live without client review.
 4. Deployment, handover with training and documentation, 3 months of free maintenance, then an optional monthly care plan.
