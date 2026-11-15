@@ -10,7 +10,7 @@
      No name, email or IP address is sent.
    - "Cookie settings" link: added to every footer, reopens the banner. */
 (() => {
-  const CLARITY_ID = '';        // Microsoft Clarity project ID, e.g. 'abcd1234ef'
+  const CLARITY_ID = 'ze8pc7e8df';   // Microsoft Clarity project ID (Groviadigi, Nov 2026)
   const META_PIXEL_ID = '2366049857482625';   // Meta (Facebook) Pixel / dataset ID (Groviadigi, Nov 2026)
   const LOG_CONSENT = false;    // true once the updated google-sheet-code.gs is deployed
   const LOG_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzCIUT5LqECMmocvN1eSujFjjReNGRZJXP2tQfhYyxFXeCjtJZz2rqSmayCyKKRlAbi/exec';
