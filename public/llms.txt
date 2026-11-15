@@ -24,12 +24,6 @@
 ## About
 - Groviadigi is a business automation and custom software studio in Ajmer, Rajasthan. About page: https://www.groviadigi.in/about/
 
-## Starter offer: Follow-up Reminders
-- One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
-- Live in 10 working days. Fixed price ₹19,999 (₹14,999 for the first 5 clients, until 31 Jan 2027).
-- Money back if the team is not using it after 30 days. Fee credited against a custom CRM within 60 days.
-- Custom CRM from ₹90,000 (3 milestone payments). 3 months of free maintenance, then care plans from ₹5,000 a month.
-
 ## How Groviadigi works
 1. Free 15-minute discovery call, then a paid consultancy to map the current process (fee adjusted in the project price; not charged if no software is needed).
 2. Written scope, timeline and fixed quote before work starts.

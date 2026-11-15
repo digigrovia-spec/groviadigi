@@ -98,7 +98,7 @@
   let heroP = 0;
   const intro = $('#intro'), introSticky = $('#introSticky'), introScene = $('#introScene');
   const stage = $('#stage'), horizon = $('#horizon'), wordWrap = $('#wordWrap');
-  const offerWrap = $('#offer > .wrap');
+  const offerWrap = $('#process > .wrap');   // first section after the intro (the starter offer section was removed, Nov 2026)
   const work = $('#work'), cardsEl = $('#cards'), cards = $$('.card', cardsEl);
   const wTitle = $('#workTitleNow'), wType = $('#workType'), wCount = $('#workCount'), wBar = $('#workBar');
   const darkSecs = $$('.dark');
