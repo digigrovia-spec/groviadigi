@@ -2,12 +2,12 @@
 
 > Groviadigi is a business automation and custom software studio based in Ajmer, Rajasthan, India. It builds custom CRMs, internal tools and dashboards, workflow automations and business websites for small and growing companies in India and abroad. Tagline: "Your Vision. Our Development."
 
-## Services (fixed written price before payment)
-- Custom CRM: leads, reminders, quotes and payments built around the client's sales steps. From ₹90,000, paid in 3 parts.
-- Custom automation of any manual work: data entry, reports, follow-ups, emails, social posts, lead research. Written in code, no Zapier or Make fees. From ₹15,000 per automation.
+## Services (fixed written quote after the consultancy, before the build)
+- Custom CRM: leads, reminders, quotes and payments built around the client's sales steps.
+- Custom automation of any manual work: data entry, reports, follow-ups, emails, social posts, lead research. Written in code, no Zapier or Make fees.
 - Consultancy: the paid first step of every project, after a free 15-minute call. A study of how the team works and a written plan with costs. The fee depends on the project and is quoted after the free call. It is adjusted in full in the project price if the client goes ahead, and not charged if the study shows no software is needed.
-- Custom software and apps: dashboards, portals, in-house software, web and mobile apps. From ₹75,000.
-- Websites: designed, written and built from scratch, ready for Google and AI answers. From ₹30,000.
+- Custom software and apps: dashboards, portals, in-house software, web and mobile apps.
+- Websites: designed, written and built from scratch, ready for Google and AI answers.
 - Maintenance: 3 months free with every project, then care plans from ₹5,000 a month.
 
 ## Main project: Growth Center (USAIndiaCFO)
@@ -16,7 +16,7 @@
 ## Why Groviadigi
 - Honest first call: if a process change fixes the problem, Groviadigi says so instead of selling software.
 - Pure-code automation, not Zapier, Make or n8n: apps are connected directly through their official APIs, so there is no monthly platform fee, no task caps, and client data does not pass through a third-party platform.
-- Fixed scope and published starting prices.
+- Fixed scope and a fixed written quote before the build.
 - People stay in charge: automation does the repetitive work; a person approves important decisions.
 - The client owns the code (in their own GitHub or Google account) and the data.
 - One studio for CRM, automation and website, plus care after launch.
