@@ -119,7 +119,8 @@
       else if (a === 'more') { box.classList.add('more'); e.target.style.display = 'none'; box.querySelector('#gd-a').focus(); }
       else if (a === 'save') { const an = box.querySelector('#gd-a').checked, mk = box.querySelector('#gd-m').checked; choose(an, mk, 'custom'); }
     });
-    requestAnimationFrame(() => box.classList.add('on'));
+    const b = box;
+    requestAnimationFrame(() => b.classList.add('on'));
   }
   function close() { if (!box) return; const b = box; box = null; b.classList.remove('on'); setTimeout(() => b.remove(), 300); }
 

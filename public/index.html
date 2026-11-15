@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en-IN">
 <head>
+<meta http-equiv="Content-Security-Policy" id="gd-csp" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.clarity.ms https://*.clarity.ms https://connect.facebook.net https://unpkg.com https://cdnjs.cloudflare.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.doubleclick.net https://www.google.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://script.google.com https://script.googleusercontent.com; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; media-src 'self' blob:; worker-src 'self' blob:; frame-src https://www.googletagmanager.com https://www.facebook.com https://td.doubleclick.net; form-action 'self' mailto: https://script.google.com; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <script id="gd-consent-default">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});gtag('set','ads_data_redaction',true);try{var c=JSON.parse(localStorage.getItem('gd_consent')||'null');if(c&&c.v==='2026-11'){var m=c.marketing?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:m,ad_user_data:m,ad_personalization:m});}}catch(e){}</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P6F4467Z');</script>
@@ -385,10 +387,19 @@
 <!-- SERVICES -->
 <section class="sec" id="services" aria-labelledby="svcTitle" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow rv">What we do</p>
-      <h2 class="split" id="svcTitle">What we do, and what it costs to start.</h2>
-      <p class="lede rv rv-d1">Every project starts with a free call, then a paid consultancy. If you go ahead, the consultancy fee is adjusted in full in your project price. You get a fixed price in writing before the build starts.</p>
+    <div class="svc-intro">
+      <div class="sec-head">
+        <p class="eyebrow rv">What we do</p>
+        <h2 class="split" id="svcTitle">What we do, and what it costs to start.</h2>
+        <p class="lede rv rv-d1">Every project starts with a free call, then a paid consultancy. If you go ahead, the consultancy fee is adjusted in full in your project price. You get a fixed price in writing before the build starts.</p>
+      </div>
+    <figure class="promo rv rv-d2">
+      <div class="promo-frame">
+        <video id="promoVideo" preload="none" playsinline poster="/assets/video/groviadigi-promo.jpg" aria-label="Groviadigi in 96 seconds: what we build and how a project runs"><source src="/assets/video/groviadigi-promo.mp4" type="video/mp4"></video>
+        <button type="button" class="promo-play" aria-label="Play the 96-second video about Groviadigi" onclick="var v=document.getElementById('promoVideo');v.controls=true;v.play();this.hidden=true;(window.dataLayer=window.dataLayer||[]).push({event:'promo_video_play'});"><span aria-hidden="true"></span>Watch: what we do, in 96 seconds</button>
+      </div>
+      <figcaption>From the first call to monthly care: how we turn manual work into software.</figcaption>
+    </figure>
     </div>
     <div class="svc-list">
       <article class="svc rv"><span class="num">01</span><h3>Custom CRM</h3><p><b>All your sales in one place.</b>Leads from your website, calls and WhatsApp, with reminders, quotes and payments. Built around how you sell, not a ready-made template.<small class="svc-price">From ₹90,000 · paid in 3 parts</small></p></article>

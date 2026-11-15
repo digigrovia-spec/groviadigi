@@ -562,3 +562,18 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .form .chip span{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.18);color:#E6E3FF}
 .chip input:checked+span{background:var(--grad);border-color:transparent;color:#fff}
 .chip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+
+/* What we do: promo video beside the intro */
+.svc-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,4vw,64px);align-items:center;margin-bottom:clamp(36px,6vh,64px)}
+.svc-intro .sec-head{margin-bottom:0}
+.promo{margin:0;min-width:0}
+.promo-frame{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:22px;overflow:hidden;background:#0D0B26;box-shadow:0 30px 70px -30px rgba(52,120,255,.55),0 0 0 1px rgba(138,73,234,.18)}
+.promo-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.promo-play{position:absolute;inset:auto 0 0 0;margin:0 auto 18px;width:max-content;max-width:calc(100% - 32px);display:flex;align-items:center;gap:12px;padding:10px 20px 10px 10px;border:0;border-radius:99px;background:rgba(13,11,38,.72);backdrop-filter:blur(8px);color:#fff;font:700 15px Manrope,system-ui,sans-serif;cursor:pointer;transition:transform .2s}
+.promo-play span{width:40px;height:40px;border-radius:50%;background:var(--grad);display:grid;place-items:center;flex:none}
+.promo-play span::before{content:"";margin-left:3px;border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent #fff}
+.promo-play:hover{transform:scale(1.04)}
+.promo-play:focus-visible{outline:2px solid #FFAF57;outline-offset:3px}
+.promo figcaption{margin-top:12px;font-size:14px;color:var(--ink-500)}
+@media (max-width:900px){.svc-intro{grid-template-columns:1fr}}
+@media (max-width:520px){.promo-play{font-size:13px;padding:8px 14px 8px 8px}.promo-play span{width:34px;height:34px}}
