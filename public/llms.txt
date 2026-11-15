@@ -22,7 +22,7 @@
 - One studio for CRM, automation and website, plus care after launch.
 
 ## About
-- Groviadigi is a small software and automation studio from Ajmer, Rajasthan. About page: https://www.groviadigi.in/about/
+- Groviadigi is a business automation and custom software studio in Ajmer, Rajasthan. About page: https://www.groviadigi.in/about/
 
 ## Starter offer: Follow-up Reminders
 - One automation that reads an existing Excel, Google Sheet or Zoho and sends the sales team WhatsApp reminders when a lead is due, plus a daily owner summary.
