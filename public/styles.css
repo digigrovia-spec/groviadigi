@@ -251,7 +251,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------- OFFER ---------- */
 /* the offer slides up over the end of the dive, so its text can appear while the dot fills the screen */
-.offer{position:relative;z-index:4;margin-top:-80vh;margin-top:-80svh;background:transparent}
+.offer,.after-intro{position:relative;z-index:4;margin-top:-80vh;margin-top:-80svh;background:transparent}
 .offer-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(20px,3vw,40px);align-items:stretch}
 .offer-flow{background:var(--night);border-radius:24px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;justify-content:center;gap:10px;color:#fff;position:relative;overflow:hidden}
 .offer-flow::before{content:"";position:absolute;inset:auto -20% -40% -20%;height:70%;background:radial-gradient(50% 60% at 50% 50%,rgba(138,73,234,.35),transparent 70%);pointer-events:none}
@@ -406,7 +406,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .loader{display:none}
   .intro{margin-top:0;pointer-events:auto}
-  .offer{margin-top:0}
+  .offer,.after-intro{margin-top:0}
   .intro-sticky{visibility:visible}
   .intro-scene{position:relative;clip-path:none;min-height:100svh}
   .hero,.intro{height:auto}

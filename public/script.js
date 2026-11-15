@@ -250,7 +250,7 @@
       if (wordWrap.style.transform) { wordWrap.style.transform = ''; wordWrap.style.opacity = ''; }
     }
     // the next page's content arrives out of a blur while the square fills the screen
-    const rv = sstep(.8, .96, ip);
+    const rv = sstep(.72, .92, ip);   // starts while the camera is still diving, so the light screen is never empty
     offerWrap.style.opacity = rv.toFixed(3);
     offerWrap.style.filter = lite || rv > .995 ? '' : `blur(${((1 - rv) * 14).toFixed(1)}px)`;
     offerWrap.style.transform = rv > .995 ? '' : `translate3d(0,${((1 - rv) * 40).toFixed(1)}px,0)`;
