@@ -517,7 +517,11 @@
     lenis && lenis.scrollTo(0, { immediate: true, force: true });
     lenis && lenis.stop();
     rb && rb.drop();                                    // the rope hangs out of sight until the curtain lifts
-    setTimeout(open, 1350);
+    // open once the wordmark has risen: 1.2 s after the brand font is ready (the font check gives up after 1.5 s)
+    const html = document.documentElement;
+    const afterFonts = () => setTimeout(open, 1200);
+    if (html.classList.contains('fonts')) afterFonts();
+    else new MutationObserver((_, mo) => { if (html.classList.contains('fonts')) { mo.disconnect(); afterFonts(); } }).observe(html, { attributes: true, attributeFilter: ['class'] });
   }
   requestAnimationFrame(loop);
 })();

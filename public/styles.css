@@ -91,7 +91,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .loader.gone{display:none}
 @keyframes loaderFallback{to{clip-path:inset(0 0 100% 0);visibility:hidden}}
 .loader-word{display:flex;overflow:hidden;font-weight:600;font-size:clamp(44px,9vw,120px);letter-spacing:-.04em;line-height:1.1;padding-bottom:.26em;margin-bottom:-.18em;color:#F4F1FF}
-.loader-word span{display:inline-block;padding-bottom:.24em;margin-bottom:-.24em;transform:translateY(110%);animation:rise .8s var(--ease) forwards}
+.loader-word span{display:inline-block;padding-bottom:.24em;margin-bottom:-.24em;transform:translateY(110%);animation:rise .8s var(--ease) forwards;animation-play-state:paused}
+.fonts .loader-word span{animation-play-state:running}
 .loader-word span.v{background:linear-gradient(180deg,#C9B3FF,#8A49EA);-webkit-background-clip:text;background-clip:text;color:transparent}
 .loader-word span:nth-child(1){animation-delay:0.10s}
 .loader-word span:nth-child(2){animation-delay:0.16s}
