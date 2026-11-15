@@ -171,3 +171,6 @@
 .page-main>.sec:first-child{padding-top:clamp(36px,7vh,72px)}
 .page-h1{font-size:clamp(38px,5.6vw,80px);line-height:1;letter-spacing:-.05em;font-weight:700;max-width:18ch;text-wrap:balance}
 .page-main .sec + .sec{padding-top:0}
+
+.cs-part{margin-top:14px;font-size:14.5px;color:var(--ink-500);background:#fff;border:1px solid var(--line);border-left:3px solid var(--violet);border-radius:12px;padding:10px 14px;display:inline-block}
+.cs-part a{color:var(--blue-600);font-weight:700}

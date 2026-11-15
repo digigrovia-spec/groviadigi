@@ -2,12 +2,16 @@
 
 > Groviadigi is a business automation and custom software studio based in Ajmer, Rajasthan, India. It builds custom CRMs, internal tools and dashboards, workflow automations and business websites for small and growing companies in India and abroad. Tagline: "Your Vision. Our Development."
 
-## Services (published starting prices; fixed written quote before payment)
-- Custom CRM development: lead management, follow-up reminders, quotations, payments, built around the client’s own sales steps. From ₹90,000, paid in 3 milestones.
-- Workflow and business process automation: form to CRM, sheet to email, WhatsApp alerts, scheduled reports, app integrations, written in code on official APIs. From ₹15,000 per workflow.
-- Internal tools: portals, request and approval flows, master databases, live dashboards. From ₹75,000.
-- Business websites: designed, written and coded from scratch, with SEO, AEO and GEO built in. From ₹30,000.
-- Care plans: monthly maintenance, fixes, updates and small improvements. From ₹5,000 a month.
+## Services (fixed written price before payment)
+- Custom CRM: leads, reminders, quotes and payments built around the client's sales steps. From ₹90,000, paid in 3 parts.
+- Custom automation of any manual work: data entry, reports, follow-ups, emails, social posts, lead research. Written in code, no Zapier or Make fees. From ₹15,000 per automation.
+- Consultancy: a study of how the team works and a written plan with costs, starting with a free 15-minute call.
+- Custom software and apps: dashboards, portals, in-house software, web and mobile apps. From ₹75,000.
+- Websites: designed, written and built from scratch, ready for Google and AI answers. From ₹30,000.
+- Care plans after launch: from ₹5,000 a month.
+
+## Main project: Growth Center (USAIndiaCFO)
+- A central growth system with four automations (social media, SEO/AEO/GEO, outbound email, performance marketing) reporting into one dashboard, with data stored on a one-way in-house server and a person approving every action. The firm's sales grew 15%. https://www.groviadigi.in/work/growth-center-usaindiacfo/
 
 ## Why Groviadigi
 - Honest first call: if a process change fixes the problem, Groviadigi says so instead of selling software.
