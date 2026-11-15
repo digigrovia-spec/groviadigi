@@ -5,7 +5,7 @@
 ## Services (fixed written price before payment)
 - Custom CRM: leads, reminders, quotes and payments built around the client's sales steps. From ₹90,000, paid in 3 parts.
 - Custom automation of any manual work: data entry, reports, follow-ups, emails, social posts, lead research. Written in code, no Zapier or Make fees. From ₹15,000 per automation.
-- Consultancy: the paid first step of every project, after a free 15-minute call. A study of how the team works and a written plan with costs. The fee is adjusted in full in the project price if the client goes ahead, and not charged if the study shows no software is needed.
+- Consultancy: the paid first step of every project, after a free 15-minute call. A study of how the team works and a written plan with costs. The fee depends on the project and is quoted after the free call. It is adjusted in full in the project price if the client goes ahead, and not charged if the study shows no software is needed.
 - Custom software and apps: dashboards, portals, in-house software, web and mobile apps. From ₹75,000.
 - Websites: designed, written and built from scratch, ready for Google and AI answers. From ₹30,000.
 - Care plans after launch: from ₹5,000 a month.
