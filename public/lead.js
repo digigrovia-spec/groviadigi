@@ -24,7 +24,7 @@
     src.referrer = sessionStorage.getItem('gd_ref');
   } catch (e) { src.referrer = document.referrer || 'direct'; }
 
-  const LABELS = { name: 'Name', email: 'Email', phone: 'Phone / WhatsApp', company: 'Company', need: 'Looking for', budget: 'Budget', msg: 'Message', question: 'Question' };
+  const LABELS = { name: 'Name', email: 'Email', phone: 'Phone / WhatsApp', company: 'Company', need: 'Looking for', budget: 'Budget', timeline: 'Start', msg: 'Message', question: 'Question' };
   const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
   const isPhone = v => v.replace(/\D/g, '').length >= 8;
 
@@ -44,7 +44,7 @@
     form.addEventListener('submit', async e => {
       e.preventDefault();
       const data = {};
-      new FormData(form).forEach((v, k) => { data[k] = String(v).trim(); });
+      new FormData(form).forEach((v, k) => { v = String(v).trim(); if (v) data[k] = data[k] ? data[k] + ', ' + v : v; });
       if (data.website) { form.reset(); say(note, form.dataset.ok || 'Thanks, we got it.', 'ok'); return; }   // bot trap
       delete data.website;
 
@@ -79,7 +79,7 @@
           put('name', data.name); put('email', data.email); put('phone', data.phone); put('company', data.company);
           put('service', data.need);
           put('message', data.question || data.msg);
-          put('budget', data.budget);
+          put('budget', data.budget); put('timeline', data.timeline);
           ['referrer', ...KEYS].forEach(k => put(k, src[k]));
           body.append('secret', SHEET_SECRET);
           await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body });

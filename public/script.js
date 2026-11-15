@@ -481,8 +481,8 @@
 
   /* ---------- offer CTA pre-selects the form ---------- */
   $$('[data-need]').forEach(a => a.addEventListener('click', () => {
-    const sel = $('#need');
-    if (sel) sel.value = a.dataset.need;
+    const box = [...document.querySelectorAll('#form input[name="need"]')].find(x => x.value.startsWith(a.dataset.need));
+    if (box) box.checked = true;
   }));
 
   /* ---------- forms: handled by lead.js ---------- */

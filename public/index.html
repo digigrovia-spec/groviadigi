@@ -432,11 +432,11 @@
           </div>
         </article>
 
-        <article class="card" data-title="CRM and lead pipeline" data-type="Zoho CRM, outbound and remarketing" data-href="/work/crm-pipeline-usaindiacfo/" data-client="USAIndiaCFO" data-kicker="CRM and lead pipeline" data-dek="A six-stage lead pipeline, CRM workflows, a 20-mailbox outbound setup and a five-channel remarketing plan, from first email to signed client." data-s1="6" data-l1="pipeline stages, sourcing to reporting" data-s2="20" data-l2="sending mailboxes on 10 authenticated domains">
+        <article class="card" data-title="Outbound automation" data-type="Lead finding and cold email, connected to Zoho CRM" data-href="/work/crm-pipeline-usaindiacfo/" data-client="USAIndiaCFO" data-kicker="Outbound automation" data-dek="We built the automation that finds likely clients, enriches each lead, sends cold email and records every outcome in the Zoho CRM the firm already used." data-s1="20" data-l1="sending mailboxes on 10 domains" data-s2="6" data-l2="stages from lead to report">
           <video class="card-video" muted loop playsinline preload="none" poster="/work/video/crm-pipeline.webp" aria-hidden="true"><source src="/work/video/crm-pipeline.mp4" type="video/mp4"></video>
           <div class="ui ui-video">
             <div class="ui-bar"><i></i><i></i><i></i><span>CRM</span></div>
-            <span class="card-label">CRM and lead pipeline · Zoho</span>
+            <span class="card-label">Outbound automation · Zoho CRM connected</span>
           </div>
         </article>
 
@@ -505,7 +505,7 @@
       <div class="confirm-card rv rv-d1">
         <p class="eyebrow">Client confirmed</p>
         <h3>USAIndiaCFO</h3>
-        <p>A cross-border CFO firm in Mumbai and Palo Alto. The firm reviewed and confirmed four case studies of our work: its website, Growth Center, Data Sorter and its CRM pipeline.</p>
+        <p>A cross-border CFO firm in Mumbai and Palo Alto. The firm reviewed and confirmed four case studies of our work: its website, Growth Center, Data Sorter and its outbound automation.</p>
         <a href="/work/" class="link-arrow">See all case studies →</a>
       </div>
     </div>
@@ -576,12 +576,16 @@
       </div>
       <div class="contact-cta rv"><a href="#form" class="btn btn-light">Book a free 15-minute call</a><span>We reply within one working day.</span></div>
 
-      <form class="form rv" id="form" data-lead="contact" data-subject="Discovery call request" novalidate aria-label="Discovery call request">
-        <label>Your name<input name="name" autocomplete="name" required data-err="Please add your name."></label>
-        <label>Work email<input name="email" type="email" autocomplete="email" required data-err="Please add a valid email."></label>
+      <form class="form lead-form rv" id="form" data-lead="contact" data-subject="Discovery call request" novalidate aria-label="Discovery call request">
+        <p class="fs-title full"><span>1</span>About you</p>
+        <label>Your name *<input name="name" autocomplete="name" required data-err="Please add your name."></label>
+        <label>Work email *<input name="email" type="email" autocomplete="email" required data-err="Please add a valid email."></label>
         <label>Phone or WhatsApp<input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
         <label>Company<input name="company" autocomplete="organization"></label>
-        <label>Looking for<select name="need" id="need"><option>Not sure yet</option><option>Follow-up Reminders</option><option>Custom CRM</option><option>Custom automation</option><option>Consultancy</option><option>Custom software or app</option><option>Website</option></select></label>
+        <p class="fs-title full"><span>2</span>Your project</p>
+        <div class="full chip-group" role="group" aria-labelledby="needHome"><span class="chip-title" id="needHome">What do you need? <em>Choose one or more</em></span><div class="chips"><label class="chip"><input type="checkbox" name="need" value="Custom CRM"><span>Custom CRM</span></label><label class="chip"><input type="checkbox" name="need" value="Custom automation"><span>Custom automation</span></label><label class="chip"><input type="checkbox" name="need" value="Consultancy"><span>Consultancy</span></label><label class="chip"><input type="checkbox" name="need" value="Custom software or app"><span>Custom software or app</span></label><label class="chip"><input type="checkbox" name="need" value="Website"><span>Website</span></label><label class="chip"><input type="checkbox" name="need" value="Follow-up Reminders (starter offer)"><span>Follow-up Reminders (starter offer)</span></label><label class="chip"><input type="checkbox" name="need" value="Not sure yet"><span>Not sure yet</span></label></div></div>
+        <label>Budget<select name="budget"><option>Not sure yet</option><option>Under ₹25,000</option><option>₹25,000 to ₹1 lakh</option><option>₹1 lakh to ₹3 lakh</option><option>Above ₹3 lakh</option><option>USD project</option></select></label>
+        <label>When do you want to start?<select name="timeline"><option>Not sure yet</option><option>As soon as possible</option><option>Within a month</option><option>In 1 to 3 months</option><option>Just exploring</option></select></label>
         <label class="full">What takes up your team’s time?<textarea name="msg" placeholder="e.g. Every Monday we copy leads from three sheets into our CRM."></textarea></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="row"><button class="btn btn-grad" type="submit">Request my call →</button><p class="form-note" id="formNote" role="status">We reply within one working day.</p></div>

@@ -103,13 +103,16 @@
     <section class="lp-card" id="lead" aria-labelledby="leadTitle">
       <h2 id="leadTitle">Book your free call</h2>
       <p>Takes about a minute. Fields marked * are required.</p>
-      <form class="lform" data-lead="landing" data-subject="New lead from the landing page" data-ok="Thanks! We’ll reply within one working day with time slots for your call." novalidate>
+      <form class="lform lead-form" data-lead="landing" data-subject="New lead from the landing page" data-ok="Thanks! We’ll reply within one working day with time slots for your call." novalidate>
+        <p class="fs-title full"><span>1</span>About you</p>
         <label>Your name *<input name="name" autocomplete="name" required data-err="Please add your name."></label>
         <label>Company<input name="company" autocomplete="organization"></label>
         <label>Work email *<input name="email" type="email" autocomplete="email" required data-err="Please add a valid email."></label>
         <label>Phone or WhatsApp *<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required data-err="Please add a phone or WhatsApp number we can reach."></label>
-        <label>What do you need?<select name="need"><option>Not sure yet</option><option>Follow-up Reminders</option><option>Custom CRM</option><option>Custom automation</option><option>Consultancy</option><option>Custom software or app</option><option>Website</option><option>Care plan for an existing tool</option></select></label>
+        <p class="fs-title full"><span>2</span>Your project</p>
+        <div class="full chip-group" role="group" aria-labelledby="needLp"><span class="chip-title" id="needLp">What do you need? <em>Choose one or more</em></span><div class="chips"><label class="chip"><input type="checkbox" name="need" value="Custom CRM"><span>Custom CRM</span></label><label class="chip"><input type="checkbox" name="need" value="Custom automation"><span>Custom automation</span></label><label class="chip"><input type="checkbox" name="need" value="Consultancy"><span>Consultancy</span></label><label class="chip"><input type="checkbox" name="need" value="Custom software or app"><span>Custom software or app</span></label><label class="chip"><input type="checkbox" name="need" value="Website"><span>Website</span></label><label class="chip"><input type="checkbox" name="need" value="Follow-up Reminders (starter offer)"><span>Follow-up Reminders (starter offer)</span></label><label class="chip"><input type="checkbox" name="need" value="Not sure yet"><span>Not sure yet</span></label></div></div>
         <label>Budget<select name="budget"><option>Not sure yet</option><option>Under ₹25,000</option><option>₹25,000 to ₹1 lakh</option><option>₹1 lakh to ₹3 lakh</option><option>Above ₹3 lakh</option><option>USD project</option></select></label>
+        <label>When do you want to start?<select name="timeline"><option>Not sure yet</option><option>As soon as possible</option><option>Within a month</option><option>In 1 to 3 months</option><option>Just exploring</option></select></label>
         <label class="full">What takes up your team’s time?<textarea name="msg" placeholder="e.g. Leads come in on WhatsApp and IndiaMART, and follow-ups get missed."></textarea></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="row"><button class="btn btn-grad" type="submit">Request my free call →</button><p class="form-note" role="status"></p></div>
