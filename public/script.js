@@ -18,7 +18,7 @@
   let lenis = null;
   if (!reduce && !lite && window.Lenis) {
     // a gentler lerp glides more, both down and back up
-    lenis = new Lenis({ lerp: 0.08, wheelMultiplier: 0.55, smoothWheel: true });   // one wheel step moves about as far as a normal scroll
+    lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.48, touchMultiplier: 0.9, smoothWheel: true });   // one wheel step moves about as far as a normal scroll
   }
   // anchor links
   $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {

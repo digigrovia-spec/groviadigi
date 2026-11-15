@@ -395,11 +395,13 @@
       </div>
     <figure class="promo rv rv-d2">
       <div class="promo-frame">
-        <video id="promoVideo" preload="none" playsinline poster="/assets/video/groviadigi-promo.jpg" aria-label="Groviadigi in 96 seconds: what we build and how a project runs"><source src="/assets/video/groviadigi-promo.mp4" type="video/mp4"></video>
-        <button type="button" class="promo-play" aria-label="Play the 96-second video: how we can help your business" onclick="var v=document.getElementById('promoVideo');v.controls=true;v.play();this.hidden=true;(window.dataLayer=window.dataLayer||[]).push({event:'promo_video_play'});"><span aria-hidden="true"></span>How we can help your business, in 96 seconds</button>
+        <video id="promoVideo" muted loop playsinline preload="none" poster="/assets/video/groviadigi-promo.jpg" data-hd="/assets/video/groviadigi-promo.mp4" data-sd="/assets/video/groviadigi-promo-720.mp4" aria-label="How Groviadigi can help your business, a 96-second video"></video>
+        <span class="promo-badge" aria-hidden="true"><i></i>96 sec</span>
+        <button type="button" class="promo-play" aria-label="Play the 96-second video with sound: how we can help your business"><span aria-hidden="true"></span>How we can help your business, in 96 seconds</button>
       </div>
-      <figcaption>From the first call to monthly care: how we turn manual work into software.</figcaption>
+      <figcaption>Tap the video to watch it from the start with sound.</figcaption>
     </figure>
+    <script src="/promo.js" defer></script>
     </div>
     <div class="svc-list">
       <article class="svc rv"><span class="num">01</span><h3>Custom CRM</h3><p><b>All your sales in one place.</b>Leads from your website, calls and WhatsApp, with reminders, quotes and payments. Built around how you sell, not a ready-made template.<small class="svc-price">From ₹90,000 · paid in 3 parts</small></p></article>
