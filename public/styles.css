@@ -522,3 +522,24 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .about-facts b{font-size:clamp(22px,2.2vw,30px);letter-spacing:-.03em}
 .about-facts span{color:var(--ink-500);font-size:15px}
 @media (max-width:760px){.about-facts{grid-template-columns:1fr}}
+
+/* testimonials */
+.testi{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;align-items:stretch}
+.quote-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:22px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:22px;margin:0}
+.quote-card blockquote{font-size:clamp(19px,1.9vw,25px);line-height:1.45;letter-spacing:-.015em;font-weight:600;color:var(--ink)}
+.quote-card figcaption{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--ink-500)}
+.quote-card figcaption b{display:block;color:var(--ink);font-size:16px}
+.quote-card .qa{width:48px;height:48px;border-radius:14px;background:var(--grad);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center;flex-shrink:0}
+.confirm-card{background:var(--night);color:#fff;border-radius:22px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:12px;background-image:radial-gradient(70% 90% at 100% 0%,rgba(138,73,234,.35),transparent 70%)}
+.confirm-card .eyebrow{color:#B9B6DA}
+.confirm-card h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em}
+.confirm-card p:not(.eyebrow){color:#C9C6E6;font-size:15.5px;line-height:1.6;flex:1}
+.confirm-card .link-arrow{color:#fff}
+@media (max-width:900px){.testi{grid-template-columns:1fr}}
+
+/* 8 menu links: switch to the menu button before they crowd the logo */
+@media (max-width:1080px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:block}
+}
+@media (min-width:1081px) and (max-width:1280px){.nav-links{gap:22px}}
