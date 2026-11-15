@@ -8,7 +8,7 @@
    Web App and put its URL in LEAD_ENDPOINT (steps in Website_build/LEADS_GOOGLE_SHEET.md).
    While it is empty, the form opens a pre-filled email to hello@groviadigi.in instead. */
 (() => {
-  const LEAD_ENDPOINT = '';   // paste the Apps Script Web App URL here (ends in /exec)
+  const LEAD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzCIUT5LqECMmocvN1eSujFjjReNGRZJXP2tQfhYyxFXeCjtJZz2rqSmayCyKKRlAbi/exec';   // Google Sheet web app (Website_build/google-sheet-code.gs)
   const SHEET_SECRET = 'grovia-forms-2026';   // same as SECRET_KEY in google-sheet-code.gs (only stops casual spam: it is visible in the page)
   const FORM_NAMES = { landing: 'Landing Page Form', contact: 'Contact Form', question: 'Ask a Question' };
   const EMAIL = 'hello@groviadigi.in';
