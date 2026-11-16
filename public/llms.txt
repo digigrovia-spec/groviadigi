@@ -46,12 +46,14 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 
 <!--CONTENT-->
 ## Blog
+- How to merge duplicate leads from multiple spreadsheets into one master list: https://www.groviadigi.in/blog/merge-duplicate-leads-master-list/
 - How we automated SEO for a finance firm without losing the human review: https://www.groviadigi.in/blog/seo-automation-with-human-review/
 - A social media dashboard that designs, learns and keeps the brand consistent: https://www.groviadigi.in/blog/social-media-dashboard-brand-consistency/
 
 ## News (AI and automation, updated daily)
 - Newsroom: https://www.groviadigi.in/news/
 - 2026-11-16: AT&T runs nearly 500 AI agent workflows, and every one starts with a human checking it: https://www.groviadigi.in/news/att-agentic-workflows-human-review/
+- 2026-11-16: OpenAI launches ChatGPT Wallet so AI agents can pay, and tells businesses to stop blocking them: https://www.groviadigi.in/news/chatgpt-wallet-agent-payments/
 - 2026-11-15: IBM and Microsoft launch Imagine Enterprise, an AI agent platform with 6,000+ prebuilt agents: https://www.groviadigi.in/news/ibm-microsoft-imagine-enterprise-agent-platform/
 - 2026-11-14: Gartner: only 21% of service leaders have cut agent headcount because of AI: https://www.groviadigi.in/news/gartner-ai-customer-service-headcount-survey/
 - 2026-11-13: GitHub Agentic Workflows is now generally available: AI agents inside GitHub Actions: https://www.groviadigi.in/news/github-agentic-workflows-generally-available/
