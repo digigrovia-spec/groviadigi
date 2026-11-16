@@ -109,7 +109,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .dark{background:var(--night);color:#fff}
 /* The intro is pulled up over the hero's last screen. When it pins, the screen is still the
    ribbon colour; the night scene then splits open along the horizon line. */
-.intro{position:relative;z-index:3;height:240vh;height:240svh;margin-top:-100vh;margin-top:-100svh;background:transparent}
+.intro{position:relative;z-index:3;height:200vh;height:200svh;margin-top:-100vh;margin-top:-100svh;background:transparent}
 .intro-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:rgb(var(--dive,138,73,234));visibility:hidden}
 .intro-sticky.on{visibility:visible;pointer-events:auto}
 .intro{pointer-events:none}
