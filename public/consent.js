@@ -138,7 +138,7 @@
     footerLink();
     const c = read();
     if (c) apply(c);
-    else setTimeout(open, 1500);   // after the loader, so the banner never covers the brand intro
+    else setTimeout(open, 600);   // shows straight away and stays until the visitor accepts or rejects
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', start); else start();
   if (location.hash === '#cookie-settings') addEventListener('load', open);
