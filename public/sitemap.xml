@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://www.groviadigi.in/</loc><lastmod>2026-11-16</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.groviadigi.in/</loc><lastmod>2026-11-19</lastmod><priority>1.0</priority></url>
   <url><loc>https://www.groviadigi.in/get-started/</loc><lastmod>2026-11-16</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.groviadigi.in/services/</loc><lastmod>2026-11-16</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.groviadigi.in/work/</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -8,8 +8,8 @@
   <url><loc>https://www.groviadigi.in/about/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.groviadigi.in/testimonials/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.groviadigi.in/faq/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.groviadigi.in/blog/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.groviadigi.in/news/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.groviadigi.in/blog/</loc><lastmod>2026-11-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.groviadigi.in/news/</loc><lastmod>2026-11-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.groviadigi.in/privacy/</loc><lastmod>2026-11-16</lastmod><priority>0.3</priority></url>
   <url><loc>https://www.groviadigi.in/work/crm-pipeline-usaindiacfo/</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.groviadigi.in/work/data-sorter-usaindiacfo/</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -21,6 +21,7 @@
   <url><loc>https://www.groviadigi.in/blog/merge-duplicate-leads-master-list/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority><image:image><image:loc>https://www.groviadigi.in/images/blog/merge-duplicate-leads-master-list-banner.jpg</image:loc><image:title>Data Sorter: many contact lists merged into one master database</image:title></image:image></url>
   <url><loc>https://www.groviadigi.in/blog/seo-automation-with-human-review/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><image:image><image:loc>https://www.groviadigi.in/images/blog/seo-automation-banner.jpg</image:loc><image:title>Growth Center: SEO automation with a human review step</image:title></image:image></url>
   <url><loc>https://www.groviadigi.in/blog/social-media-dashboard-brand-consistency/</loc><lastmod>2026-11-14</lastmod><priority>0.7</priority><image:image><image:loc>https://www.groviadigi.in/images/blog/social-dashboard-banner.jpg</image:loc><image:title>A social media dashboard that keeps every creative on brand</image:title></image:image></url>
+  <url><loc>https://www.groviadigi.in/news/microsoft-ai-agent-spending-limits/</loc><lastmod>2026-11-19</lastmod><priority>0.5</priority><image:image><image:loc>https://www.groviadigi.in/images/news/microsoft-ai-agent-spending-limits-banner.jpg</image:loc><image:title>Microsoft adds spending limits for AI agents</image:title></image:image></url>
   <url><loc>https://www.groviadigi.in/news/att-agentic-workflows-human-review/</loc><lastmod>2026-11-16</lastmod><priority>0.5</priority><image:image><image:loc>https://www.groviadigi.in/images/news/att-agentic-workflows-human-review-banner.jpg</image:loc><image:title>AT&amp;T runs nearly 500 AI agent workflows with human review</image:title></image:image></url>
   <url><loc>https://www.groviadigi.in/news/chatgpt-wallet-agent-payments/</loc><lastmod>2026-11-16</lastmod><priority>0.5</priority><image:image><image:loc>https://www.groviadigi.in/images/news/chatgpt-wallet-agent-payments-banner.jpg</image:loc><image:title>ChatGPT Wallet lets AI agents pay for purchases</image:title></image:image></url>
   <url><loc>https://www.groviadigi.in/news/ibm-microsoft-imagine-enterprise-agent-platform/</loc><lastmod>2026-11-15</lastmod><priority>0.5</priority><image:image><image:loc>https://www.groviadigi.in/images/news/ibm-microsoft-imagine-enterprise-banner.jpg</image:loc><image:title>IBM and Microsoft launch Imagine Enterprise</image:title></image:image></url>

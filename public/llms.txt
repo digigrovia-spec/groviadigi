@@ -52,6 +52,7 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 
 ## News (AI and automation, updated daily)
 - Newsroom: https://www.groviadigi.in/news/
+- 2026-11-19: Microsoft adds spending limits for AI agents as company AI bills grow harder to track: https://www.groviadigi.in/news/microsoft-ai-agent-spending-limits/
 - 2026-11-16: AT&T runs nearly 500 AI agent workflows, and every one starts with a human checking it: https://www.groviadigi.in/news/att-agentic-workflows-human-review/
 - 2026-11-16: OpenAI launches ChatGPT Wallet so AI agents can pay, and tells businesses to stop blocking them: https://www.groviadigi.in/news/chatgpt-wallet-agent-payments/
 - 2026-11-15: IBM and Microsoft launch Imagine Enterprise, an AI agent platform with 6,000+ prebuilt agents: https://www.groviadigi.in/news/ibm-microsoft-imagine-enterprise-agent-platform/
