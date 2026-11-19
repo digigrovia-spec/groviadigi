@@ -594,5 +594,4 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .qa-logo{width:56px;height:auto;flex:none;border-radius:12px;background:#fff;padding:4px;box-shadow:0 0 0 1px var(--line)}
 .client-logo{display:block;width:min(220px,70%);height:auto;margin-bottom:14px;background:#fff;border-radius:10px;padding:8px 10px;box-sizing:content-box}
 .cs-client-logo{display:block;height:auto;max-width:100%;margin:14px 0 6px;background:#fff;border-radius:12px;padding:8px 12px;box-shadow:0 0 0 1px var(--line)}
-img.cs-client-logo[src*="usaindiacfo"]{width:220px}
 img.cs-client-logo[src*="smart-sun"]{width:78px}

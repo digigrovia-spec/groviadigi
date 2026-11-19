@@ -10,8 +10,8 @@
 - Websites: designed, written and built from scratch, ready for Google and AI answers.
 - Maintenance: 3 months free with every project, then care plans from ₹5,000 a month.
 
-## Main project: Growth Center (USAIndiaCFO)
-- A central growth system with four automations (social media, SEO/AEO/GEO, outbound email, performance marketing) reporting into one dashboard, with data stored on a one-way in-house server and a person approving every action. The firm's sales grew 15%. https://www.groviadigi.in/work/growth-center-usaindiacfo/
+## Main project: Growth Center (for a cross-border CFO firm)
+- A central growth system with four automations (social media, SEO/AEO/GEO, outbound email, performance marketing) reporting into one dashboard, with data stored on a one-way in-house server and a person approving every action. The firm's sales grew 15%. https://www.groviadigi.in/work/growth-center/
 
 ## Why Groviadigi
 - Honest first call: if a process change fixes the problem, Groviadigi says so instead of selling software.
@@ -38,11 +38,11 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 
 ## Case studies (signed off by each client)
 - Solar CRM for Smart Sun Power: +28% lead conversion in 3 months, sales cycle 45 to 28 days. https://www.groviadigi.in/work/solar-crm-smart-sun-power/
-- Website rebuild for USAIndiaCFO: custom site, 54 service pages, three practice hubs. https://www.groviadigi.in/work/website-usaindiacfo/
-- Growth Center for USAIndiaCFO: SEO, AEO and GEO automation with about 1% human input. https://www.groviadigi.in/work/seo-aeo-geo-automation-usaindiacfo/
-- Data Sorter for USAIndiaCFO: one master contact database with duplicate and usage checks. https://www.groviadigi.in/work/data-sorter-usaindiacfo/
-- Outbound automation for USAIndiaCFO: lead finding, enrichment and cold email from 20 mailboxes on 10 domains, with outcomes written into the firm’s existing Zoho CRM (Groviadigi built the automation and the integration, not the CRM).
-- Social media automation for USAIndiaCFO: creatives, videos and copy in one brand kit, AI-drafted replies, enquiries routed to sales, human approval. https://www.groviadigi.in/work/social-media-automation-usaindiacfo/ https://www.groviadigi.in/work/crm-pipeline-usaindiacfo/
+- Website rebuild for a cross-border CFO firm: custom site, 54 service pages, three practice hubs. https://www.groviadigi.in/work/website-cfo-firm/
+- Growth Center for a cross-border CFO firm: SEO, AEO and GEO automation with about 1% human input. https://www.groviadigi.in/work/seo-aeo-geo-automation/
+- Data Sorter for a cross-border CFO firm: one master contact database with duplicate and usage checks. https://www.groviadigi.in/work/data-sorter/
+- Outbound automation for a cross-border CFO firm: lead finding, enrichment and cold email from 20 mailboxes on 10 domains, with outcomes written into the firm’s existing Zoho CRM (Groviadigi built the automation and the integration, not the CRM).
+- Social media automation for a cross-border CFO firm: creatives, videos and copy in one brand kit, AI-drafted replies, enquiries routed to sales, human approval. https://www.groviadigi.in/work/social-media-automation/ https://www.groviadigi.in/work/crm-pipeline/
 
 <!--CONTENT-->
 ## Blog
