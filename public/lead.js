@@ -75,7 +75,7 @@
       try {
         if (/script.google(usercontent)?.com/.test(LEAD_ENDPOINT)) {
           // Google Apps Script (Google Sheet): send as plain text so the browser makes a simple request.
-          // Apps Script answers through a redirect the browser cannot read, so a sent request counts as success.
+          // Apps Script replies with JSON ({"result":"success"}), which the browser can read after the redirect.
           // Google Sheet script (Website_build/google-sheet-code.gs) reads form fields as e.parameter.
           // Field names follow the sheet's columns; extras (budget, UTM tags) get their own column automatically.
           const body = new URLSearchParams();
@@ -88,7 +88,18 @@
           put('timeline', data.timeline);
           ['referrer', ...KEYS].forEach(k => put(k, src[k]));
           body.append('secret', SHEET_SECRET);
-          await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
+          // Read Google's reply so a busy moment never loses a lead: up to 3 tries (Apps Script runs about
+          // 30 submissions at once), then the email fallback in the catch below.
+          let saved = false;
+          for (let attempt = 0; attempt < 3 && !saved; attempt++) {
+            if (attempt) await new Promise(r => setTimeout(r, attempt * 2000 + Math.random() * 1000));
+            try {
+              const r = await fetch(LEAD_ENDPOINT, { method: 'POST', body });
+              const j = await r.json().catch(() => ({}));
+              saved = r.ok && j.result === 'success';
+            } catch (e) { saved = false; }
+          }
+          if (!saved) throw new Error('lead not saved');
         } else {
           const r = await fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) });
           if (!r.ok) throw new Error(r.status);
