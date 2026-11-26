@@ -7,6 +7,12 @@ User-agent: Googlebot
 Allow: /
 User-agent: Bingbot
 Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: YandexBot
+Allow: /
+User-agent: Applebot
+Allow: /
 
 # AI search and answer engines
 User-agent: GPTBot
@@ -29,11 +35,26 @@ User-agent: Google-Extended
 Allow: /
 User-agent: Applebot-Extended
 Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: YouBot
+Allow: /
 User-agent: CCBot
 Allow: /
 
-# A plain-text summary for AI tools: https://www.groviadigi.in/llms.txt
+# Plain-text summaries for AI tools: https://www.groviadigi.in/llms.txt and https://www.groviadigi.in/llms-full.txt
 # Blog and news feed: https://www.groviadigi.in/feed.xml
 
+Sitemap: https://www.groviadigi.in/sitemap_index.xml
 Sitemap: https://www.groviadigi.in/sitemap.xml
 Sitemap: https://www.groviadigi.in/news-sitemap.xml

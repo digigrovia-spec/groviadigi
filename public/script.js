@@ -6,7 +6,9 @@
   // frame-rate watchdog in loop() if the page cannot keep up.
   const conn = navigator.connection || {};
   const cores = navigator.hardwareConcurrency || 8, mem = navigator.deviceMemory || 8;
-  let lite = !!conn.saveData || mem <= 2 || cores <= 2 || (cores <= 4 && mem <= 4) || /[?&]lite(=|&|$)/.test(location.search);
+  const touch = matchMedia('(pointer: coarse)').matches;
+  // phones and tablets with 4 GB or less, or 4 cores or fewer, also start in lite mode (budget Android phones)
+  let lite = !!conn.saveData || mem <= 2 || cores <= 2 || (cores <= 4 && mem <= 4) || (touch && (mem <= 4 || cores <= 4)) || /(slow-2g|2g)/.test(conn.effectiveType || '') || /[?&]lite(=|&|$)/.test(location.search);
   if (lite) document.documentElement.classList.add('lite');
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -55,7 +57,21 @@
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }), { rootMargin: '0px 0px -12% 0px', threshold: 0.01 });
-  $$('.rv, .split, .indent').forEach(el => io.observe(el));
+  let toReveal = $$('.rv, .split, .indent');
+  toReveal.forEach(el => io.observe(el));
+  // backup for fast flicks and menu jumps: anything already on screen or scrolled past is shown,
+  // so no block can stay invisible because the observer missed it
+  let sweepAt = 0;
+  function sweepReveals(t) {
+    if (!toReveal.length || t < sweepAt) return;
+    sweepAt = t + 200;
+    const limit = innerHeight * 0.92;
+    toReveal = toReveal.filter(el => {
+      if (el.classList.contains('in')) return false;
+      if (el.getBoundingClientRect().top < limit) { el.classList.add('in'); io.unobserve(el); return false; }
+      return true;
+    });
+  }
 
   /* ---------- letters ---------- */
   const WORD = 'groviadigi';
@@ -443,6 +459,7 @@
 
   function loop(t) {
     watchdog(t);
+    sweepReveals(t);
     lenis && lenis.raf(t);
     frame();
     carousel(lenis ? lenis.scroll : scrollY);
@@ -507,6 +524,14 @@
     }, 200);
   }, { passive: true });
   addEventListener('load', measure);
+  // re-measure when the page height changes after load (images, video, fonts, new cards), so every
+  // scroll animation keeps firing at the right place
+  let lastDocH = document.documentElement.scrollHeight, roT;
+  if (window.ResizeObserver) new ResizeObserver(() => {
+    const h = document.documentElement.scrollHeight;
+    if (Math.abs(h - lastDocH) < 2) return;
+    lastDocH = h; clearTimeout(roT); roT = setTimeout(measure, 120);
+  }).observe(document.body);
   document.fonts && document.fonts.ready.then(measure);
   if (reduce) { runCounters(); letters.forEach(l => (l.style.opacity = 1)); }
   if (reduce || !loader) open();

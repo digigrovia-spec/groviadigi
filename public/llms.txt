@@ -1,5 +1,7 @@
 # Groviadigi
 
+Full text of every page and post: https://www.groviadigi.in/llms-full.txt
+
 > Groviadigi is a business automation and custom software studio based in Ajmer, Rajasthan, India. It builds custom CRMs, internal tools and dashboards, workflow automations and business websites for small and growing companies in India and abroad. Tagline: "Your Vision. Our Development."
 
 ## Services (fixed written quote after the consultancy, before the build)

@@ -5,8 +5,8 @@
    when you scroll fast. Libraries load only when the section is near; if anything fails the
    page keeps the plain HTML cards. */
 (() => {
-  const THREE_URL = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-  const H2C_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+  const THREE_URL = '/vendor/three-r128.min.js';
+  const H2C_URL = '/vendor/html2canvas-1.4.1.min.js';
   const load = src => new Promise((ok, fail) => {
     if ([...document.scripts].some(s => s.src === src)) return ok();
     const s = document.createElement('script'); s.src = src; s.async = true;
