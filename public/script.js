@@ -20,7 +20,7 @@
   let lenis = null;
   if (!reduce && !lite && window.Lenis) {
     // a gentler lerp glides more, both down and back up
-    lenis = new Lenis({ lerp: 0.08, wheelMultiplier: 0.58, touchMultiplier: 0.9, smoothWheel: true });   // one wheel step moves about as far as a normal scroll
+    lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 0.58, touchMultiplier: 0.9, smoothWheel: true });   // one wheel step moves about as far as a normal scroll
   }
   // anchor links
   $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
@@ -114,6 +114,9 @@
   let heroP = 0;
   const intro = $('#intro'), introSticky = $('#introSticky'), introScene = $('#introScene');
   const stage = $('#stage'), horizon = $('#horizon'), wordWrap = $('#wordWrap');
+  // dive square: a full-size violet box plus a light layer that fades in on top (both composited, no repaint)
+  const diveSq = $('#diveSquare'), sqLight = document.createElement('i');
+  diveSq.appendChild(sqLight);
   const offerWrap = $('#process > .wrap');   // first section after the intro (the starter offer section was removed, Nov 2026)
   const work = $('#work'), cardsEl = $('#cards'), cards = $$('.card', cardsEl);
   const wTitle = $('#workTitleNow'), wType = $('#workType'), wCount = $('#workCount'), wBar = $('#workBar');
@@ -153,6 +156,10 @@
     L.dotX = stage.offsetLeft + wordWrap.offsetLeft + L.dot.x;
     L.dotY = stage.offsetTop + wordWrap.offsetTop + L.dot.y;
     L.diveMax = 1.5 * Math.hypot(L.sceneW, L.sceneH) / L.dotSize;
+    // the dive square at its full size, set once; the dive only scales it down/up with a transform
+    L.sqFull = L.dotSize * L.diveMax;
+    diveSq.style.width = diveSq.style.height = L.sqFull.toFixed(0) + 'px';
+    diveSq.style.borderRadius = (L.sqFull * .11).toFixed(0) + 'px';
     L.lightR = fs * 1.1;
     L.work = { t: top(work), h: work.offsetHeight };
     L.dark = darkSecs.map(s => ({ t: top(s), b: top(s) + s.offsetHeight }));
@@ -226,7 +233,7 @@
       const tx = sd.x * .5 * k, ty = sd.y * .4 * k, r = sd.rot * .45 * k, sc = 1 + .35 * k;
       el.style.transform = `translate3d(${tx.toFixed(2)}vw,${ty.toFixed(2)}vh,0) rotate(${r.toFixed(1)}deg) scale(${sc.toFixed(3)})`;
       el.style.opacity = p.toFixed(3);
-      el.style.filter = lite || p > .995 ? '' : `blur(${(k * 16).toFixed(1)}px)`;
+      el.style.filter = lite || p > .995 ? '' : `blur(${(k * 8).toFixed(1)}px)`;
       const er = lettersR[i];
       er.style.transform = `translate3d(${tx.toFixed(2)}vw,${(-ty).toFixed(2)}vh,0) rotate(${(-r).toFixed(1)}deg) scale(${sc.toFixed(3)})`;
       er.style.opacity = p.toFixed(3);
@@ -242,18 +249,16 @@
     diving = d > 0;
     const dotEl = $('#diveDot'), sq = $('#diveSquare');
     if (diving) {
-      // the square grows in real pixels (width/height, not a scaled bitmap), so it never pixelates
+      // The square is built once at full size (see measure) and only scaled and moved with a transform,
+      // so the browser never re-lays-out or repaints a screen-sized box per frame (smooth on Macs and phones).
       const s = Math.exp(Math.log(L.diveMax) * Math.pow(d, 2.2));
-      const size = L.dotSize * s;
+      const size = L.dotSize * s, k = size / L.sqFull;
       const cx = L.dotX + (L.sceneW / 2 - L.dotX) * c, cy = L.dotY + (L.sceneH / 2 - L.dotY) * c;
-      // its violet turns to the light page colour as it fills the screen
-      const tint = sstep(.2, .8, d), a = [168, 132, 242], b = [245, 244, 250];
-      sq.style.display = 'block';
-      sq.style.width = sq.style.height = size.toFixed(1) + 'px';
-      sq.style.left = (cx - size / 2).toFixed(1) + 'px';
-      sq.style.top = (cy - size / 2).toFixed(1) + 'px';
-      sq.style.borderRadius = (size * .11).toFixed(1) + 'px';
-      sq.style.background = `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * tint)).join(',')})`;
+      // its violet turns to the light page colour as it fills the screen: a light layer on top fades in
+      const tint = sstep(.2, .8, d);
+      if (sq.style.display !== 'block') sq.style.display = 'block';
+      sq.style.transform = `translate3d(${(cx - L.sqFull / 2).toFixed(1)}px,${(cy - L.sqFull / 2).toFixed(1)}px,0) scale(${k.toFixed(5)})`;
+      sqLight.style.opacity = tint.toFixed(3);
       dotEl.style.visibility = 'hidden';
       // the letters move with the camera a little, then fade, so nothing is blown up into blur
       const ls = Math.min(s, 3.2);
@@ -265,10 +270,10 @@
       if (dotEl.style.visibility) dotEl.style.visibility = '';
       if (wordWrap.style.transform) { wordWrap.style.transform = ''; wordWrap.style.opacity = ''; }
     }
-    // the next page's content arrives out of a blur while the square fills the screen
+    // the next page's content fades and rises in while the square fills the screen
+    // (no blur filter: blurring a whole section every frame is what made the dive stutter on Macs)
     const rv = sstep(.72, .92, ip);   // starts while the camera is still diving, so the light screen is never empty
     offerWrap.style.opacity = rv.toFixed(3);
-    offerWrap.style.filter = lite || rv > .995 ? '' : `blur(${((1 - rv) * 14).toFixed(1)}px)`;
     offerWrap.style.transform = rv > .995 ? '' : `translate3d(0,${((1 - rv) * 40).toFixed(1)}px,0)`;
   }
 

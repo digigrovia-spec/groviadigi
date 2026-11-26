@@ -60,7 +60,7 @@ The first call is free. If a simple change in how you work will fix it, we tell 
 02 
 
 ## No Zapier or Make fees
-We connect your apps directly, in code. So there are no monthly tool fees, no task limits, and your data doesn’t pass through another company.
+We connect your apps directly, in code. So there are no Zapier or Make fees, no task limits, and your data doesn’t pass through another company.
 
 03 
 
@@ -84,9 +84,6 @@ Every project includes training, simple guides and 3 months of free maintenance.
 
 Zapier, Make or n8n Groviadigi (code) 
 
-Monthly cost A monthly fee that goes up as you use more
-No monthly tool fee. You only pay for hosting.
-
 Your data Passes through the platform’s servers
 Moves straight between your own apps
 
@@ -96,7 +93,7 @@ Built for exactly how you work
 Ownership Lives in someone else’s account
 You own the code
 
-Our main project, Growth Center, helped a cross-border finance firm grow its sales by 15%. Read the case studies → 
+Our custom CRM for Smart Sun Power, a rooftop solar installer, lifted lead conversion by 28% in three months. Read the case study → 
 
 Groviadigi 
 
@@ -208,7 +205,7 @@ What happens after launch? We launch it, train your team and give you simple gui
 
 Zapier vs custom code automation: which is cheaper? If it runs often, custom code is usually cheaper over time. Zapier, Make and n8n charge a monthly fee that goes up the more you use them. We write the automation in code, so you pay once to build it, then only a small hosting cost.
 
-Is my data safe with your automations? Yes. Your data goes straight between your own apps, not through another company’s platform. Access keys are stored safely, each automation only gets the access it needs, and the code stays in your account.
+Is my data safe with your automations? We build for that. Your data goes straight between your own apps, not through another company’s platform. Access keys are stored securely, each automation only gets the access it needs, the code stays in your account, and we can sign an NDA before we see any of your data.
 
 Custom CRM or Zoho / HubSpot: which is better for a small business? If a standard CRM fits how you sell, use it; we can set it up for you. A custom CRM makes sense when you keep working around your software, pay for users you don’t need, or need steps like site visits, quotes or part payments built in.
 
@@ -230,14 +227,6 @@ Every case study on this site was reviewed and signed off by the client before w
 Smart Sun Power Management team · Rooftop solar installer 
 Read the case study → 
 
-Client confirmed
-
-## A cross-border CFO firm
-
-A virtual CFO, tax and compliance firm working with clients in the US and India. The firm reviewed and confirmed four case studies of our work: its website, Growth Center, Data Sorter and its outbound automation.
-
-See all case studies → 
-
 Groviadigi 
 
 ## Tell us what slows your team down.
@@ -254,471 +243,11 @@ Groviadigi · Work
 
 ## Recent builds. 
 
-Our main project is Growth Center, a central growth system for a cross-border CFO firm. Below it are the other builds, each with what the problem was, what we built and what changed.
+Each case study shows the problem, what we built and what changed. More are being written up with our clients.
 
 01 
-Growth Center · A cross-border CFO firm Growth Center: one system that runs and reports a firm’s growth work Four automations for social media, search, outbound and ads, all reporting into one dashboard and an in-house server, with a person approving every action. 
-+15% growth in the firm’s sales 
-
-02 
-Social media automation · A cross-border CFO firm Social media that makes its own creatives and stays on brand Creatives, short videos and post copy made automatically in the firm’s brand, with AI-drafted replies, enquiries sent to sales and a person approving everything. 
-1 fixed brand kit used on every creative 
-
-03 
 Solar CRM · Smart Sun Power A custom CRM for a rooftop solar installer Lead management, site surveys, quotations, installations and payments, brought into one platform for Smart Sun Power. 
-+28% lead conversion within 3 months 
-
-04 
-Custom website · A cross-border CFO firm A website rebuild for a cross-border CFO firm A custom-built website that replaced a WordPress site and organises 54 services across three practices. 
-54 service pages, each with its own URL 
-
-05 
-SEO, AEO and GEO automation · A cross-border CFO firm Search automation in Growth Center: SEO, AEO and GEO that plan their own month An automated dashboard that drafts a monthly strategy, gets one human review, then runs research, writing, fact-checking, publishing and reporting every day. 
-~1% human input, mainly the monthly review 
-
-06 
-Custom data tool · A cross-border CFO firm Data Sorter: one master database for outbound and paid campaigns An internal tool that merges every contact list, flags duplicates and already-used contacts, and exports clean audiences for each channel. 
-1 master database for every contact list 
-
-07 
-Outbound automation and lead pipeline · A cross-border CFO firm Outbound automation that finds clients and feeds the firm’s Zoho CRM We built the automation that finds likely clients, enriches each lead, sends cold email and records every outcome in the Zoho CRM the firm already used. 
-6 stages from finding a lead to reporting
-
-
----
-
-# Outbound Automation and Zoho CRM Case Study | Groviadigi
-URL: https://www.groviadigi.in/work/crm-pipeline/
-
-← All work · Case study 
-
-Outbound automation and lead pipeline · A cross-border CFO firm
-
-## Outbound automation that finds clients and feeds the firm’s Zoho CRM
-
-We built the automation that finds likely clients, enriches each lead, sends cold email and records every outcome in the Zoho CRM the firm already used.
-
-Client A cross-border CFO firm (US and India) 
-What we built Outbound automation, lead enrichment, pipeline 
-Connected to Zoho CRM (the firm’s existing CRM) 
-Engagement Custom automation and integration 
-
-This is the outbound automation inside Growth Center. See Growth Center → 
-
-6 stages from finding a lead to reporting 
-20 sending mailboxes on 10 authenticated domains 
-8 audience segments 
-1 status per lead, recorded in Zoho CRM 
-
-## Executive summary
-The client, a cross-border CFO firm, already ran its sales on Zoho CRM. What it lacked was a steady flow of new, qualified leads and a way to see each lead’s status. We built the outbound automation that finds likely clients, removes duplicates, enriches each lead, sends cold email from authenticated mailboxes and writes every outcome back into the firm’s Zoho CRM. We did not build the CRM itself; we connected our system to it.
-
-## The challenge
-
-Not enough new leads Finding and qualifying new clients by hand took hours each week. 
-Leads in many places Cold email, the website, WhatsApp and ads each kept their own lists. 
-Deliverability at volume Sending more than 10,000 emails a month needs authenticated domains and warmed mailboxes, or mail goes to spam. 
-Limited data credits Lead data costs money, so no contact should be bought twice. 
-No single status per lead Nobody could see at a glance who was contacted, who replied and who signed. 
-
-## What we built
-
-01 Lead finding The automation finds likely clients for each audience segment and gathers their details. 
-02 Duplicate check Every new contact is checked against the master list first, so no one is bought or emailed twice. 
-03 Lead enrichment Each lead gets a short profile: what the company does and what is worth pitching, ready before the first call. 
-04 Cold email sending 20 mailboxes on 10 domains with SPF, DKIM and DMARC, warmed up before volume went up. 
-05 Zoho CRM integration Every reply, meeting and outcome is written into the firm’s existing Zoho CRM, next to its other leads. 
-06 Reports and remarketing Weekly and monthly reports, plus a remarketing plan built from the CRM’s own records. 
-
-## How it works
-
-Find
-Dedupe
-Enrich
-Send
-Record in Zoho CRM
-Report
-
-## What changed
-
-Area Before With the outbound automation 
-New leads Found and qualified by hand Found and enriched automatically 
-Sending Domains that risk the spam folder SPF, DKIM and DMARC on 10 domains 
-Data spend Same contact bought more than once Master list checked before every pull 
-Follow-up Depends on who remembers Fixed timing: Day 1, 4, 9 and 14 
-Lead status Spread across sheets and inboxes One status per lead in Zoho CRM 
-
-## How we delivered it
-
-Map the funnel Lead sources, three buyer groups and eight segments. 
-Set up sending 10 domains, 20 mailboxes and warm-up. 
-Build the automation Finding, duplicate check, enrichment and sending. 
-Connect to Zoho CRM Outcomes written into the firm’s existing CRM. 
-Run and report Outbound programmes, reports and a remarketing plan. 
-
-## Why it worked
-
-Built around their CRM The team kept working in Zoho CRM; our system fed it. 
-Deliverability first Domains authenticated and mailboxes warmed before volume went up. 
-Timing, not pressure Follow-ups go out on a fixed schedule and never use fear to create urgency. 
-
-Groviadigi 
-
-## Want something like this for your business?
-
-If you need more qualified leads and already use a CRM such as Zoho or HubSpot, we can build outbound automation that feeds it.
-
-Book a 15-minute discovery call → 
-
-Ask us about a project like this → 
-Next: A cross-border CFO firm, Growth Center →
-
-
----
-
-# Data Sorter: One Master Contact List | Groviadigi
-URL: https://www.groviadigi.in/work/data-sorter/
-
-← All work · Case study 
-
-Custom data tool · A cross-border CFO firm
-
-## Data Sorter: one master database for outbound and paid campaigns
-
-An internal tool that merges every contact list, flags duplicates and already-used contacts, and exports clean audiences for each channel.
-
-Client A cross-border CFO firm (US and India) 
-Function Outbound and paid marketing 
-Channels Email, Meta Ads, LinkedIn Ads, newsletter 
-Engagement Custom internal tool 
-
-Data Sorter supports the outbound automation inside Growth Center. See Growth Center → 
-
-1 master database for every contact list 
-4 export channels 
-2 checks on every upload 
-10k–15k emails a month in the programme it supports 
-
-## Executive summary
-The client, a cross-border CFO firm, runs cold email and paid campaigns on Meta and LinkedIn from the same pool of contacts. Lists arrive from Apollo, past campaigns and the ad platforms, and without one master list every new file risks duplicates and repeat contact. Data Sorter keeps one master database, flags duplicates and already-used contacts on upload, builds segments, and exports a clean file for each channel while marking those contacts as used.
-
-## The challenge
-
-Lists from many sources Apollo exports, re-enriched past campaigns, and Meta and LinkedIn ad data. 
-Duplicates across files The same person could sit in two or three lists, and every copy cost time or budget. 
-Repeat contact Without a usage record, a channel could contact someone it had already used. 
-Limited data credits Apollo credits are limited, so recycled contacts had to be reused with care. 
-Segments to keep full Eight segments need 1,750 to 3,000 new sequence-ready contacts every month. 
-
-## What we built
-
-01 Dashboard Total records, fresh and used contacts, channel usage and audience breakdowns on one screen. 
-02 Upload and Compare Every new list is checked against the master; duplicates and used contacts are flagged first. 
-03 Master Data One searchable list with filters, in place of a spreadsheet per source. 
-04 Segments Audiences built with filters for country, industry and usage status. 
-05 Export by channel Exports for email, Meta Ads, LinkedIn Ads and newsletters; exported contacts are marked as used. 
-06 History and backup A record of every upload and export, with settings and a backup option. 
-
-## How it works
-
-Sources
-Upload and Compare
-Master database
-Segments
-Export
-
-## What changed
-
-Area Without Data Sorter With Data Sorter 
-New lists Compared against older files by hand Checked against the master on upload 
-Duplicates Easy to miss across separate files Flagged before they reach a campaign 
-Repeat contact No record of which channel used whom Contacts marked as used on export 
-Audiences Assembled from several files Built with filters 
-Activity Not recorded in one place Logged in History, with backup 
-
-## How we delivered it
-
-Map the data Every contact source and every channel that uses them. 
-Define one record One master record per contact, with a usage status. 
-Build the checks Upload and Compare flags duplicates and used contacts. 
-Segments and exports Filters plus exports for four channels. 
-History and backup A log of every upload and export. 
-
-## Why it worked
-
-One source of truth Every channel draws from the same list, with the same counts and statuses. 
-Usage recorded at export Contacts are marked as used the moment they are exported. 
-Built for recycling Past contacts can be re-checked and reused when credits are limited. 
-
-Groviadigi 
-
-## Want something like this for your business?
-
-If your team pulls lists from several tools and worries about duplicates or repeat contact, we can build a tool like this around your data.
-
-Book a 15-minute discovery call → 
-
-Ask us about a project like this → 
-Next: A cross-border CFO firm, Outbound automation and lead pipeline →
-
-
----
-
-# Growth Center Case Study: Sales Up 15% | Groviadigi
-URL: https://www.groviadigi.in/work/growth-center/
-
-← All work · Case study 
-
-Growth Center · A cross-border CFO firm
-
-## Growth Center: one system that runs and reports a firm’s growth work
-
-Four automations for social media, search, outbound and ads, all reporting into one dashboard and an in-house server, with a person approving every action.
-
-Client A cross-border CFO firm (US and India) 
-Industry Cross-border finance, tax and compliance 
-Built Central dashboard, 4 automations, in-house server 
-Engagement Custom automation system 
-
-+15% growth in the firm’s sales 
-4 automations reporting into one dashboard 
-1 central view for the founder, by department 
-One-way data flow: nothing leaves the in-house server 
-
-## Executive summary
-The client’s marketing and sales work ran in separate places, and the founder had no single view of what was working. We built Growth Center: four automations for social media, search, outbound email and paid ads, each sending its results to one central dashboard. The data is stored on an in-house server we built, which has no running cost. A person approves every action before it goes live, and each automation learns from those reviews. Since launch, the firm’s sales have grown by 15%.
-
-## The challenge
-
-Growth work in separate places Social media, search, outreach and ads each ran in their own tools, so results were hard to compare. 
-No single view for the founder Seeing leads converted, client work status or SEO progress meant asking different people. 
-Repeat work every day Creatives, posts, blogs, outreach emails and ad checks took the team’s time every week. 
-Client data had to stay safe A finance firm cannot risk its data leaving its own systems. 
-
-## What we built
-
-01 Growth Center dashboard One screen where the founder sees each department’s results: leads converted, client work done and pending, SEO, marketing, posting and the latest blogs. 
-02 1. Social media automation Creatives, short videos and post copy are made automatically. Replies to comments and messages are drafted by AI, and real enquiries go straight to the sales team. 
-03 2. SEO, AEO and GEO automation A content calendar, blogs written and published to the website, analytics, a month-end report and regular website maintenance. Website changes can be made from the dashboard. 
-04 3. Outbound automation Finds likely clients, gathers their details and sends cold emails, then records every reply. 
-05 4. Performance marketing automation Runs ads, analyses how they perform and suggests changes. Nothing changes until a person approves it. 
-06 In-house server, one-way data Every automation sends its data to a server we built for the firm. Data flows in but never flows out, so even if something harmful got in, it would have no way to send data out. 
-07 Access by role Each person sees only the dashboards and automations their role needs, from team member up to the founder. 
-08 Lead enrichment before every call When a lead enters the CRM, a short brief is ready before the first call: what the company does, what to pitch and what to avoid. 
-
-## How it works
-
-Four automations do the work
-A person approves each action
-Results flow into Growth Center
-Data is stored on the in-house server
-The automations learn from the reviews
-
-## What changed
-
-Area Before With Growth Center 
-Visibility Results spread across tools and people One dashboard, by department 
-Social media Creatives and replies made by hand Made automatically, approved by a person 
-Search Blogs and reports done when time allowed Calendar, blogs and month-end report run on schedule 
-Outreach and ads Lists, emails and ad checks by hand Automated, with approval before any action 
-Data Stored across third-party tools Kept on the firm’s own in-house server 
-Sales Baseline 15% higher 
-
-## How we delivered it
-
-Map the work Each department’s daily tasks and the results the founder wanted to see. 
-Build the four automations Social media, search, outbound and performance marketing, one at a time. 
-Build Growth Center The central dashboard, the in-house server and access by role. 
-Add human approval Review steps before any post, email or ad change goes out. 
-Learn and improve Each automation learns from the team’s approvals and edits. 
-
-## Why it worked
-
-One place to look The founder sees every department’s results on one screen. 
-People approve, software does the work Nothing goes out without a person’s approval, and the system learns from each review. 
-Data stays inside The one-way in-house server keeps client data from leaving the firm. 
-
-Groviadigi 
-
-## Want something like this for your business?
-
-If your growth work is spread across tools and people, we can build a central system like this around how your team works, with the parts you need.
-
-Book a 15-minute discovery call → 
-
-Ask us about a project like this → 
-Next: A cross-border CFO firm, Social media automation →
-
-
----
-
-# SEO, AEO and GEO Automation Case Study | Groviadigi
-URL: https://www.groviadigi.in/work/seo-aeo-geo-automation/
-
-← All work · Case study 
-
-SEO, AEO and GEO automation · A cross-border CFO firm
-
-## Search automation in Growth Center: SEO, AEO and GEO that plan their own month
-
-An automated dashboard that drafts a monthly strategy, gets one human review, then runs research, writing, fact-checking, publishing and reporting every day.
-
-Client A cross-border CFO firm (US and India) 
-Goal Grow SEO, AEO and GEO visibility 
-Content Blogs and LinkedIn articles 
-Engagement Custom automation dashboard 
-
-This search automation is one of the four automations inside Growth Center. See Growth Center → 
-
-~1% human input, mainly the monthly review 
-10:00 AM daily research run, India time 
-5 sourced topic ideas a day, with keywords 
-72 h drafts ready before each publishing slot 
-
-## Executive summary
-To rank for US and India tax and compliance topics, on Google and inside AI answers, the firm needs steady, accurate content and constant tracking. Growth Center drafts a monthly strategy, sends it for one human review, and then runs the month: daily topic research, writing, fact-checking, publishing and reporting. Human input is about 1% of the work, mostly that monthly review.
-
-## The challenge
-
-Search has three fronts Buyers search on Google, read direct answers and ask AI assistants; each needs its own work. 
-Rules change often Tax and compliance rules and deadlines change through the year, so topics must stay current. 
-Accuracy is not optional A wrong deadline in a tax article damages trust, so every piece needs a fact-check. 
-Too many daily steps Research, writing, review, publishing and reporting every day adds up to a lot of manual work. 
-Reporting in different tools Rankings, answer-box visibility and AI mentions sat in separate tools. 
-
-## What we built
-
-01 Monthly strategy The dashboard drafts the month’s plan with one goal: grow SEO, AEO and GEO visibility. 
-02 Daily topic research At 10:00 AM IST it reviews the last two days of news and rule changes and suggests up to five sourced topics. 
-03 Monthly calendar Planned blogs sit on a calendar, with drafts prepared 72 hours before each slot. 
-04 Research, draft, fact-check Blogs and LinkedIn articles go through one workflow that ends in a fact-check. 
-05 Review and publish Drafts wait in a review queue for a set window, then publish on schedule. 
-06 Reports Overall, SEO, AEO and GEO views, with analytics and a month-end report. 
-
-## How it works
-
-Dashboard drafts the month
-A person reviews it
-System runs the month
-
-## What changed
-
-Area Done by hand With Growth Center 
-Planning Strategy written from scratch each month Drafted by the dashboard, reviewed by a person 
-Research Someone scans the news when they find time Runs daily at 10:00 AM IST 
-Writing Drafted whenever the team has time Drafts ready 72 hours before each slot 
-Accuracy Depends on who reviews the draft Every draft goes through a fact-check 
-Reporting Pulled from several tools One place, plus a month-end report 
-
-## How we delivered it
-
-Choose the tools One tool per job: rank tracking, on-page scoring, Search Console and GA4. 
-Build the dashboard A web app on Vercel with a Postgres database. 
-Connect the tools Research, writing and reporting share the same data. 
-Strategy and reports Monthly strategy, analytics and month-end reporting. 
-Handover Every account and setting documented for day-to-day running. 
-
-## Why it worked
-
-One goal per month Every task traces back to a single goal: grow SEO, AEO and GEO visibility. 
-People decide, the system works A person approves or edits the plan; the dashboard does the daily work. 
-Facts checked first Every draft passes a fact-check, which matters in tax content. 
-
-Groviadigi 
-
-## Want something like this for your business?
-
-If your business needs to be found on Google and in AI answers without a full-time content team, we can build this for you.
-
-Book a 15-minute discovery call → 
-
-Ask us about a project like this → 
-Next: A cross-border CFO firm, Custom data tool →
-
-
----
-
-# Social Media Automation Case Study | Groviadigi
-URL: https://www.groviadigi.in/work/social-media-automation/
-
-← All work · Case study 
-
-Social media automation · A cross-border CFO firm
-
-## Social media that makes its own creatives and stays on brand
-
-Creatives, short videos and post copy made automatically in the firm’s brand, with AI-drafted replies, enquiries sent to sales and a person approving everything.
-
-Client A cross-border CFO firm (US and India) 
-What we built Social media automation and dashboard 
-Connected to Growth Center and the SEO automation 
-Engagement Custom automation 
-
-This is the social media automation inside Growth Center. See Growth Center → 
-
-1 fixed brand kit used on every creative 
-Every planned blog gets its banner automatically 
-Human approval before anything is posted 
-Learns from the team’s reviews and chosen examples 
-
-## Executive summary
-Every blog needed a banner, every update needed a post, and on busy weeks the look drifted. We built a social media automation for a cross-border CFO firm that makes creatives, short videos and post copy in one fixed brand kit, drafts replies to comments and messages, and sends real enquiries to the sales team. A person approves what goes out, and the system learns from each review.
-
-## The challenge
-
-Too many creatives to make Banners, posts and videos for every blog and update took a designer’s week. 
-The brand drifted When the team rushed, fonts, colours and layouts changed from post to post. 
-Replies and enquiries were slow Comments and messages waited, and real enquiries could be missed. 
-
-## What we built
-
-01 One brand kit, defined once Fixed colours, fonts and layouts, with contrast checked in code so text stays readable. 
-02 Creatives, videos and copy Banners for every blog, posts for every update and short videos, made in the house style. 
-03 AI-drafted replies Replies to comments and messages are drafted automatically; real enquiries go straight to the sales team. 
-04 Learns from examples The team picks design videos it likes; the system turns them into design rules it follows. 
-05 Memory of mistakes Corrections are remembered, so the same mistake is less likely to come back. 
-06 Linked to search and Growth Center Shares topics and designs with the SEO automation and reports results to Growth Center. 
-
-## How it works
-
-Plan from the content calendar
-Make creatives and copy
-A person approves
-Post and reply
-Results go to Growth Center
-
-## What changed
-
-Area Before With the automation 
-Creatives Designed by hand for each post Made automatically in the brand kit 
-Brand Drifted on busy weeks Same colours, fonts and layouts every time 
-Replies Handled when someone had time Drafted by AI, enquiries sent to sales 
-Approval Ad hoc A person approves before anything goes out 
-
-## How we delivered it
-
-Fix the brand Colours, fonts and layouts agreed first. 
-Build the creative engine Banners, posts and videos in the house style. 
-Add replies and routing AI-drafted replies and enquiries sent to sales. 
-Add learning and memory Design rules from chosen examples; corrections remembered. 
-Connect Linked to the SEO automation and Growth Center. 
-
-## Why it worked
-
-Brand first A clear brand kit made every later step simpler. 
-Always a fallback If a design tool fails, a simpler layout is used, so nothing waits. 
-A person on the last step Nothing is posted under the firm’s name without approval. 
-
-Groviadigi 
-
-## Want something like this for your business?
-
-If your team posts often and spends its week resizing banners, we can build social media automation around your brand, with a person approving what goes out.
-
-Book a 15-minute discovery call → 
-
-Ask us about a project like this → 
-Next: Smart Sun Power, Solar CRM →
++28% lead conversion within 3 months
 
 
 ---
@@ -807,91 +336,7 @@ If your business is dealing with missed leads, scattered information or no view 
 Book a 15-minute discovery call → 
 
 Ask us about a project like this → 
-Next: A cross-border CFO firm, Custom website →
-
-
----
-
-# CFO Firm Website Rebuild Case Study | Groviadigi
-URL: https://www.groviadigi.in/work/website-cfo-firm/
-
-← All work · Case study 
-
-Custom website · A cross-border CFO firm
-
-## A website rebuild for a cross-border CFO firm
-
-A custom-built website that replaced a WordPress site and organises 54 services across three practices.
-
-Client A cross-border CFO firm (US and India) 
-Industry Cross-border finance, tax and compliance 
-Markets United States and India 
-Engagement Custom website build 
-
-54 service pages, each with its own URL 
-3 practice hubs: USA CFO, India CFO, Family Office 
-30 client logos on the homepage 
-3 new guides published in October 2026 
-
-## Executive summary
-The client, a cross-border CFO firm, handles virtual CFO, tax and compliance work for businesses and families across the US and India. Its old website ran on WordPress, with search settings handled by a plugin. Groviadigi designed and built a new site from scratch: three practice hubs with 54 service pages, site-wide search, a booking flow for discovery calls, and the SEO basics written into the code. It went live in October 2026, ahead of the deadline.
-
-## The challenge
-
-SEO tied to a plugin Search settings lived in a WordPress plugin, so on a custom site SEO had to be built into the code. 
-54 services to organise From US incorporation and ITIN to GST and FEMA compliance, in a structure a first-time visitor can follow. 
-Two countries, two time zones Prospects in India and the US needed to reach the right team during their own working hours. 
-Trust before the first call A finance firm has to show reviews, client names and the people behind the work early. 
-A home for guides Tax and compliance guides needed a section readers and search engines could find easily. 
-
-## What we built
-
-01 Practice hubs USA CFO Services, India CFO Services and Family Office, each with an overview and its own list of services. 
-02 54 service pages 18 for the USA, 23 for India and 13 for the Family Office, each with its own page and URL. 
-03 Site-wide search Covers services, pages and Insights articles; press the / key to open it. 
-04 Discovery-call booking The scheduler loads only after a click, which keeps pages light, with email as a fallback. 
-05 Contact in two time zones US and India phone lines with office hours in EST and IST, plus WhatsApp. 
-06 Search and policy basics Canonical URLs, meta descriptions and share images, plus privacy, terms and accessibility pages. 
-
-## How it works
-
-Requirements ranked P1 to P3
-Project dashboard
-Design
-Development
-Launch
-
-## What changed
-
-Area Before After 
-Platform WordPress site built on a theme Custom-coded site, no theme or plugins 
-SEO Handled by a plugin Canonical URLs, meta descriptions and share images on every page 
-Upkeep Theme and plugin updates to track Changes go straight into the code 
-
-## How we delivered it
-
-Requirements Every feature ranked P1, P2 or P3, with integrations planned. 
-Project dashboard Tasks, owners and progress in one live view. 
-Design A visual system and page assets. 
-Development Every page built from scratch, with SEO fields written in. 
-Launch Replaced the WordPress site in October 2026, ahead of the 7 November deadline. 
-
-## Why it worked
-
-Priorities agreed early Ranking features kept the first release focused on what visitors need most. 
-One view of progress Everyone worked from one dashboard instead of chats and calls. 
-Built around services The structure follows the three practices, so new services have an obvious place. 
-
-Groviadigi 
-
-## Want something like this for your business?
-
-If your website has grown page by page and become hard to manage, we can rebuild it around your services and your customers.
-
-Book a 15-minute discovery call → 
-
-Ask us about a project like this → 
-Next: A cross-border CFO firm, SEO, AEO and GEO automation →
+Next: Smart Sun Power, Solar CRM →
 
 
 ---
@@ -987,7 +432,7 @@ Not every team needs this. If you add one or two lists a month and use a single 
 
 ## Could this work for your team?
 
-If your team pulls lists from more than one tool and worries about duplicates or contacting people twice, the answer is probably yes. We build tools like this in code, around your own data and the channels you already use. You can read the full Data Sorter case study , see how it feeds the outbound automation connected to Zoho CRM , look at our services , or read how the same client automated SEO without losing human review . When you are ready, tell us about your lists .
+If your team pulls lists from more than one tool and worries about duplicates or contacting people twice, the answer is probably yes. We build tools like this in code, around your own data and the channels you already use. You can read the full Data Sorter case study, see how it feeds the outbound automation connected to Zoho CRM, look at our services , or read how the same client automated SEO without losing human review . When you are ready, tell us about your lists .
 
 ## Frequently asked questions
 How do I merge duplicate leads from multiple spreadsheets? Put every list into the same columns, add a column for the source, clean the email field (trim spaces, lower case), stack the lists in one sheet and keep one row per email. In Google Sheets the UNIQUE function does this; Excel has a Remove Duplicates button. Add a status column so you know who has already been contacted.
@@ -1008,7 +453,6 @@ Book a free 15-minute call →
 RFC 5321: Simple Mail Transfer Protocol (IETF) 
 Google Docs Editors Help: UNIQUE function 
 Gmail Help: Email sender guidelines 
-Groviadigi case study: Data Sorter for a cross-border CFO firm 
 
 ## More from the blog
 
@@ -1118,7 +562,7 @@ Respect what Google actually rewards. Google’s own guidance says it looks for 
 
 ## Could this work for your business?
 
-If you publish regularly and the work is scattered across tools, probably yes. The setup does not have to be this big. Many teams start with one piece, such as daily topic research or a review queue, and add the rest later. You can read the full project in our Growth Center case study , see the other services we offer , or read how the same team automated on-brand social media creatives .
+If you publish regularly and the work is scattered across tools, probably yes. The setup does not have to be this big. Many teams start with one piece, such as daily topic research or a review queue, and add the rest later. You can read the full project in our Growth Center case study, see the other services we offer , or read how the same team automated on-brand social media creatives .
 
 ## Frequently asked questions
 Can SEO be fully automated? The repetitive parts can: data collection, research, drafting, checks and post-publish tasks. Deciding what matters to your clients and approving sensitive content still needs people, especially in finance, health and legal topics.
@@ -1141,7 +585,6 @@ Google Search Central blog: Google Search’s guidance about AI-generated conten
 Google Search Console 
 IndexNow protocol 
 Google Search Central: Sitemaps overview 
-Groviadigi case study: Growth Center for a cross-border CFO firm 
 
 ## More from the blog
 
@@ -1263,7 +706,6 @@ Book a free 15-minute call →
 W3C: Understanding WCAG contrast (minimum) 
 Google Search Central: Creating helpful, reliable, people-first content 
 Groviadigi blog: SEO automation with human review 
-Groviadigi case study: Growth Center for a cross-border CFO firm 
 
 ## More from the blog
 
