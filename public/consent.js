@@ -32,7 +32,9 @@
   function save(c) {
     const s = JSON.stringify(c);
     try { localStorage.setItem(KEY, s); } catch (e) {}
-    d.cookie = `${KEY}=${encodeURIComponent(s)}; max-age=${DAYS * 86400}; path=/; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`;
+    // shared by groviadigi.in and www.groviadigi.in, so the same visitor is never asked twice
+    const dom = /(^|\.)groviadigi\.in$/.test(location.hostname) ? '; domain=.groviadigi.in' : '';
+    d.cookie = `${KEY}=${encodeURIComponent(s)}; max-age=${DAYS * 86400}; path=/${dom}; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`;
   }
   const id = () => (w.crypto && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
 
@@ -71,8 +73,9 @@
 
   // ---------- banner ----------
   let box;
-  const CSS = `#gd-cc{position:fixed;z-index:9999;left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));max-width:440px;margin-left:auto;background:#0D0B26;color:#E6E3FF;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px;box-shadow:0 24px 60px -20px rgba(13,11,38,.7);font:500 14px/1.55 Manrope,system-ui,sans-serif;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
-#gd-cc.on{opacity:1;transform:none}
+  const CSS = `#gd-cc{position:fixed!important;z-index:2147483000!important;display:block!important;visibility:visible!important;left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));max-width:440px;margin-left:auto;background:#0D0B26;color:#E6E3FF;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px;box-shadow:0 24px 60px -20px rgba(13,11,38,.7);font:500 14px/1.55 Manrope,system-ui,sans-serif;animation:gdIn .35s ease both}
+@keyframes gdIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+#gd-cc.out{animation:none;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
 #gd-cc h2{margin:0 0 6px;font-size:16px;font-weight:800;color:#fff;letter-spacing:-.01em}
 #gd-cc p{margin:0 0 14px;color:#B9B6DA}
 #gd-cc a{color:#fff;text-decoration:underline;text-underline-offset:2px}
@@ -88,7 +91,7 @@
 #gd-cc label small{display:block;color:#9B98BF;font-size:12.5px}
 #gd-cc .gd-save{display:none}
 #gd-cc.more .gd-save{display:inline-block}
-@media (prefers-reduced-motion:reduce){#gd-cc{transition:none}}`;
+@media (prefers-reduced-motion:reduce){#gd-cc{animation:none;transition:none}}`;
 
   function open() {
     if (box) return;
@@ -119,10 +122,16 @@
       else if (a === 'more') { box.classList.add('more'); e.target.style.display = 'none'; box.querySelector('#gd-a').focus(); }
       else if (a === 'save') { const an = box.querySelector('#gd-a').checked, mk = box.querySelector('#gd-m').checked; choose(an, mk, 'custom'); }
     });
-    const b = box;
-    requestAnimationFrame(() => b.classList.add('on'));
   }
-  function close() { if (!box) return; const b = box; box = null; b.classList.remove('on'); setTimeout(() => b.remove(), 300); }
+  function close() { if (!box) return; const b = box; box = null; b.classList.add('out'); setTimeout(() => b.remove(), 300); }
+
+  // guard: until the visitor accepts or rejects, the banner stays. If anything removes or hides it,
+  // it comes back within a second. After a choice is saved it never shows again (12 months).
+  setInterval(() => {
+    if (read()) return;
+    if (box && d.body.contains(box)) { box.removeAttribute('hidden'); box.style.display = box.style.visibility = box.style.opacity = ''; return; }
+    box = null; if (d.body) open();
+  }, 1000);
 
   function footerLink() {
     d.querySelectorAll('footer nav').forEach(n => {
@@ -138,7 +147,7 @@
     footerLink();
     const c = read();
     if (c) apply(c);
-    else setTimeout(open, 600);   // shows straight away and stays until the visitor accepts or rejects
+    else open();   // shows straight away and stays until the visitor accepts or rejects
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', start); else start();
   if (location.hash === '#cookie-settings') addEventListener('load', open);
