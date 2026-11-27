@@ -47,6 +47,7 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 
 ## News (AI and automation, updated daily)
 - Newsroom: https://www.groviadigi.in/news/
+- 2026-11-27: Google opens Workspace to AI agents through MCP servers, and from February they must use them: https://www.groviadigi.in/news/google-workspace-mcp-ai-agents/
 - 2026-11-26: Cloudflare launches Search for Agents, a search endpoint that lets AI agents query your website: https://www.groviadigi.in/news/cloudflare-search-for-agents/
 - 2026-11-21: Citi tells customers they carry the risk if a third-party AI agent misuses their account: https://www.groviadigi.in/news/citi-ai-agent-liability-customers/
 - 2026-11-20: AWS Marketplace now lets AI agents buy software, within budgets and rules a company sets: https://www.groviadigi.in/news/aws-marketplace-ai-agents-buy-software/
