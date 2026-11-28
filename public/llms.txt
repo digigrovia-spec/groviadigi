@@ -47,6 +47,7 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 
 ## News (AI and automation, updated daily)
 - Newsroom: https://www.groviadigi.in/news/
+- 2026-11-28: AI assistants are sending far more holiday shoppers to online stores, Adobe data shows: https://www.groviadigi.in/news/adobe-ai-shopping-traffic-holidays/
 - 2026-11-27: Google opens Workspace to AI agents through MCP servers, and from February they must use them: https://www.groviadigi.in/news/google-workspace-mcp-ai-agents/
 - 2026-11-26: Cloudflare launches Search for Agents, a search endpoint that lets AI agents query your website: https://www.groviadigi.in/news/cloudflare-search-for-agents/
 - 2026-11-21: Citi tells customers they carry the risk if a third-party AI agent misuses their account: https://www.groviadigi.in/news/citi-ai-agent-liability-customers/
@@ -56,7 +57,6 @@ Groviadigi first asks whether automation is needed at all. The recommendation ca
 - 2026-11-16: OpenAI launches ChatGPT Wallet so AI agents can pay, and tells businesses to stop blocking them: https://www.groviadigi.in/news/chatgpt-wallet-agent-payments/
 - 2026-11-15: IBM and Microsoft launch Imagine Enterprise, an AI agent platform with 6,000+ prebuilt agents: https://www.groviadigi.in/news/ibm-microsoft-imagine-enterprise-agent-platform/
 - 2026-11-14: Gartner: only 21% of service leaders have cut agent headcount because of AI: https://www.groviadigi.in/news/gartner-ai-customer-service-headcount-survey/
-- 2026-11-13: GitHub Agentic Workflows is now generally available: AI agents inside GitHub Actions: https://www.groviadigi.in/news/github-agentic-workflows-generally-available/
 <!--/CONTENT-->
 
 ## Get started
